@@ -1,0 +1,146 @@
+.compilation-collections{
+    display: flex;
+    overflow-x: scroll;
+    color: #fff;
+    padding: 0px 0 32px;
+}
+
+.compilation-collections_item{
+    min-width: 227px;
+    height: 217px;
+    &:not(:last-child){
+        margin-right: 8px;
+    }
+}
+
+.compilation-item_box,
+.item-blur{
+    background: url("https://natworld.info/wp-content/uploads/2018/01/-%D0%BF%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D1%8B-e1534007720297-900x500.jpg") 50% 50% / cover;
+    width: 100%;
+    height: 100%;
+}
+
+.compilation-item_box {
+    position: relative;
+    background: rgba(#000, .3);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 7px 5px 20px 0 rgba(0, 0, 0, 0.24);
+    .item-blur{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        filter: blur(20px);
+    }
+}
+
+.item-content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 19px 11px;
+}
+
+.dot{
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 8px;
+}
+
+.item-content_data{
+    font-size: 12px;
+    line-height: 1.75;
+    font-family: $p_semi;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.item-content_title{
+    font-family: $adelle;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.32;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.item-content_user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-content_user-avatar{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 18px;
+    img{
+        width: 100%;
+    }
+}
+
+.item-content_user-name{
+    a{
+        font-size: 14px;
+        color: #fff;
+        font-family: $p_semi;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .compilation-collections_item{
+        min-width: 450px;
+        height: 224px;
+        &:not(:last-child){
+            margin-right: 16px;
+        }
+    }
+
+    .item-content_title{
+        font-size: 26px;
+    }
+    
+    .item-content{
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .item-content_title{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .compilation-collections{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: #fff;
+        padding: 0px 0 32px;
+    }
+
+    .compilation-collections_item{
+        min-width: 549px;
+        height: 224px;
+        margin: 0;
+        margin-bottom: 14px;
+        &:not(:last-child){
+            margin-right: 0;
+        }
+        &:nth-child(odd) {
+            margin-right: 16px;
+        }
+    }
+}

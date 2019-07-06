@@ -1,0 +1,378 @@
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#reg-modal')
+    | Регистрация/вход
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#check-modal')
+    | Проверяйте почту
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#reset-pass-modal')
+    | Восстановление пароля
+#reg-modal.modal.fade.reg-modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                img(src="./img/main-logo-only-img.svg", alt="")
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                .reg-modal_content
+                    .action-list
+                        .login-item Войти
+                        .registration-item.active Зарегистрироваться
+                    form
+                        .reg-modal_form
+                            .form-item.valid
+                                input.reg-modal_input(type="email" placeholder="E-mail")
+                            .form-item.invalid
+                                input.reg-modal_input(type="password" placeholder="Пароль")
+                                .show-pass
+                                    img(src="./img/icons/eye.svg", alt="")
+                                .optional опционально
+                            .form-item
+                                input.reg-modal_input(type="password" placeholder="Повторите пароль")
+                                .show-pass
+                                    img(src="./img/icons/eye.svg", alt="")
+                            a.reset-pass(href="#") Восстановление пароля
+                            button.submit.disabled Подтвердить
+
+                            .sep или
+
+                            .reg-modal_btns
+                                button.fb-reg Продолжить с Facebook
+                                button.vk-reg Продолжить с Vkontakte
+
+                            a.availability-acc(href="#") У меня есть аккаунт
+                            a.availability-acc.not(href="#") У меня нет аккаунта
+
+                            .agreement-tip Регистрируясь, вы соглашаетесь с нашими <a href="#">Условиями и политикой конфиденциальности</a>
+
+
+#check-modal.modal.fade.reg-modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                img(src="./img/main-logo-only-img.svg", alt="")
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                .reg-modal_content
+                    .action-list
+                        .login-item Войти
+                        .registration-item.active Зарегистрироваться
+                    
+                    .check-email
+                        .check-email_header Письмо успешно отправлено
+                        .check-email_content Проверяйте почту!
+
+                    a.availability-acc(href="#") У меня есть аккаунт
+                    a.availability-acc.not(href="#") У меня нет аккаунта
+
+                    .agreement-tip Регистрируясь, вы соглашаетесь с нашими <a href="#">Условиями и политикой конфиденциальности</a>
+
+
+#reset-pass-modal.modal.fade.reg-modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                img(src="./img/main-logo-only-img.svg", alt="")
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                .reg-modal_content
+                    .action-list
+                        .login-item Войти
+                        .registration-item.active Зарегистрироваться
+                    
+                    .reset-pass_modal
+                        .reset-pass_modal_tip Для восстановления доступа до личного кабинета, введите адрес почты, к которому привязан ваш аккаунт.
+                        form
+                            .reg-modal_form
+                                .form-item
+                                    input.reg-modal_input(type="email" placeholder="E-mail")
+                                button.submit Отправить пароль
+
+                    a.availability-acc(href="#") У меня есть аккаунт
+                    a.availability-acc.not(href="#") У меня нет аккаунта
+
+                    .agreement-tip Регистрируясь, вы соглашаетесь с нашими <a href="#">Условиями и политикой конфиденциальности</a>
+
+
+//- user help
+
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#user-help-modal')
+    | User help button
+
+#user-help-modal.modal.fade.user-help-modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true')
+            .modal-body
+                .steps
+                    .step-item.step-item_one(data-step-item="1")
+                        ul.user-help_steps
+                            li.fill
+                            li
+                            li
+                            li
+                        .upload-avatar
+                            input.inputfile(type="file" name="file" id="file")
+                            label(for="file")
+                            span 
+                                img(src="./img/icons/camera.svg", alt="")
+
+                        .step-item_header Добро пожаловать в Knigogid, Некто!
+                        .step-item_tip Ваши ответы на следующие вопросы помогут помогут собрать подборку специально для вас.
+                        .step-item_btn
+                            button.next-step_btn.tosecond Далее
+                            a.cancel-step_link(href="") Сформировать подборку позднее
+
+                    .step-item.step-item_two(data-step-item="2")
+                        ul.user-help_steps
+                            li.fill
+                            li.fill
+                            li
+                            li
+                        .step-item_header Некто, расскажтие о себе
+                        form
+                            .form-item
+                                input.reg-modal_input(type="text" placeholder="Имя")
+                            .form-item
+                                input.reg-modal_input(type="text" placeholder="Фамилия")
+                            .form-item
+                                input.reg-modal_input(type="date" placeholder="Дата рождения")
+                            .radio-block
+                                label
+                                    input.inp-radio(type="radio" name="gender")
+                                    span Мужской
+                                label
+                                    input.inp-radio(type="radio" name="gender")
+                                    span Женский
+                            .form-item
+                                label.step-item_arealabel Пару слов о себе
+                                textarea.step-item_area(placeholder="Род деятельности, хобби, цитаты...")
+                        .step-item_btn
+                            button.next-step_btn.tothird Далее
+                            a.cancel-step_link(href="") Сформировать подборку позднее
+
+                    .step-item.step-item_three(data-step-item="3")
+                        ul.user-help_steps
+                            li.fill
+                            li.fill
+                            li.fill
+                            li
+                        .step-item_header Некто, выберите >3 книг, чтобы сформировалась подборка
+                        .step-item_collection_box
+                            .step-item_collection
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                                include ./card_item.pug
+                        .step-item_collection_tip Осталось выбрать 1 книгу
+                        .step-item_btn
+                            button.next-step_btn.tofourth Готово
+                            a.cancel-step_link(href="") Сформировать подборку позднее
+
+                    .step-item.step-item_four(data-step-item="4")
+                        .topbg
+                        .step-item_four-content
+                            .border-block
+                                | Собираем вдохновляющие литературные подборки на основе ваших вкусовых предпочтений
+                        .bottombg
+
+// Поделиться книгой
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#share-book_modal')
+    | Поделиться книгой
+
+#share-book_modal.modal.fade.share-book_modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                .share-book_title Поделиться книгой в соц сетях
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                .social-list
+                    li
+                        a.vk(href="")
+                    li
+                        a.fb(href="")
+                    li
+                        a.twit(href="")
+                    li
+                        a.ok(href="")
+                    li
+                        a.pint(href="")
+                    li
+                        a.mail(href="")
+                .copy-link
+                    input.link-content(type="text" placeholder="тут лежит ссылка") 
+                    button.copy-link_btn Копировать ссылку
+
+// Обратная связь
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#feedback_modal')
+    | Обратная связь
+
+#feedback_modal.modal.fade.feedback_modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                .feedback_modal-title
+                    | Обратная связь <p> Если у Вас возникли вопросы по работе сайта - напишите нам!</p>
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                form
+                    .feedback_modal-form
+                        .form-item
+                            label Ваше имя
+                            input(type="text" placeholder="Представьтесь пожалуйста")
+                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
+                        .form-item
+                            label Контакты
+                            input(type="text" placeholder="Номер телефона/ e-mail")
+                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
+                        .form-item
+                            label Жалоба/ просьба
+                            textarea.step-item_area(placeholder="Род деятельности, хобби, цитаты...")
+                        .captcha
+                            <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+                        .submit-block
+                            button.cancel-form_btn Отмена
+                            button.submit-form_btn Опубликовать
+
+// Впечатления о книге
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#post-impression_modal')
+    | Оставить отзыв
+
+#post-impression_modal.modal.fade.post-impression_modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                .post-impression_title
+                    | Впечатления о книге <p> Дейв Логан, Джон Кинг, Хэли Фишер-Райт «Лидер и племя. Пять уровней корпоративной культуры»</p>
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                form
+                    .post-impression_form
+                        .form-item
+                            textarea.step-item_area(placeholder="Пару слов о книге")
+                            .public-box
+                                // .range-box
+                                //     input.range-mix(type="range", value="0" min="0" max="10")
+                                //     .card-item_rating
+                                //         .average_rate 4.8
+                                //         .votes_counter 548 оценок
+                                .range-box_rate
+                                    .rate-value 5
+                                    .rate-tip Благодарим вас за оценку!
+                                .submit-block
+                                    button.submit-form_btn Опубликовать
+                                    
+// Авторам и правообладателям
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#authors_modal')
+    | Авторам и правообладателям
+
+#authors_modal.modal.fade.authors_modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                .feedback_modal-title
+                    | Авторам и правообладателям
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                form
+                    .feedback_modal-form
+                        .form-item
+                            label Правообладатель
+                            input(type="text" placeholder="Юридическое лицо/ физическое лицо")
+                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
+                        .form-item
+                            label Контакты
+                            input(type="text" placeholder="Номер телефона/ e-mail")
+                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
+                        .form-item
+                            label Жалоба/ просьба
+                            textarea.step-item_area(placeholder="По существу")
+
+                        .radio-block
+                            label
+                                input.inp-radio(type="radio" name="gender")
+                                span Я против размещения
+                            label
+                                input.inp-radio(type="radio" name="gender")
+                                span Я не против размещения
+                                p На сайте будет доступен только небольшой отрывок для чтения онлайн, без возможности скачивания. Ознакомительный фрагмент позволяет заинтересовать читателя произведением.
+                        
+                        .content-percentage
+                            label Разрешенный фрагмент
+                            select.custom-select
+                                option(value="selected") 20%
+                                option(value="1") 30%
+                                option(value="2") 40%
+                                option(value="3") 50%
+
+                        .captcha
+                            <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+                        .submit-block
+                            button.cancel-form_btn Отмена
+                            button.submit-form_btn Опубликовать
+
+// Добавить на полку/ создать полку
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#add_shelf_modal')
+    | Добавить на полку/ создать полку
+
+#add_shelf_modal.modal.fade.add_shelf_modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .reg-modal_header
+                .add_shelf_title
+                    | Добавить на полку
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') 
+            .modal-body
+                .add_shelf_book_container
+                    .add_shelf_book-list
+                        include ./book_on_shelf.pug
+                        include ./book_on_shelf.pug
+                        include ./book_on_shelf.pug
+                        include ./book_on_shelf.pug
+                        include ./book_on_shelf.pug
+
+                .create_shelf_settings
+                    .shelf_name-secret
+                        .shelf_name-input
+                            input(type="text" placeholder="Название полки")
+                        .secret-shelf
+                            label
+                                input(type="checkbox")
+                                span Открытая
+                    .shelf_name-description
+                        textarea(placeholder="Пару слов о книге")
+
+                .create_shelf_box
+                    span.tip или
+                    button.add_description-btn Добавить описание
+                    button.create_shelf_btn
+                        span + 
+                        | Создать новую полку

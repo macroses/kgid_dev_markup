@@ -1,0 +1,39 @@
+header
+    .header-container
+        // В header-box добавлять registered, для отображения шапки зареганных юзеров
+        .header-box.registered
+            a.logo(href="")
+                img(src="./img/main-logo.svg", alt="")
+
+            .header-login
+                button.registration-btn Зарегистрироваться
+                button.sign-btn Войти
+
+                .header-user_block
+                    .header-search_btn-mobile
+                    .header-notice
+                    .header-user
+                        .header-user_avatar
+                        //- ul.header-user_settings
+                        //-     li
+                        //-         a(href="") Профиль
+                        //-     li
+                        //-         a(href="") Настройки
+                        //-     li
+                        //-         a(href="") Сообщения
+
+            nav.header-nav
+                ul
+                    li.active
+                        a(href="") Что читают
+                    li
+                        a(href="" class='active') Жанры
+                    li
+                        a(href="") Авторы
+                    li
+                        a(href="") Мои книги
+
+            //- .header-search
+            //-     .header-search_box
+            //-         input(id="search-input" type="text" placeholder="Найти книгу/автора/жанр")
+            //-         button.header-search_btn

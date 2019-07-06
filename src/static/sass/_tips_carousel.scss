@@ -1,0 +1,132 @@
+.tips-carousel{
+    padding: 38px 26px;
+    text-align: center;
+    margin-bottom: 24px;
+
+    .carousel-indicators{
+        bottom: 12px;
+    }
+
+    .carousel-indicators li{
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid $base-text-color;
+        opacity: 1;
+        margin: 0 8px;
+        &.active{
+            background: $base-text-color;
+            opacity: 1;
+        }
+    }
+
+    .tips-item{
+        text-align: center;
+        img{
+            width: 185px;
+            height: 185px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.tips-carousel_header{
+    font-size: 22px;
+    font-family: $p_semi;
+    line-height: 1.45;
+    color: $base-text-color;
+    margin-bottom: 12px;
+}
+
+.tips-carousel_content{
+    font-size: 14px;
+    line-height: 1.5;
+    color: $base-text-color;
+    margin-bottom: 58px;
+}
+
+.tips-carousel_btn{
+    @include btn-colored;
+    box-shadow: 5px 2px 22px 0 rgba(75, 76, 78, 0.18);
+}
+
+
+@media screen and (min-width: 768px) {
+    .carousel-item_container{
+        display: flex; 
+        justify-content: center;
+        margin-bottom: 65px;
+    }
+
+    .tips-carousel_text{
+        width: 210px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 48px;
+    }
+
+    .tips-carousel .carousel-indicators{
+        bottom: 30px;
+    }
+
+    .tips-carousel{
+        .tips-item{
+            img{
+                width: 211px;
+                height: 211px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .tips-carousel{
+        .carousel-inner{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .carousel-indicators{
+            display: none;
+        }
+    }
+
+    .carousel-item_container{
+        flex-direction: column;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .tips-carousel_text{
+        margin-left: 0;
+    }
+
+    .tips-item{
+        flex: 1;
+    }
+
+    .tips-carousel_header{
+        font-size: 26px;
+        width: 100%;
+        line-height: 1.15;
+    }
+
+    .tips-carousel .tips-item img{
+        width: 245px;
+        height: 245px;
+        margin: 0 auto 32px;
+    }
+
+    .tips-carousel_text{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .tips-carousel_content{
+        margin-bottom: 40px;
+    }
+}

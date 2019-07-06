@@ -1,0 +1,331 @@
+.header-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 16px 12px;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .logo {
+        img {
+            width: 125px;
+        }
+    }
+
+    .header-user_block{
+        display: none;
+    }
+}
+
+.header-user{
+    margin-left: 24px;
+}
+
+.header-notice{
+    width: 19px;
+    height: 19px;
+    background: url(../img/icons/bell.svg) no-repeat;
+    background-size: cover;
+    margin-left: 24px;
+}
+
+.header-user_avatar{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: url(https://st4.cannypic.com/thumbs/15/158423_632_canny_pic.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.header-box.registered{
+    .registration-btn,
+    .sign-btn{
+        display: none;
+    }
+
+    .header-user_block{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header-user{
+    position: relative;
+}
+
+.header-user_settings{
+    position: fixed;
+    
+    bottom: 0;
+    right: 0;
+    // width: 123px;
+    width: 100%;
+    color: $base-text-color;
+    line-height: 1.5;
+    z-index: 5;
+    background: #fff;
+    font-family: $p_semi;
+
+    transform: translateY(120%);
+    transition: .2s;
+    li{
+        border: 1px solid rgb(238, 238, 238);
+        a{
+            display: inline-block;
+            width: 100%;
+            padding: 8px 13px;
+            text-decoration: none;
+            &:hover{
+                color: #2ea2f8;
+                background: #f1f4f8;
+            }
+        }
+    }
+    &.open{
+        transform: translateY(0);
+    }
+}
+
+.header-search_btn-mobile{
+    width: 16px;
+    height: 16px;
+    background: url(../img/icons/search.svg) no-repeat;
+    cursor: pointer;
+}
+
+.header-login {
+    display: flex;
+}
+
+.header-nav {
+    width: 100%;
+    margin: 32px 0 16px;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            a {
+                font-family: $p_semi;
+                line-height: 1.75;
+                font-size: 12px;
+                text-decoration: none;
+            }
+            &.active{
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    height: 4px;
+                    width: 100%;
+                    background: $base-text-color;
+                    bottom: -5px;
+                    left: 0;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
+
+.sign-btn {
+    color: $base-btn-color;
+    background: transparent;
+    border: 0;
+    font-family: $p_semi;
+    font-size: 14px;
+}
+
+.header-search {
+    width: 100%;
+    position: relative;
+
+    input {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: 1px solid #dfe3e9;
+    }
+}
+
+.header-search_btn {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 8px;
+    top: calc(50% - 8px);
+    background: url(../img/icons/search.svg) no-repeat;
+    background-size: contain;
+    border: 0;
+    outline: 0;
+}
+
+.registration-btn {
+    display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    .header-nav {
+        width: auto;
+        order: -1;
+        margin: 0;
+
+        li {
+            margin: 0 21px;
+        }
+
+        a {
+            font-family: $p_semi;
+            line-height: 1.75;
+            font-size: 12px;
+        }
+    }
+
+    .logo {
+        order: -1;
+    }
+
+    .header-search {
+        margin-top: 26px;
+        margin-bottom: 38px;
+    }
+
+    .header-box {
+        padding: 26px 37px 0;
+    }
+
+    .header-user_settings{
+        position: absolute;
+        top: calc(100% + 10px);
+        width: 123px;
+        transition: .2s;
+        li{
+            a{
+                background: #fff;
+            }
+        }
+        &.open{
+            height: 0;
+            overflow: hidden;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-box {
+        padding: 29px 27px;
+
+        .logo {
+            img {
+                width: 185px;
+            }
+        }
+    }
+
+    .sign-btn {
+        @include btn-neutral;
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+
+    .registration-btn {
+        @include btn-colored;
+        margin-right: 8px;
+        font-size: 12px;
+        padding: 9px 10px;
+        display: inline-block;
+    }
+
+    .header-nav {
+        ul {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .header-search {
+        margin: 0;
+        margin-left: auto;
+        margin-right: 8px;
+        width: auto;
+        order: -1;
+
+        input {
+            width: 0;
+            border: 1px solid transparent;
+            transition: .2s;
+            padding: 9px 25px 9px 9px;
+
+            &.open {
+                width: 180px;
+                border: 1px solid #dfe3e9;
+            }
+        }
+    }
+
+    .header-search_btn-mobile{
+        display: none;
+    }
+
+    .header-box.registered{
+
+    }
+
+    .header-user{
+        margin-left: 64px;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background: lightgray;
+            bottom: 0;
+            left: -32px;
+        }
+    }
+
+    .header-notice{
+        margin-left: 16px;
+    }
+
+    .header-user_avatar{
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+@media screen and (min-width: 1350px) {
+    .header-nav{
+        margin-left: 80px;
+        li{
+            margin: 0 32px;
+        }
+    }
+
+    .sign-btn,
+    .registration-btn{
+        padding: 7px 27px;
+        font-size: 14px;
+    }
+
+    .header-search{
+        input{
+            &.open{
+                width: 235px;
+            }
+        }
+    }
+
+    
+}

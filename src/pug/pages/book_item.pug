@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        
+        .wrapper
+            include ../layout/main/up_btn.pug
+            include ../layout/header/header.pug
+
+            main
+                .book_item
+                    .book_item-container
+                        .book_item-menu
+                            ul.recomendation-item_values
+                                li 345
+                                li 66
+                                li 26647
+                            .book_item-menu_btn
+                                span
+                                span
+                                span
+                        .book_item-content
+                            .l-side
+                                include ../layout/main/card_item.pug
+                                ul.book_item-shoplist
+                                    li
+                                        a(href="")
+                                            span OZON
+                                            span 320000 руб.
+                                    li
+                                        a(href="")
+                                            span Читай-город
+                                            span 488 руб.
+                                    li
+                                        a(href="")
+                                            span Буквоед
+                                            span 1376 руб.
+                                button.rightholders-btn Правообладателям
+                            .r-side
+                                .r-side_btn-block
+                                    .dropdown-box
+                                        button.buy-book_btn.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Купить
+                                        .dropdown-menu
+                                            a.dropdown-item(href="#") 123123
+                                            a.dropdown-item(href="#") 123123
+                                            a.dropdown-item(href="#") 1232131
+                                    button.share-book_btn Поделиться
+                        .book_item-about
+                            .book_item-menu.tablet
+                                ul.recomendation-item_values
+                                    li 345
+                                    li 66
+                                    li 26647
+                                a.bug-report_btn(href="") <span>i</span> Сообщить об ошибке
+                            .book_item-func
+                                .book_item-author
+                                    a(href="") Оскар Уайлд
+                                .book_item-name Лидер и племя. Пять уровней корпоративной культуры
+                                .book_item-description 
+                                    ul
+                                        li манн, иванов и фербер
+                                        li 2014 год
+                                        li 201 страница
+                                        li на 2 часа
+                                .book_item-btn_block
+                                    button.read-fragment_btn Читать отрывок
+                                    button.plus +
+                                    .dropdown-box
+                                        button.buy-book_btn.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Скачать
+                                        .dropdown-menu
+                                            a.dropdown-item(href="#") 123123
+                                            a.dropdown-item(href="#") 123123
+                                            a.dropdown-item(href="#") 1232131
+                                ul.tags-list
+                                    li
+                                        a(href="") Биографии
+                                    li
+                                        a(href="") Биографии
+                                    li
+                                        a(href="") Биографии
+                                    li
+                                        a(href="") Биографии
+                                    li
+                                        a(href="") Биографии
+                                    li
+                                        a(href="") Биографии
+                                    li
+                                        a(href="") Биографии
+                                    li
+                                        a(href="") Биографии
+                                .book_item-fragment
+                                    p
+                                        |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                        |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец.
+                                        | Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                        | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать — светская дама,
+                                        | писавшая стихи об Ирландии и 
+                                        |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                        |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец.
+                                        | Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                        | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать — светская дама,
+                                        | писавшая стихи об Ирландии и 
+                                        |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                        |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец.
+                                        | Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                        | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать — светская дама,
+                                        | писавшая стихи об Ирландии и 
+                                        |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                        |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец.
+                                        | Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                        | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать — светская дама,
+                                        | писавшая стихи об Ирландии и 
+                                    button.open-fragment_btn Развернуть
+                            .book_item-btn_block
+                                button.btn-item.add_to_shelf-btn
+                                    span На полку
+                                button.btn-item.add_comment-btn
+                                    span Написать рецензию
+                                button.btn-item.share-btn 
+                                    span Поделиться
+
+                            .book_item_onshelf-info
+                                .compilation-section_header
+                                    h3.compilation-title Лучшие новинки
+                                    a.compilation-link_all(href="") Все
+                                ul.book_item_onshelf-info_list
+                                    li
+                                        span.name Менеджмент
+                                        span.value 148
+                                    li
+                                        span.name Менеджмент
+                                        span.value 148
+                                    li
+                                        span.name Менеджмент
+                                        span.value 148
+                                    li
+                                        span.name Менеджмент
+                                        span.value 148
+                                    li
+                                        span.name Менеджмент
+                                        span.value 148
+
+                    include ../layout/main/compilation_section.pug
+
+                    .book_item-comments
+                        .compilation-section
+                            .compilation-section_header
+                                h3.compilation-title Рецензии
+                                a.compilation-link_all(href="#") Все
+                            .comments-content
+                                .comment-area
+                                    .comment-avatar
+                                    textarea(placeholder="Я думаю что...")
+                                .comments-list
+                                    include ../layout/main/comment.pug
+                            .comment-pagination
+                                include ../layout/main/pagination.pug
+
+            include ../layout/footer/footer.pug
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")

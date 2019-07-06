@@ -1,0 +1,334 @@
+
+.card-item{
+    position: relative;
+    border-radius: 10px;
+    min-width: 138px;
+    max-width: 138px;
+    &{
+        margin-bottom: 20px;
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+        a{
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            text-decoration: none;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    &.norange{
+        input[type='range']{
+            display: none;
+        }
+    }
+
+    .card-select_item{
+        display: none;
+    }
+}
+
+.card-item_rating{
+    display: flex;
+    font-size: 10px;
+    color: #7f8fa4;
+    line-height: 2.1;
+    align-items: baseline;
+
+    transition: .2s;
+    visibility: visible;
+    opacity: 1;
+    &.visible-box{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.average_rate{
+    font-family: $p_bold;
+    line-height: 1.45;
+    color: $base-text-color;
+    font-size: 22px;
+    margin-right: 7px;
+}
+
+.card-item_author{
+    font-size: 12px;
+    line-height: 1.75;
+    color: $base-text-color;
+
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-item_name{
+    font-size: 15px;
+    line-height: 1.2;
+    font-family: $p_semi;
+    color: $base-text-color;
+}
+
+.card-item_img{
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    width: 100%;
+    height: 213px;
+    box-shadow: 4px 2px 12px 0 rgba(75, 76, 78, 0.31);
+    
+
+    .user_rate-box{
+        position: absolute;
+        left: -1px;
+        top: 16px;
+        width: 38px;
+        height: 32px;
+        background: #f7981c;
+        box-shadow: 0 0 8px 0 rgb(247, 152, 28);
+        font-size: 22px;
+        font-family: $p_bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border-radius: 4px;
+        z-index: 3;
+    }
+}
+
+.range-mix {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+
+    margin           : auto;
+    outline          : none;
+    padding          : 0;
+    width            : 100%;
+    height           : 7px;
+    background-color : #152b3c;
+    background-image : linear-gradient(rgba(247, 152, 28, .7),rgba(247, 152, 28, .7));
+    background-repeat: no-repeat;
+    cursor           : pointer;
+    -webkit-appearance: none;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    transition: height .2s;
+
+    &::-webkit-slider-runnable-track {
+        box-shadow: none;
+        border    : none;
+        background: transparent;
+        -webkit-appearance: none;
+    }
+    &::-moz-range-track {
+        box-shadow: none;
+        border    : none;
+        background: transparent;
+    }
+    &::-moz-focus-outer {
+        border: 0;
+    }
+    &::-webkit-slider-thumb {
+        width          : 15px;
+        height         : 15px;
+        border         : 3px solid #ffa24c;
+        border-radius  : 50%;
+        background: #fff;
+        -webkit-appearance: none;
+        transition: .2s;
+    }
+    &::-moz-range-thumb {
+        width          : 15px;
+        height         : 15px;
+        border         : 3px solid #ffa24c;
+        border-radius: 50%;
+        background: #fff;
+        transition: .2s;
+    }
+}
+
+.card-item_img:hover{
+    .range-mix {
+        height: 11px;
+        background-image : linear-gradient(#ff9f54, #ff9f54);
+        border-bottom-left-radius: 9px;
+        border-bottom-right-radius: 9px;
+        
+    }
+
+    .range-mix::-webkit-slider-thumb {
+        width          : 20px;
+        height         : 20px;
+    }
+    
+    .range-mix::-moz-range-thumb {
+        width          : 20px;
+        height         : 20px;
+    }
+}
+
+.rate-num{
+    font-family: $p_extra;
+    line-height: 0.85;
+    color: #fe7402;
+    font-size: 22px;
+    visibility: hidden;
+    transition: opacity .2s;
+    position: absolute;
+    opacity: 0;
+    bottom: -30px;
+    transform: translateX(3px);
+    &.visible-box{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+// отображение карточки для book-item
+.book_item-container{
+    .card-item{
+        .card-item_author{
+            display: none;
+        }
+        .card-item_name{
+            display: none;
+        }
+    }
+
+    .card-item_rating{
+        flex-direction: column;
+        position: absolute;
+        right: -70px;
+        bottom: -5px;
+    }
+}
+
+@media screen and(min-width: 768px) {
+    .card-item{
+        &:not(:last-child){
+            margin-right: 24px;
+        }
+    }
+
+    .rate-num{
+        font-size: 26px;
+    }
+
+    .book_item-container{
+        .card-item{
+            min-width: 210px;
+            max-width: 210px;
+        }
+
+        .card-item:not(:last-child){
+            margin: 0;
+        }
+        .card-item_img{
+            height: 327px;
+        }
+        
+        .card-item_rating{
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .average_rate{
+            font-size: 32px;
+            line-height: 1.13;
+            margin-top: 8px;
+        }
+        .votes_counter{
+            font-size: 12px;
+            line-height: 1.75;
+        }
+    }
+}
+
+@media screen and(min-width: 1024px) {
+    .card-item{
+        min-width: 187px;
+        max-width: 187px;
+        &:not(:last-child){
+            margin-right: 45px;
+        }
+    }
+
+    .card-item_img{
+        height: 288px;
+    }
+
+    .card-item_author{
+        font-size: 14px;
+    }
+    .card-item_name{
+        font-size: 18px;
+    }
+}
+
+
+// отображение карточки для модального окна подборки юзера
+.step-item_collection{
+    display: flex;
+    flex-wrap: wrap;
+    .card-item{
+        min-width: 99px;
+        max-width: 99px;
+        margin: 0 7px 7px;
+        &:last-child{
+            margin: 0 7px;
+        }
+
+        input,
+        .rate-num,
+        .user_rate-box,
+        .card-item_description{
+            display: none;
+        }
+    }
+
+    .card-item_img{
+        height: 152px;
+        width: 99px;
+    }
+}
+
+.card-select_item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    label{
+        width: inherit;
+        height: inherit;
+        cursor: pointer;
+    }
+    span{
+        display: none;
+        width: 100%;
+        height: 100%;
+        border: solid 2px rgb(247, 152, 28);
+        border-radius: 10px;
+        background-color: rgba(53, 64, 82, 0.55);
+        background-image: url(../img/icons/user-chck.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    input:checked + span {
+        display: block;
+    }
+}

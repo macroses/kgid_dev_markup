@@ -1,0 +1,398 @@
+.author_item-card{
+    margin-bottom: 24px;
+    .range-mix{
+        display: none;
+    }
+
+    .card-item{
+        min-width: 74px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .card-item_img{
+        height: 74px;
+        min-width: 74px;
+        overflow: hidden;
+        img{
+            height: auto;
+        }
+    }
+    
+    .user_rate-box{
+        display: none;
+    }
+    
+    .card-item_author{
+        display: none;
+    }
+    .card-item_name{
+        display: none;
+    }
+
+    .card-item_description{
+        margin-left: 24px;
+    }
+
+    .card-item_rating{
+        flex-direction: column;
+        width: 74px;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    .average_rate{
+        font-size: 26px;
+    }
+
+    .votes_counter{
+        font-size: 12px;
+    }
+}
+
+.authors-fulname{
+    color: #7f8fa4;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.author_item-about{
+    padding: 0 12px;
+}
+
+.authors_name-translate{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: $adelle;
+    line-height: 1.41;
+    text-align: center;
+    margin-bottom: 4px;
+    color: $base-text-color;
+}
+
+.authors_date{
+    text-align: center;
+    font-size: 12px;
+    color: $base-text-color;
+    font-family: $p_reg;
+    margin-bottom: 16px;
+}
+
+.authors_books-btn_box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.authors_biography{
+    margin-bottom: 16px;
+    .open-fragment_btn{
+        margin-bottom: 0;
+    }
+}
+
+.authors_books-link{
+    @include btn-colored;
+    text-decoration: none;
+    padding: 7px 20px;
+    margin-right: 8px;
+}
+
+.authors_books-share_btn{
+    @include btn-transparent;
+    display: inline-block;
+    width: 36px;
+    height: 35px;
+    background: url(../img/icons/share.svg) no-repeat;
+    background-position: center;
+    span{
+        display: none;
+    }
+}
+
+.authors_biography p{
+    line-height: 1.5;
+    margin-bottom: 0;
+    position: relative;
+    height: 130px;
+    overflow: hidden;
+    &:after{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 20px;
+        background-image: linear-gradient(to right, rgba(245, 242, 239, 0), rgb(255, 255, 255));
+    }
+}
+
+.authors_content{
+    max-height: 130px;
+    overflow: hidden;
+}
+
+.authors_content-genre{
+    font-size: 10px;
+    font-family: $p_bold;
+    line-height: 1.9;
+    text-transform: uppercase;
+}
+
+.authors_content-item{
+    font-size: 12px;
+    margin-bottom: 4px;
+    .year{
+        margin-right: 8px;
+        color: $base-text-color;
+    }
+    a{
+        color: $base-btn-color;
+    }
+}
+
+.review-item{
+    margin-bottom: 24px;
+    .comment-item{
+        padding-top: 26px;
+    }
+}
+
+.review-item_card{
+    padding: 0 12px;
+    display: flex;
+    margin-bottom: -18px;
+    .card-item_author,
+    .card-item_name,
+    .range-mix,
+    .user_rate-box{
+        display: none;
+    }
+
+    .card-item{
+        margin-bottom: 0;
+    }
+
+    .card-item_description{
+        position: absolute;
+        right: -116px;
+        bottom: 22px;
+    }
+
+    .recomendation-item_values{
+        margin-top: 12px;
+        margin-bottom: 16px;
+    }
+}
+
+.review-item_card-data{
+    margin-left: 16px;
+
+    .book_item-name{
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.33;
+    }
+
+    .book_item-author{
+        a{
+            font-size: 12px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+    }
+}
+
+
+.authors_books-counter{
+    display: none;
+    margin-bottom: 24px;
+    li{
+        position: relative;
+        &:not(:last-child):after{
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            width: 1px;
+            height: 10px;
+            background: $base-btn-color;
+        }
+        a{
+            font-size: 10px;
+            text-transform: uppercase;
+            color: $base-btn-color;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 24px;
+            &:hover{
+                color: #4a4a4a;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .author_item{
+        padding: 24px 39px 0;
+    }
+
+    .author_item-about{
+        display: flex;
+        padding: 0;
+    }
+
+    .author_item-content{
+        margin-left: 30px;
+        .book_item-menu.tablet{
+            padding-left: 0;
+        }
+    }
+    
+    .author_item-card{
+        .card-item{
+            display: block;
+            min-width: 210px;
+            max-width: 210px;
+        }
+        .card-item_img{
+            height: 327px;
+            img{
+                height: 100%;
+            }
+        }
+
+        .card-item_description{
+            margin: 0;
+        }
+
+        .card-item_rating{
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .average_rate{
+            font-size: 32px;
+        }
+
+        .rightholders-btn{
+            margin-top: 24px;
+        }
+    }
+
+    .authors-fulname{
+        text-align: left;
+        font-size: 16px;
+        color: $base-text-color;
+        line-height: 1.75;
+    }
+
+    .authors_name-translate{
+        display: flex;
+        font-size: 26px;
+        align-items: center;
+        margin: 0;
+    }
+    .authors_date{
+        margin: 0 0 0 8px;
+    }
+
+    .authors_books-counter{
+        display: flex;
+    }
+
+    .authors_books-btn_box{
+        justify-content: flex-start;
+    }
+
+    .authors_biography p{
+        height: 145px;
+    }
+
+    .authors_content-item{
+        font-size: 14px;
+    }
+
+    .authors_content{
+        max-height: 150px;
+    }
+
+    .authors_books-share_btn{
+        width: auto;
+        background-position: 12px center;
+        padding-left: 36px;
+        padding-right: 12px;
+        span{
+            display: inline;
+        }
+    }
+
+    .review-item_card-data{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .review-item_card{
+        .card-item{
+            min-width: 138px;
+            max-width: 138px;
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+        }
+        .card-item_img{
+            height: 213px;
+        }
+    }
+    .review-item_card .card-item_description{
+        right: -125px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .author_item{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .author_item-card{
+        .card-item{
+            min-width: 284px;
+            max-width: 284px;
+        }
+
+        .card-item_img{
+            height: 438px;
+        }
+    }
+
+    .author_item-content{
+        margin-left: 96px;
+    }
+
+    .authors-fulname{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .authors_name-translate{
+        font-size: 32px;
+    }
+    .authors_date{
+        font-size: 14px;
+    }
+
+    .authors_biography p{
+        height: 195px;
+        font-size: 18px;
+    }
+
+    .authors_content-item a{
+        font-family: $p_semi;
+    }
+    
+    .authors_content-item{
+        margin-left: 16px;
+    }
+}

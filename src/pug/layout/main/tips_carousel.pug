@@ -1,0 +1,32 @@
+.tips-carousel
+    .box
+        .bd-example
+            #carouselExampleCaptions.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
+                    li(data-target='#carouselExampleCaptions', data-slide-to='1')
+                    li(data-target='#carouselExampleCaptions', data-slide-to='2')
+
+                .carousel-inner
+                    .carousel-item.tips-item.active
+                        .carousel-item_container
+                            img(src='./img/tips_carousel/2.webp', alt='...')
+                            .tips-carousel_text
+                                h5.tips-carousel_header Используйте поиск
+                                p.tips-carousel_content Найдите книгу, автора, подборку, издательство, жанр, настроение или друга на Книгогид
+
+                    .carousel-item.tips-item
+                        .carousel-item_container
+                            img(src='./img/tips_carousel/1.webp', alt='...')
+                            .tips-carousel_text
+                                h5.tips-carousel_header Оценивайте книги
+                                p.tips-carousel_content Исследуйте нашу огромную библиотеку, будьте в курсе последних новинок.
+
+                    .carousel-item.tips-item
+                        .carousel-item_container
+                            img(src='./img/tips_carousel/3.webp', alt='...')
+                            .tips-carousel_text 
+                                h5.tips-carousel_header Создавайте полки
+                                p.tips-carousel_content Создавайте полки с книгами, которые вы прочитали, подписывайтесь на полки интересных пользователей.
+
+        button.tips-carousel_btn Зарегистрироваться

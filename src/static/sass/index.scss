@@ -1,0 +1,96 @@
+@import '_vars_and_mixins.scss';
+@import '_fonts.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: $p_reg;
+    font-size: 14px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $base-text-color;
+}
+
+button{
+    cursor: pointer;
+}
+
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+footer{
+    flex: 0 0 auto;
+}
+
+.box{
+    max-width: 1200px;
+    padding: 0 12px;
+    margin: 0 -15px 0 auto;
+}
+
+.colored{
+    background: #f9f8f8;
+}
+
+.blur_bg_box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0,0,0,.3);
+    background-attachment: fixed;
+    filter: blur(10px);
+}
+
+@media screen and (min-width: 768px){
+    .box{
+        margin: 0 -15px 0 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .box{
+        margin: 0 auto;
+    }
+}
+
+@import './header.scss';
+@import './start.scss';
+@import './compilation_section.scss';
+@import './card_item.scss';
+@import './tips_carousel.scss';
+@import './compilation_collections.scss';
+@import './footer.scss';
+@import './recomendation_section.scss';
+@import './modals.scss';
+@import './book_on_shelf.scss';
+@import './book_item.scss';
+@import './comment.scss';
+@import './pagination.scss';
+@import './up_btn.scss';
+@import './author_item.scss';

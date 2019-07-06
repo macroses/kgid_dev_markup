@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        .popup-box
+            // можно добавлять success, info, warning, error
+            .popup.warning Success! This is positive notification.
+        .wrapper
+            
+            include ../layout/header/header.pug
+
+            main
+                section.promo
+                    .promo-img
+                        img(src="./img/promo-start.webp", alt="")
+                    .promo-title
+                        h1.promo-title_header Получите персональную <span>книжную подборку</span>
+                        .promo-title_tip Расскажите, какие книги вам нравятся!
+                        a(href="").promo-compilation_link Получить подборку
+                // добавляем в card-item .norange, чтобы убрать ползунок.
+                include ../layout/main/compilation_section.pug
+
+                include ../layout/main/tips_carousel.pug
+
+                include ../layout/main/compilation_collections.pug
+
+                include ../layout/main/compilation_section.pug
+
+                include ../layout/main/compilation_collections.pug
+
+            include ../layout/footer/footer.pug
+        
+            include ../layout/main/modals.pug
+        
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")

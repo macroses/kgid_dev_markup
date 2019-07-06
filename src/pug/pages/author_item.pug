@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Author
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        
+        .wrapper
+            include ../layout/header/header.pug
+
+            main
+                .author_item
+                    .author_item-top_menu
+                    .author_item-about
+                        .author_item-card
+                            include ../layout/main/card_item.pug
+                            button.rightholders-btn Правообладателям
+                        .author_item-content
+                            .book_item-menu.tablet
+                                ul.recomendation-item_values
+                                    li 345
+                                    li 66
+                                    li 26647
+                                a.bug-report_btn(href="") <span>i</span> Сообщить об ошибке
+                            .authors-fulname Oscar Fingal O'Flahertie Wills Wilde
+                            .authors_name-translate Оскар Уайльд 
+                                .authors_date 16.10.1854 – 30.11.1900
+                            ul.authors_books-counter
+                                li
+                                    a(href="") 57 произведений
+                                li
+                                    a(href="") 1023 изданий
+                                li
+                                    a(href="") на 5 языках
+                            .authors_books-btn_box
+                                a.authors_books-link(href="") 975 книг автора
+                                button.authors_books-share_btn
+                                    span Поделиться
+                            ul.tags-list
+                                li
+                                    a(href="") Биографии
+                                li
+                                    a(href="") Биографии
+                                li
+                                    a(href="") Биографии
+                                li
+                                    a(href="") Биографии
+                                li
+                                    a(href="") Биографии
+                                li
+                                    a(href="") Биографии
+                                li
+                                    a(href="") Биографии
+                                li
+                                    a(href="") Биографии
+                            .authors_biography
+                                p
+                                    |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                    |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец. 
+                                    |Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                    | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать 
+                                    |— светская дама, писавшая стихи об Ирландии и 
+                                    |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                    |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец. 
+                                    |Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                    | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать 
+                                    |— светская дама, писавшая стихи об Ирландии и 
+                                    |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                    |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец. 
+                                    |Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                    | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать 
+                                    |— светская дама, писавшая стихи об Ирландии и 
+                                    |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
+                                    |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец. 
+                                    |Родился 16 октября 1854 в Дублине в весьма известной семье. Отец, сэр Уильям Уайльд,
+                                    | был врачом-офтальмологом с мировым именем, автором множества научных трудов; мать 
+                                    |— светская дама, писавшая стихи об Ирландии и 
+                                button.open-fragment_btn Развернуть
+                            .authors_content
+                                .authors_content-genre Романы
+                                .authors_content-item
+                                    span.year 1890
+                                    a(href="") Портрет Дориана Грея / The Picture of Dorian Gray  
+                                .authors_content-item
+                                    span.year 1890
+                                    a(href="") Портрет Дориана Грея / The Picture of Dorian Gray
+                                .authors_content-item
+                                    span.year 1890
+                                    a(href="") Портрет Дориана Грея / The Picture of Dorian Gray
+                                .authors_content-item
+                                    span.year 1890
+                                    a(href="") Портрет Дориана Грея / The Picture of Dorian Gray
+                                .authors_content-item
+                                    span.year 1890
+                                    a(href="") Портрет Дориана Грея / The Picture of Dorian Gray
+                            button.open-fragment_btn Развернуть
+
+                include ../layout/main/compilation_section.pug
+
+                .authors_review
+                    .book_item-comments
+                        include ../layout/main/review_item.pug
+                        include ../layout/main/review_item.pug
+
+                .comment-pagination
+                    include ../layout/main/pagination.pug
+
+            include ../layout/footer/footer.pug
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")

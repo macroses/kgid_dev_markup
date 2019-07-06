@@ -1,0 +1,114 @@
+$base-text-color: #354052;
+$base-btn-color: #1991eb;
+
+
+$p_reg: proxima_regular;
+$p_bold: proxima_bold;
+$p_semi: proxima_semibold;
+$p_light: proxima_light;
+$p_extra: proxima_extrabold;
+$adelle: AdelleCyrillic;
+
+$base-shadow: 4px 2px 12px 0 rgba(75, 76, 78, 0.31);
+
+@mixin btn-colored{
+    background: $base-btn-color;
+    color: #fff;
+    border-radius: 4px;
+    border: 0;
+    padding: 9px 37px;
+    font-family: $p_semi;
+    text-decoration: none;
+    &:hover{
+        color: #fff;
+        text-decoration: none;
+        box-shadow: 0 0 4px 0 rgb(25, 145, 235);
+    }
+}
+
+@mixin btn-neutral{
+    background: linear-gradient(to bottom, #fefefe, #f2f4f7);
+    color: $base-text-color;
+    font-family: $p_semi;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 9px 37px;
+}
+
+@mixin btn-transparent {
+    background: transparent;
+    color: $base-text-color;
+    font-family: $p_semi;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    &:hover{
+        box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31);
+    }
+    &:active{
+        background-color: rgba(10, 10, 10, 0.08);
+    }
+}
+
+@mixin btn-gradient {
+    border: 0;
+    background-image: linear-gradient(102deg, #1991eb, rgb(78, 42, 206));
+    color: #fff;
+    padding: 8px 80px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-size: 200%;
+    background-position: 100% 0;
+    box-shadow: 2px 4px 14px 0 rgba(74, 74, 74, 0.28);
+    transition: .3s;
+    font-family: $p_semi;
+    &:hover{
+        box-shadow: 0 0 3px 0 rgb(25, 145, 235);
+    }
+    &.disabled{
+        pointer-events: none;
+        opacity: .5;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder           { @content; }
+    &::-moz-placeholder          { @content; }
+    &:-ms-input-placeholder      { @content; }  
+}
+
+@mixin link-neutral {
+    color: $base-text-color;
+    text-decoration: none;
+    outline: 0;
+    &:hover{
+        color: $base-btn-color;
+    }
+    &:active{
+        color: $base-text-color;
+    }
+}
+
+@mixin link-neutral-light {
+    color: $base-text-color;
+    text-decoration: none;
+    outline: 0;
+    &:hover{
+        color: $base-btn-color;
+    }
+    &:active{
+        color: $base-text-color;
+    }
+}
+
+@mixin link-color {
+    color: $base-btn-color;
+    text-decoration: none;
+    outline: 0;
+    &:hover{
+        text-decoration: underline;    
+    }
+    &:active{
+        color: $base-text-color;
+    }
+}

@@ -1,0 +1,303 @@
+footer{
+    .header-nav{
+        margin: 0;
+        margin-bottom: 19px;
+        ul{
+            li{
+                a{
+                    color: $base-btn-color;
+                }
+            }
+        }
+    }
+
+    .box{
+        margin: 0 auto;
+    }
+}
+
+.footer{
+    background: #f9f8f8;
+    padding: 19px 0 0;
+    .logo{
+        margin-bottom: 16px;
+        display: inline-block;
+        img{
+            width: 190px;
+        }
+    }
+
+    // бутстрап переопределим для аккордеона
+
+    .card-header{
+        padding: 0;
+        border: 0;
+        background: transparent;
+        outline: 0;
+    }
+    .card{
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #8fb3cc!important;
+    }
+
+    .card-body{
+        padding: 0px 26px 16px;
+    }
+}
+
+.footer-tagline{
+    font-family: $p_extra;
+    font-size: 22px;
+    line-height: 1.23;
+    color: #1991eb;
+    margin-bottom: 8px;
+}
+
+.footer-tip{
+    color: $base-text-color;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.footer-reg_btn{
+    @include btn-gradient;
+    display: block;
+    width: 100%;
+}
+
+
+
+.accordion-opener{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    font-size: 18px;
+    font-family: $p_semi;
+    outline: 0;
+    padding: 16px 8px;
+    &:focus{
+        outline: 0;
+    }
+    .accordion-icon{
+        display: flex;
+        span{
+            display: inline-block;
+            width: 14px;
+            height: 2px;
+            background: $base-text-color;
+            &:nth-child(2){
+                transition: .2s;
+                transform: rotate(90deg) translateY(14px);
+            }
+        }
+    }
+
+    &.change-icon{
+        .accordion-icon{
+            span{
+                &:nth-child(2){
+                    transform: rotate(0) translateY(0px) translateX(-14px);
+                }
+            }
+        }
+    }
+}
+
+.footer-list{
+    color: $base-text-color;
+    line-height: 1.5;
+    li{
+        margin-bottom: 8px;
+        a{
+            @include link-neutral;
+        }
+    }
+}
+
+.footer-main{
+    .accordion{
+        margin-bottom: 32px;
+    }
+}
+
+.footer-copy{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            margin-right: 16px;
+            position: relative;
+            margin-bottom: 16px;
+            &:not(:last-child):before{
+                content: '';
+                position: absolute;
+                top: 4px;
+                right: -8px;
+                width: 1px;
+                height: 12px;
+                background: #7f8fa4;
+            }
+            a{
+                @include link-neutral-light;
+                font-size: 13px;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-content{
+        display: flex;
+        padding: 20px 0px;
+        border-bottom: solid 1px #8fb3cc;
+    }
+
+    .footer-header{
+        flex: 1;
+        max-width: 206px;
+        margin-right: 32px;
+    }
+
+    .footer-main{
+        flex: 2;
+        .accordion{
+            display: flex;
+            flex-direction: column;
+            max-height: 500px;
+            flex-wrap: wrap;
+        }
+    }
+
+    .footer{
+        .logo{
+            margin-bottom: 24px;
+            img{
+                width: 195px;
+            }
+        }
+
+        .card-body{
+            padding: 0;
+        }
+
+        .card{
+            border-bottom: 0!important;
+        }
+
+        .collapse:not(.show){
+            display: block;
+        }
+    }
+
+    .accordion-opener{
+        pointer-events: none;
+        padding: 0;
+        font-size: 12px;
+        line-height: 1.75;
+        .accordion-icon{
+            display: none;
+        }
+    }
+
+    .footer-tagline{
+        font-size: 26px;
+    }
+
+    .footer-reg_btn{
+        width: auto;
+        padding: 8px 36px;
+    }
+
+    footer{
+        .header-nav{
+            display: none;
+        }
+        .box{
+            margin: 0 0px 0 30px;
+        }
+    }
+
+    .footer-list li{
+        margin: 0;
+    }
+
+    .footer-list li a{
+        font-size: 10px;
+        line-height: 2.5;
+        margin: 0;
+    }
+
+    .footer-copy{
+        padding: 16px 0px;
+        ul{
+            li{
+                margin-bottom: 8px;
+                a{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .footer{
+        .box{
+            margin: 0 auto;
+        }
+    }
+
+    .footer-main{
+        .accordion{
+            flex-direction: row;
+        }
+    }
+
+    .footer{
+        .card{
+            flex: 1;
+        }
+    }
+
+    .footer .logo img{
+        width: 157px;
+    }
+
+    .footer-content{
+        padding: 20px 30px;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 186px;
+            height: 233px;
+            background-color: #f9f8f8;
+            background-image: url(../img/footer-img.png);
+            background-repeat: no-repeat;
+            right: -34px;
+            bottom: -32px;
+        }
+    }
+
+    .accordion-opener{
+        font-size: 18px;
+        color: $base-text-color;
+    }
+
+    .footer-list li a{
+        font-size: 14px;
+        line-height: 1.93;
+        color: #7f8fa4;
+    }
+    .footer .card .card-header{
+        margin-bottom: 10px;
+    }
+}
