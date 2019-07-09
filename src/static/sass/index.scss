@@ -34,7 +34,6 @@ button{
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
 main{
@@ -48,7 +47,7 @@ footer{
 .box{
     max-width: 1200px;
     padding: 0 12px;
-    margin: 0 -15px 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .colored{
@@ -67,17 +66,6 @@ footer{
     filter: blur(10px);
 }
 
-@media screen and (min-width: 768px){
-    .box{
-        margin: 0 -15px 0 30px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .box{
-        margin: 0 auto;
-    }
-}
 
 @import './header.scss';
 @import './start.scss';
@@ -94,3 +82,4 @@ footer{
 @import './pagination.scss';
 @import './up_btn.scss';
 @import './author_item.scss';
+@import './my_profile.scss';

@@ -15,33 +15,6 @@ $(function () {
         $('.header-search_box input').addClass('open');
     });
 
-    // кастомный скролл
-    $("body").niceScroll({
-        autohidemode: false,
-        cursorwidth: '8px'
-    });
-    $(".compilation-section_list").niceScroll({
-        autohidemode: false,
-        cursorwidth: '8px',
-        cursorcolor: "#a8aab7"
-    });
-    $(".compilation-collections").niceScroll({
-        autohidemode: false,
-        cursorwidth: '8px',
-        cursorcolor: "#a8aab7"
-    });
-    $(".step-item_collection").niceScroll({
-        autohidemode: false,
-        cursorwidth: '8px',
-        cursorcolor: "#a8aab7"
-    });
-    $(".add_shelf_book-list").niceScroll({
-        autohidemode: false,
-        cursorwidth: '8px',
-        cursorcolor: "#a8aab7"
-    });
-
-
     //   ползунок
     $('.range-mix').on('input', function (e) {
         $(e.target).css({
@@ -100,7 +73,7 @@ $(function () {
     // показать мобильное меню.
 
     $('.header-user').click(function () {
-        $('.header-user_settings').toggleClass('open');
+        $('.dropdown-block').toggleClass('open');
     });
 
     // modal
@@ -192,5 +165,19 @@ $(function () {
             $(this).text('Развернуть');
         }
     });
+
+
+    // кнопка настроек в профиле.
+
+    $(document).click(function(e) {
+        let cont = $('.book_item-menu_btn');
+
+        if(!cont.is(e.target) && cont.has(e.target).length === 0) {
+            $('.book_item-menu_btn .dropdown-block').fadeOut(0);
+        }
+        else{
+            $('.book_item-menu_btn .dropdown-block').fadeIn(0);
+        }
+    })
 
 });

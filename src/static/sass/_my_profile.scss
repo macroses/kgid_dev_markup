@@ -1,0 +1,548 @@
+.profile{
+    margin-top: 24px;
+    text-align: center;
+}
+
+.profile_avatar{
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 12px;
+    position: relative;
+}
+
+.profile_img{
+    width: 100%;
+    height: 100%;
+    background: url(https://profile.ru/wp-content/uploads/2019/07/trump-firefox-782x440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 22px 10px rgba(74, 74, 74, 0.33);
+}
+
+.profile_rank{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    span{
+        background: #4e2ace;
+        display: inline-block;
+        color: #fff;
+        font-size: 10px;
+        font-family: $p_bold;
+        text-transform: uppercase;
+        line-height: 1.9;
+        padding: 0 8px;
+        border-radius: 30px;
+    }
+}
+
+.profile_name{
+    font-size: 18px;
+    line-height: 1.33;
+    color: $base-text-color;
+    font-family: $p_semi;
+}
+
+.profile_username{
+    color: #7f8fa4;
+    margin-bottom: 8px;
+}
+
+.profile_soc{
+    display: inline-block;
+    a{
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        margin: 0 3px;
+    }
+}
+
+.profile_soc-list{
+    display: flex;
+    flex: auto;
+    width: auto;
+    padding: 3px 10px;
+    background: #f9f8f8;
+    border-radius: 30px;
+    margin-bottom: 21px;
+}
+
+.profile_soc-item{
+    &.fb{
+        background: url(../img/icons/social/profile_fb.svg) no-repeat;
+        background-position: center;
+    }
+    &.tw{
+        background: url(../img/icons/social/profile_tw.svg) no-repeat;
+        background-position: center;
+    }
+    &.in{
+        background: url(../img/icons/social/profile_in.svg) no-repeat;
+        background-position: center;
+    }
+    &.plus{
+        background: url(../img/icons/social/profile_plus.svg) no-repeat;
+        background-position: center;
+    }
+}
+
+.profile_tabs{
+    .nav-item{
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.2;
+            font-family: $p_semi;
+            color: #a3a5b1;
+            text-decoration: none;
+            text-transform: uppercase;
+            &.active{
+                color: $base-text-color;
+            }
+        }
+    }
+
+    .nav-pills{
+        justify-content: space-between;
+        padding: 12px 15px;
+        border-top: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .value{
+        font-size: 18px;
+    }
+    .title{
+        font-size: 10px;
+        font-family: $p_bold;
+    }
+}
+
+.profile_books-filter{
+    display: flex;
+    flex-direction: column;
+    padding: 21px 40px 32px;
+}
+
+.profile_books-filter_item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19px;
+    padding-bottom: 8px;
+    &:not(:last-child) {
+        border-bottom: 1px solid #f9f8f8;
+    }
+
+    &:hover{
+        text-decoration: none;
+    }
+    &.active{
+        font-family: $p_semi;
+    }
+}
+
+.profile_books-list{
+    text-align: left;
+    padding: 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .card-item{
+        margin: 0 0px 24px;
+    }
+
+    .review-item{
+        .card-item{
+            margin-bottom: 0;
+        }
+        .card-item:not(:nth-child(4n+4)){
+            margin-right: 32px;
+        }
+    }
+}
+
+.profile_data{
+    position: relative;
+    .book_item-menu_btn{
+        display: none;
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        span{
+            background: #d8d8d8;
+        }
+
+        .dropdown-block{
+            position: absolute;
+            right: 0;
+            top: 100%;
+            display: none;
+            height: auto;
+        }
+    }
+}
+
+.profile_data-right{
+    .title{
+        font-size: 12px;
+        font-family: $p_semi;
+        color: #7f8fa4;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+}
+
+.profile_self-info{
+    display: none;
+    text-align: left;
+    p{
+        height: 82px;
+        overflow: hidden;
+        line-height: 1.5;
+        margin: 0;
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 144px;
+            height: 25px;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(to right, rgba(249, 248, 248, 0), rgb(249, 248, 248));
+        }
+    }
+    .open-fragment_btn{
+        margin-bottom: 12px;
+    }
+}
+
+.profile_awards{
+    display: none;
+    ul{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        li{
+            width: 47px;
+            height: 47px;
+            background: rgba(0,0,0,.3);
+            border-radius: 50%;
+            margin-right: -20px;
+            transition: .3s;
+            transition-delay: .1s;
+            &:hover{
+                transform: translateY(-15px);
+            }
+
+            &.fire-aw{
+                background: url(../img/awards/1.png) no-repeat;
+                background-size: cover;
+            }
+            &.brain-aw{
+                background: url(../img/awards/2.png) no-repeat;
+                background-size: cover;
+            }
+            &.pumpkin-aw{
+                background: url(../img/awards/3.png) no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.last_events{
+    display: none;
+    width: 286px;
+    margin-left: 120px;
+    margin-top: 54px;
+    .title{
+        font-family: $p_semi;
+        line-height: 1.5;
+        border-bottom: 1px solid #f5f2ef;
+        margin-bottom: 8px;
+        padding: 0 15px 10px;
+    }
+}
+
+.event-item_header{
+    display: flex;
+    margin-bottom: 8px;
+    .user_avatar{
+        min-width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: url(http://www.sncmedia.ru/upload/iblock/54f/54f43ca82d7fac079c7b14438a4d891d_w877_h500_crp.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-right: 8px;
+    }
+
+    .user_name{
+        display: inline-block;
+        margin-right: 8px;
+        color: #9b9b9b;
+        font-size: 12px;
+    }
+
+    .event-name{
+        color: #9b9b9b;
+        font-size: 10px;
+    }
+}
+
+.event-title{
+    font-size: 12px;
+    font-family: $p_semi;
+    line-height: 1.33;
+    color: $base-text-color;
+}
+
+.event-item_content{
+    background: #f9f8f8;
+    border-radius: 4px;
+    padding: 8px 16px;
+    p{
+        overflow: hidden;
+        line-height: 1.5;
+        color: $base-text-color;
+        max-height: 103px;
+        margin-bottom: 0;
+    }
+}
+
+.event-item{
+    margin-bottom: 16px;
+}
+
+.event-item_list{
+    position: relative;
+    max-height: 700px;
+    overflow: hidden;
+    padding: 0 15px;
+    margin-bottom: 60px;
+    &:after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 63px;
+        left: 0;
+        bottom: 0;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(249, 248, 248));
+    }
+}
+
+.profile-recomendation{
+    display: none;
+    flex-direction: column;
+}
+
+.recomendation-item{
+    height: 86px;
+    background: url(../img/recomendation/1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recomendation-item_link{
+    color: #fff;
+    font-family: $p_semi;
+    line-height: 1.5;
+    padding: 5px 14px;
+    background: #5ecabf;
+    border-radius: 4px;
+    &:hover{
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.profile_shelfs-list{
+    .shelf-container:hover{
+        border-color: transparent;
+    }
+}
+
+.profile-aside_authors,
+.profile_aside-compilation{
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.popular-author{
+    display: flex;
+    margin: 12px 0;
+    align-items: center;
+    font-family: $p_semi;
+    .user-avatar{
+        width: 32px;
+        height: 32px;
+        background: url(http://www.sncmedia.ru/upload/iblock/54f/54f43ca82d7fac079c7b14438a4d891d_w877_h500_crp.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-right: 8px;
+        border-radius: 50%;
+    }
+}
+
+.profile-event_link{
+    color: $base-btn-color;
+    display: inline-block;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .profile_data{
+        display: flex;
+        padding: 24px 40px 16px;
+        background: #f9f8f8;
+        .book_item-menu_btn{
+            display: flex;
+        }
+    }
+
+    .profile_data-left{
+        flex: 1;
+    }
+
+    .profile_data-right{
+        flex: 2;
+    }
+
+    .profile_self-info{
+        display: block;
+    }
+
+    .profile_awards{
+        display: block;
+    }
+
+    .profile_tabs{
+        .nav-pills{
+            max-width: 513px;
+            margin: 0 auto;
+        }
+        .tab-content{
+            padding: 0 40px;
+        }
+    }
+
+    .profile_books-filter{
+        width: 160px;
+        padding: 0;
+        margin: 16px auto 0px;
+    }
+
+    .profile_tabs .value{
+        font-size: 26px;
+    }
+
+    .profile_soc-list{
+        background: #fff;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .profile_books-list{
+        .card-item{
+            min-width: 138px;
+            max-width: 138px;
+        }
+        .card-item_img{
+            height: 213px;
+        }
+        .card-item_author{
+            font-size: 12px;
+        }
+        .card-item_name{
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .profile{
+        max-width: 831px;
+    }
+
+    .profile-container{
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .profile-tab_container{
+        display: flex;
+    }
+
+    .profile_books-list{
+        width: 600px;
+        padding: 0;
+        justify-content: flex-start;
+        .card-item:not(:nth-child(4n+4)){
+            margin-right: 16px;
+        }
+    }
+
+    .profile_tabs .nav-pills{
+        max-width: 600px;
+        padding: 12px 0;
+        margin: 0 0 32px auto;
+    }
+
+    .profile_tabs .tab-content{
+        padding: 0;
+    }
+
+    .profile_data{
+        padding-left: 0;
+    }
+
+    .profile_data-left{
+        padding: 0 16px;
+    }
+    .profile_data-right{
+        flex: 3;
+    }
+
+    .profile_self-info{
+        p{
+            height: 63px;
+        }
+    }
+
+    .profile_avatar{
+        width: 124px;
+        height: 124px;
+    }
+
+    .profile_awards{
+        ul{
+            li{
+                width: 83px;
+                height: 83px;
+                margin-right: -34px;
+            }
+        }
+    }
+
+    .last_events{
+        display: block;
+    }
+
+    .profile-recomendation{
+        display: flex;
+    }
+}

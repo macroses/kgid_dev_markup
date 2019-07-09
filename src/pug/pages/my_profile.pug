@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        
+        .wrapper
+            include ../layout/main/up_btn.pug
+            include ../layout/header/header.pug
+
+            main
+                .profile-container
+                    .profile
+                        .profile_data
+                            .book_item-menu_btn
+                                span
+                                span
+                                span
+                                .dropdown-block
+                                    .dropdown-block_item
+                                        a(href="") Настройки
+                                    .dropdown-block_item
+                                        a(href="") Выход
+                            .profile_data-left
+                                .profile_avatar
+                                    .profile_img
+                                    .profile_rank <span>Любитель</span>
+                                .profile_name Ульяна Сергеевна
+                                .profile_username @uljana1987
+                                .profile_soc
+                                    .profile_soc-list
+                                        a.profile_soc-item.fb(href="")
+                                        a.profile_soc-item.tw(href="")
+                                        a.profile_soc-item.in(href="")
+                                        a.profile_soc-item.plus(href="")
+                            .profile_data-right
+                                .profile_self-info
+                                    .title О себе
+                                    p 
+                                        |Люблю читать и находить что-то новое, люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов. 
+                                        |Люблю поговорить о прочитанном с друзьями за чашкой чая. Люблю читать и находить что-то новое,
+                                        | люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов.
+                                        |Люблю читать и находить что-то новое, люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов. 
+                                        |Люблю поговорить о прочитанном с друзьями за чашкой чая. Люблю читать и находить что-то новое,
+                                        | люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов.
+                                        |Люблю читать и находить что-то новое, люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов. 
+                                        |Люблю поговорить о прочитанном с друзьями за чашкой чая. Люблю читать и находить что-то новое,
+                                        | люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов.
+                                    button.open-fragment_btn Подробнее
+                                .profile_awards
+                                    .title Награды
+                                    ul
+                                        li.fire-aw
+                                        li.brain-aw
+                                        li.pumpkin-aw
+                                        li.fire-aw
+                                        li.brain-aw
+                                        li.pumpkin-aw
+
+                        .profile_tabs
+                            ul#pills-tab.nav.nav-pills(role='tablist')
+                                li.nav-item
+                                    a#pills-books-tab(data-toggle='pill', href='#pills-books', role='tab', aria-controls='pills-books', aria-selected='true')
+                                        span.value 148
+                                        span.title книг
+                                li.nav-item
+                                    a#pills-shelfs-tab.active(data-toggle='pill', href='#pills-shelfs', role='tab', aria-controls='pills-shelfs', aria-selected='false')
+                                        span.value 12
+                                        span.title полок
+                                li.nav-item
+                                    a#pills-review-tab(data-toggle='pill', href='#pills-review', role='tab', aria-controls='pills-review', aria-selected='false')
+                                        span.value 345
+                                        span.title рецензий
+                                li.nav-item
+                                    a#pills-follow-tab(data-toggle='pill', href='#pills-follow', role='tab', aria-controls='pills-follow', aria-selected='false')
+                                        span.value 9
+                                        span.title подписок
+                            #pills-tabContent.tab-content
+                                #pills-books.tab-pane.fade(role='tabpanel', aria-labelledby='pills-books-tab')
+                                    .profile-tab_container
+                                        .profile_books-filter
+                                            a.profile_books-filter_item.active(href="")
+                                                span Просмотренные
+                                                span 8
+                                            a.profile_books-filter_item(href="")
+                                                span Оцененные
+                                                span 140
+                                            a.profile_books-filter_item(href="")
+                                                span Все
+                                                span 148
+                                        .profile_books-list
+                                            include ../layout/main/card_item.pug
+                                            include ../layout/main/card_item.pug
+                                            include ../layout/main/card_item.pug
+                                            include ../layout/main/card_item.pug
+                                            include ../layout/main/card_item.pug
+                                            include ../layout/main/card_item.pug
+                                            include ../layout/main/card_item.pug
+
+                                #pills-shelfs.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-shelfs-tab') 
+                                    .profile-tab_container
+                                        .profile_books-filter
+                                            a.profile_books-filter_item.active(href="")
+                                                span Просмотренные
+                                                span 8
+                                            a.profile_books-filter_item(href="")
+                                                span Оцененные
+                                                span 140
+                                            a.profile_books-filter_item(href="")
+                                                span Все
+                                                span 148
+                                        .profile_books-list
+                                            .profile_shelfs-list
+                                                include ../layout/main/book_on_shelf.pug
+                                                include ../layout/main/book_on_shelf.pug
+                                                include ../layout/main/book_on_shelf.pug
+
+                                #pills-review.tab-pane.fade(role='tabpanel', aria-labelledby='pills-review-tab') 
+                                    .profile-tab_container
+                                        .profile_books-filter
+                                            a.profile_books-filter_item.active(href="")
+                                                span Просмотренные
+                                                span 8
+                                            a.profile_books-filter_item(href="")
+                                                span Оцененные
+                                                span 140
+                                            a.profile_books-filter_item(href="")
+                                                span Все
+                                                span 148
+                                        .profile_books-list
+                                            .authors_review
+                                                .book_item-comments
+                                                    include ../layout/main/review_item.pug
+                                                    include ../layout/main/review_item.pug
+
+                                #pills-follow.tab-pane.fade(role='tabpanel', aria-labelledby='pills-follow-tab') ...
+                    .last_events
+                        .title Последние рецензии
+                        .event-item_list
+                            .event-item
+                                .event-item_header
+                                    .user_avatar
+                                    .event-item_title
+                                        a.user_name(href="") @nikitavsepobrito
+                                        span.event-name о книге
+                                        .event-title Сам себе MBA. Самообразование на 100%
+                                .event-item_content
+                                    p
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                            .event-item
+                                .event-item_header
+                                    .user_avatar
+                                    .event-item_title
+                                        a.user_name(href="") @nikitavsepobrito
+                                        span.event-name о книге
+                                        .event-title Сам себе MBA. Самообразование на 100%
+                                .event-item_content
+                                    p
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                            .event-item
+                                .event-item_header
+                                    .user_avatar
+                                    .event-item_title
+                                        a.user_name(href="") @nikitavsepobrito
+                                        span.event-name о книге
+                                        .event-title Сам себе MBA. Самообразование на 100%
+                                .event-item_content
+                                    p
+                                        |Если вы становитесь такой же как мама
+
+                        .title Популярные авторы
+                        .profile-aside_authors
+                            .event-item
+                                a(href="").popular-author
+                                    .user-avatar
+                                    .user-name Nikita Vse Pobrito
+                            .event-item
+                                a(href="").popular-author
+                                    .user-avatar
+                                    .user-name Masha Prostokvasha
+                            .event-item
+                                a(href="").popular-author
+                                    .user-avatar
+                                    .user-name Masha Prostokvasha
+
+                        .title Подборки для вас
+                        .profile_aside-compilation
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+
+                        .profile-recomendation
+                            .recomendation-item
+                                a.recomendation-item_link(href="") Новое на сайте
+                            .recomendation-item
+                                a.recomendation-item_link(href="") Идем в город
+                            .recomendation-item
+                                a.recomendation-item_link(href="") Прокачай себя и еще кого-нибудь
+
+
+            include ../layout/footer/footer.pug
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")

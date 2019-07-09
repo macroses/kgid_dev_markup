@@ -35,6 +35,12 @@
     flex-direction: column;
     margin-left: 15px;
     padding-right: 16px;
+    position: relative;
+    .book_item-menu_btn{
+        position: absolute;
+        right: 12px;
+        top: 8px;
+    }
 }
 
 .shelf_book-list_item-title{

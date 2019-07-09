@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Start</title>
+    <link rel="stylesheet" href="css/libs.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="up_btn"><span></span></div>
+      <header>
+        <div class="header-container">
+          <!-- В header-box добавлять registered, для отображения шапки зареганных юзеров-->
+          <div class="header-box registered"><a class="logo" href=""><img src="./img/main-logo.svg" alt=""/></a>
+            <div class="header-login">
+              <button class="registration-btn">Зарегистрироваться</button>
+              <button class="sign-btn">Войти</button>
+              <div class="header-user_block">
+                <div class="header-search_btn-mobile"></div>
+                <div class="header-notice"></div>
+                <div class="header-user">
+                  <div class="header-user_avatar"></div>
+                </div>
+              </div>
+            </div>
+            <nav class="header-nav">
+              <ul>
+                <li class="active"><a href="">Что читают</a></li>
+                <li><a class="active" href="">Жанры</a></li>
+                <li><a href="">Авторы</a></li>
+                <li><a href="">Мои книги</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="profile-container">
+          <div class="profile">
+            <div class="profile_data">
+              <div class="book_item-menu_btn"><span></span><span></span><span></span>
+                <div class="dropdown-block">
+                  <div class="dropdown-block_item"><a href="">Настройки</a></div>
+                  <div class="dropdown-block_item"><a href="">Выход</a></div>
+                </div>
+              </div>
+              <div class="profile_data-left">
+                <div class="profile_avatar">
+                  <div class="profile_img"></div>
+                  <div class="profile_rank"><span>Любитель</span></div>
+                </div>
+                <div class="profile_name">Ульяна Сергеевна</div>
+                <div class="profile_username">@uljana1987</div>
+                <div class="profile_soc">
+                  <div class="profile_soc-list"><a class="profile_soc-item fb" href=""></a><a class="profile_soc-item tw" href=""></a><a class="profile_soc-item in" href=""></a><a class="profile_soc-item plus" href=""></a></div>
+                </div>
+              </div>
+              <div class="profile_data-right">
+                <div class="profile_self-info">
+                  <div class="title">О себе</div>
+                  <p>
+                     Люблю читать и находить что-то новое, люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов. 
+                    Люблю поговорить о прочитанном с друзьями за чашкой чая. Люблю читать и находить что-то новое,
+                    люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов.
+                    Люблю читать и находить что-то новое, люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов. 
+                    Люблю поговорить о прочитанном с друзьями за чашкой чая. Люблю читать и находить что-то новое,
+                    люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов.
+                    Люблю читать и находить что-то новое, люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов. 
+                    Люблю поговорить о прочитанном с друзьями за чашкой чая. Люблю читать и находить что-то новое,
+                    люблю наталкиваться на созвучные мне мысли у самых неожиданных авторов.
+                  </p>
+                  <button class="open-fragment_btn">Подробнее</button>
+                </div>
+                <div class="profile_awards">
+                  <div class="title">Награды</div>
+                  <ul>
+                    <li class="fire-aw"></li>
+                    <li class="brain-aw"></li>
+                    <li class="pumpkin-aw"></li>
+                    <li class="fire-aw"></li>
+                    <li class="brain-aw"></li>
+                    <li class="pumpkin-aw"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="profile_tabs">
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item"><a id="pills-books-tab" data-toggle="pill" href="#pills-books" role="tab" aria-controls="pills-books" aria-selected="true"><span class="value">148</span><span class="title">книг</span></a></li>
+                <li class="nav-item"><a class="active" id="pills-shelfs-tab" data-toggle="pill" href="#pills-shelfs" role="tab" aria-controls="pills-shelfs" aria-selected="false"><span class="value">12</span><span class="title">полок</span></a></li>
+                <li class="nav-item"><a id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-selected="false"><span class="value">345</span><span class="title">рецензий</span></a></li>
+                <li class="nav-item"><a id="pills-follow-tab" data-toggle="pill" href="#pills-follow" role="tab" aria-controls="pills-follow" aria-selected="false"><span class="value">9</span><span class="title">подписок</span></a></li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade" id="pills-books" role="tabpanel" aria-labelledby="pills-books-tab">
+                  <div class="profile-tab_container">
+                    <div class="profile_books-filter"><a class="profile_books-filter_item active" href=""><span>Просмотренные</span><span>8</span></a><a class="profile_books-filter_item" href=""><span>Оцененные</span><span>140</span></a><a class="profile_books-filter_item" href=""><span>Все</span><span>148</span></a></div>
+                    <div class="profile_books-list">
+                      <div class="card-item">
+                        <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                          <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                          <div class="rate-num"> </div>
+                          <div class="user_rate-box">10</div>
+                          <div class="card-select_item">
+                            <label>
+                              <input type="checkbox"/><span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="card-item_description">
+                          <div class="card-item_rating">
+                            <div class="average_rate">4.8</div>
+                            <div class="votes_counter">548 оценок</div>
+                          </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                        </div>
+                      </div>
+                      <div class="card-item">
+                        <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                          <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                          <div class="rate-num"> </div>
+                          <div class="user_rate-box">10</div>
+                          <div class="card-select_item">
+                            <label>
+                              <input type="checkbox"/><span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="card-item_description">
+                          <div class="card-item_rating">
+                            <div class="average_rate">4.8</div>
+                            <div class="votes_counter">548 оценок</div>
+                          </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                        </div>
+                      </div>
+                      <div class="card-item">
+                        <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                          <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                          <div class="rate-num"> </div>
+                          <div class="user_rate-box">10</div>
+                          <div class="card-select_item">
+                            <label>
+                              <input type="checkbox"/><span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="card-item_description">
+                          <div class="card-item_rating">
+                            <div class="average_rate">4.8</div>
+                            <div class="votes_counter">548 оценок</div>
+                          </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                        </div>
+                      </div>
+                      <div class="card-item">
+                        <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                          <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                          <div class="rate-num"> </div>
+                          <div class="user_rate-box">10</div>
+                          <div class="card-select_item">
+                            <label>
+                              <input type="checkbox"/><span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="card-item_description">
+                          <div class="card-item_rating">
+                            <div class="average_rate">4.8</div>
+                            <div class="votes_counter">548 оценок</div>
+                          </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                        </div>
+                      </div>
+                      <div class="card-item">
+                        <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                          <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                          <div class="rate-num"> </div>
+                          <div class="user_rate-box">10</div>
+                          <div class="card-select_item">
+                            <label>
+                              <input type="checkbox"/><span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="card-item_description">
+                          <div class="card-item_rating">
+                            <div class="average_rate">4.8</div>
+                            <div class="votes_counter">548 оценок</div>
+                          </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                        </div>
+                      </div>
+                      <div class="card-item">
+                        <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                          <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                          <div class="rate-num"> </div>
+                          <div class="user_rate-box">10</div>
+                          <div class="card-select_item">
+                            <label>
+                              <input type="checkbox"/><span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="card-item_description">
+                          <div class="card-item_rating">
+                            <div class="average_rate">4.8</div>
+                            <div class="votes_counter">548 оценок</div>
+                          </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                        </div>
+                      </div>
+                      <div class="card-item">
+                        <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                          <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                          <div class="rate-num"> </div>
+                          <div class="user_rate-box">10</div>
+                          <div class="card-select_item">
+                            <label>
+                              <input type="checkbox"/><span></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="card-item_description">
+                          <div class="card-item_rating">
+                            <div class="average_rate">4.8</div>
+                            <div class="votes_counter">548 оценок</div>
+                          </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade show active" id="pills-shelfs" role="tabpanel" aria-labelledby="pills-shelfs-tab"> 
+                  <div class="profile-tab_container">
+                    <div class="profile_books-filter"><a class="profile_books-filter_item active" href=""><span>Просмотренные</span><span>8</span></a><a class="profile_books-filter_item" href=""><span>Оцененные</span><span>140</span></a><a class="profile_books-filter_item" href=""><span>Все</span><span>148</span></a></div>
+                    <div class="profile_books-list">
+                      <div class="profile_shelfs-list">
+                        <div class="shelf-container">
+                          <div class="add_shelf_book-list_item">
+                            <div class="shelf_book-list_item-img"><img src="https://media-cdn.tripadvisor.com/media/photo-s/11/13/7b/3c/caption.jpg" alt=""/></div>
+                            <div class="shelf_book-list_item-content">
+                              <div class="book_item-menu_btn"><span></span><span></span><span></span>
+                                <div class="dropdown-block">
+                                  <div class="dropdown-block_item"><a href="">Настройки</a></div>
+                                  <div class="dropdown-block_item"><a href="">Выход</a></div>
+                                </div>
+                              </div>
+                              <div class="shelf_book-list_item-title"><span>Мотивационная литература про чето там Мотивационная литература про чето там</span></div>
+                              <div class="shelf_book-list_item-info"> 
+                                <div class="item-content_data">
+                                   <span class='compilation_books-counter'>20 книг</span>
+<span class='dot'></span>
+<span class='compilation_folllwers-counter'>32 подписок</span> <a class="share-link" href="">Поделиться</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="shelf-container">
+                          <div class="add_shelf_book-list_item">
+                            <div class="shelf_book-list_item-img"><img src="https://media-cdn.tripadvisor.com/media/photo-s/11/13/7b/3c/caption.jpg" alt=""/></div>
+                            <div class="shelf_book-list_item-content">
+                              <div class="book_item-menu_btn"><span></span><span></span><span></span>
+                                <div class="dropdown-block">
+                                  <div class="dropdown-block_item"><a href="">Настройки</a></div>
+                                  <div class="dropdown-block_item"><a href="">Выход</a></div>
+                                </div>
+                              </div>
+                              <div class="shelf_book-list_item-title"><span>Мотивационная литература про чето там Мотивационная литература про чето там</span></div>
+                              <div class="shelf_book-list_item-info"> 
+                                <div class="item-content_data">
+                                   <span class='compilation_books-counter'>20 книг</span>
+<span class='dot'></span>
+<span class='compilation_folllwers-counter'>32 подписок</span> <a class="share-link" href="">Поделиться</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="shelf-container">
+                          <div class="add_shelf_book-list_item">
+                            <div class="shelf_book-list_item-img"><img src="https://media-cdn.tripadvisor.com/media/photo-s/11/13/7b/3c/caption.jpg" alt=""/></div>
+                            <div class="shelf_book-list_item-content">
+                              <div class="book_item-menu_btn"><span></span><span></span><span></span>
+                                <div class="dropdown-block">
+                                  <div class="dropdown-block_item"><a href="">Настройки</a></div>
+                                  <div class="dropdown-block_item"><a href="">Выход</a></div>
+                                </div>
+                              </div>
+                              <div class="shelf_book-list_item-title"><span>Мотивационная литература про чето там Мотивационная литература про чето там</span></div>
+                              <div class="shelf_book-list_item-info"> 
+                                <div class="item-content_data">
+                                   <span class='compilation_books-counter'>20 книг</span>
+<span class='dot'></span>
+<span class='compilation_folllwers-counter'>32 подписок</span> <a class="share-link" href="">Поделиться</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab"> 
+                  <div class="profile-tab_container">
+                    <div class="profile_books-filter"><a class="profile_books-filter_item active" href=""><span>Просмотренные</span><span>8</span></a><a class="profile_books-filter_item" href=""><span>Оцененные</span><span>140</span></a><a class="profile_books-filter_item" href=""><span>Все</span><span>148</span></a></div>
+                    <div class="profile_books-list">
+                      <div class="authors_review">
+                        <div class="book_item-comments">
+                          <div class="review-item">
+                            <div class="review-item_card">
+                              <div class="card-item">
+                                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                                  <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                                  <div class="rate-num"> </div>
+                                  <div class="user_rate-box">10</div>
+                                  <div class="card-select_item">
+                                    <label>
+                                      <input type="checkbox"/><span></span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="card-item_description">
+                                  <div class="card-item_rating">
+                                    <div class="average_rate">4.8</div>
+                                    <div class="votes_counter">548 оценок</div>
+                                  </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                                </div>
+                              </div>
+                              <div class="review-item_card-data">
+                                <ul class="recomendation-item_values">
+                                  <li>345</li>
+                                  <li>66</li>
+                                </ul>
+                                <div class="book_item-author"><a href="">Оскар Уайлд</a>
+                                  <div class="book_item-name">Лидер и племя. Пять уровней корпоративной культуры</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="comment-item">
+                              <div class="comment-item_header">
+                                <div class="comment-avatar"></div>
+                                <div class="comment-user_data">
+                                  <div class="comment-name-rate">
+                                    <div class="comment-user_name">@uljana1987</div>
+                                    <div class="comment-user_rate">оценка книги <span>2</span></div>
+                                  </div>
+                                  <div class="comment-date">вчера</div>
+                                </div>
+                              </div>
+                              <div class="comment-item_content">
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                              </div>
+                              <div class="comment-item_social">
+                                <div class="comment-social_item"><img src="./img/icons/social/like-n.svg" alt=""/><span>3</span></div>
+                                <div class="open-comment">
+                                  <button> Развернуть</button>
+                                </div>
+                                <div class="comment-social_item answer"><img src="./img/icons/social/answer.svg" alt=""/><span>3</span></div>
+                                <div class="comment-social_item share"><img src="./img/icons/social/share.svg" alt=""/><span>3</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="review-item">
+                            <div class="review-item_card">
+                              <div class="card-item">
+                                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                                  <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                                  <div class="rate-num"> </div>
+                                  <div class="user_rate-box">10</div>
+                                  <div class="card-select_item">
+                                    <label>
+                                      <input type="checkbox"/><span></span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="card-item_description">
+                                  <div class="card-item_rating">
+                                    <div class="average_rate">4.8</div>
+                                    <div class="votes_counter">548 оценок</div>
+                                  </div><a class="card-item_author" href="">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="">45 татуировок менеджера</a>
+                                </div>
+                              </div>
+                              <div class="review-item_card-data">
+                                <ul class="recomendation-item_values">
+                                  <li>345</li>
+                                  <li>66</li>
+                                </ul>
+                                <div class="book_item-author"><a href="">Оскар Уайлд</a>
+                                  <div class="book_item-name">Лидер и племя. Пять уровней корпоративной культуры</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="comment-item">
+                              <div class="comment-item_header">
+                                <div class="comment-avatar"></div>
+                                <div class="comment-user_data">
+                                  <div class="comment-name-rate">
+                                    <div class="comment-user_name">@uljana1987</div>
+                                    <div class="comment-user_rate">оценка книги <span>2</span></div>
+                                  </div>
+                                  <div class="comment-date">вчера</div>
+                                </div>
+                              </div>
+                              <div class="comment-item_content">
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                                «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                                по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                                вкусу напоминать пирожок с вишней, но она подарит вам
+                              </div>
+                              <div class="comment-item_social">
+                                <div class="comment-social_item"><img src="./img/icons/social/like-n.svg" alt=""/><span>3</span></div>
+                                <div class="open-comment">
+                                  <button> Развернуть</button>
+                                </div>
+                                <div class="comment-social_item answer"><img src="./img/icons/social/answer.svg" alt=""/><span>3</span></div>
+                                <div class="comment-social_item share"><img src="./img/icons/social/share.svg" alt=""/><span>3</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-follow" role="tabpanel" aria-labelledby="pills-follow-tab">...</div>
+              </div>
+            </div>
+          </div>
+          <div class="last_events">
+            <div class="title">Последние рецензии</div>
+            <div class="event-item_list">
+              <div class="event-item">
+                <div class="event-item_header">
+                  <div class="user_avatar"></div>
+                  <div class="event-item_title"><a class="user_name" href="">@nikitavsepobrito</a><span class="event-name">о книге</span>
+                    <div class="event-title">Сам себе MBA. Самообразование на 100%</div>
+                  </div>
+                </div>
+                <div class="event-item_content">
+                  <p>
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                  </p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-item_header">
+                  <div class="user_avatar"></div>
+                  <div class="event-item_title"><a class="user_name" href="">@nikitavsepobrito</a><span class="event-name">о книге</span>
+                    <div class="event-title">Сам себе MBA. Самообразование на 100%</div>
+                  </div>
+                </div>
+                <div class="event-item_content">
+                  <p>
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                  </p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-item_header">
+                  <div class="user_avatar"></div>
+                  <div class="event-item_title"><a class="user_name" href="">@nikitavsepobrito</a><span class="event-name">о книге</span>
+                    <div class="event-title">Сам себе MBA. Самообразование на 100%</div>
+                  </div>
+                </div>
+                <div class="event-item_content">
+                  <p>Если вы становитесь такой же как мама</p>
+                </div>
+              </div>
+            </div>
+            <div class="title">Популярные авторы</div>
+            <div class="profile-aside_authors">
+              <div class="event-item"><a class="popular-author" href="">
+                  <div class="user-avatar"></div>
+                  <div class="user-name">Nikita Vse Pobrito</div></a></div>
+              <div class="event-item"><a class="popular-author" href="">
+                  <div class="user-avatar"></div>
+                  <div class="user-name">Masha Prostokvasha</div></a></div>
+              <div class="event-item"><a class="popular-author" href="">
+                  <div class="user-avatar"></div>
+                  <div class="user-name">Masha Prostokvasha</div></a></div>
+            </div>
+            <div class="title">Подборки для вас</div>
+            <div class="profile_aside-compilation"><a class="profile-event_link" href="">Лучшие научно-популярные книги</a><a class="profile-event_link" href="">Лучшие научно-популярные книги</a><a class="profile-event_link" href="">Лучшие научно-популярные книги</a><a class="profile-event_link" href="">Лучшие научно-популярные книги</a></div>
+            <div class="profile-recomendation">
+              <div class="recomendation-item"><a class="recomendation-item_link" href="">Новое на сайте</a></div>
+              <div class="recomendation-item"><a class="recomendation-item_link" href="">Идем в город</a></div>
+              <div class="recomendation-item"><a class="recomendation-item_link" href="">Прокачай себя и еще кого-нибудь</a></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="box">
+          <nav class="header-nav">
+            <ul>
+              <li><a href="">Что читают</a></li>
+              <li><a class="active" href="">Жанры</a></li>
+              <li><a href="">Авторы</a></li>
+              <li><a href="">Мои книги</a></li>
+            </ul>
+          </nav>
+        </div>
+        <section class="footer">
+          <div class="box">
+            <div class="footer-content">
+              <div class="footer-header"><a class="logo" href=""><img src="./img/main-logo.svg" alt=""/></a>
+                <div class="footer-tagline">Книги, которые вы полюбите</div>
+                <div class="footer-tip">Читайте, ставьте оценки и делитесь с друзьями</div>
+                <button class="footer-reg_btn">Зарегистрироваться</button>
+              </div>
+              <div class="footer-main">
+                <div class="accordion" id="accordionExample">
+                  <div class="card compilation">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0">
+                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span>Подборки</span><span class="accordion-icon"><span></span><span></span></span></button>
+                      </h5>
+                    </div>
+                    <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <ul class="footer-list">
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><span>Популярные полки</span><span class="accordion-icon"><span></span><span></span></span></button>
+                      </h5>
+                    </div>
+                    <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <ul class="footer-list">
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h5 class="mb-0">
+                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><span>О компании</span><span class="accordion-icon"><span></span><span></span></span></button>
+                      </h5>
+                    </div>
+                    <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <ul class="footer-list">
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copy">
+              <ul>
+                <li><a href="">© Knigigid 2019</a></li>
+                <li><a href="">Карта сайта</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">Конфиденциальность пользователя</a></li>
+                <li><a href="">Правообладателям</a></li>
+                <li><a href="">Помогите нам стать лучше <span>info@knigogid.ru</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script src="./js/libs.min.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

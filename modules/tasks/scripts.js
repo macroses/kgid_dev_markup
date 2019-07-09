@@ -3,8 +3,7 @@ module.exports = function () {
         return $.gulp.src([
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/popper.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js'
+            'node_modules/bootstrap/dist/js/bootstrap.min.js'
         ])
             .pipe($.concat('libs.min.js'))
             .pipe($.gulp.dest('dist/js'))

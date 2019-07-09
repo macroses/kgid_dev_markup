@@ -34,6 +34,7 @@
     padding-bottom: 12px;
     margin-bottom: 20px;
     justify-content: flex-start;
+    overflow-x: scroll;
 }
 
 @media screen and (min-width: 768px) {
@@ -53,6 +54,7 @@
     }
     .compilation-section_list{
         justify-content: center;
+        overflow: visible;
     }
 
     .compilation-section_header{
