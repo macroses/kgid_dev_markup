@@ -54,7 +54,6 @@
     }
     .compilation-section_list{
         justify-content: center;
-        overflow: visible;
     }
 
     .compilation-section_header{
@@ -65,5 +64,8 @@
 @media screen and (min-width: 1200px) {
     .compilation-section_header{
         padding-left: 33px;
+    }
+    .compilation-section_list{
+        overflow: visible;
     }
 }

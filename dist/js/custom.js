@@ -178,6 +178,9 @@ $(function () {
         else{
             $('.book_item-menu_btn .dropdown-block').fadeIn(0);
         }
-    })
+    });
+
+    // календарь
+    
 
 });

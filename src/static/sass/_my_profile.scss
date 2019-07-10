@@ -163,7 +163,11 @@
             margin-bottom: 0;
         }
         .card-item:not(:nth-child(4n+4)){
-            margin-right: 32px;
+            margin-right: 0px;
+        }
+
+        .card-item_description{
+            right: -110px;
         }
     }
 }
@@ -450,6 +454,14 @@
     .profile_soc-list{
         background: #fff;
     }
+
+    .profile_books-list{
+        .review-item{
+            .review-item_card-data{
+                margin-left: 16px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -491,7 +503,8 @@
         width: 600px;
         padding: 0;
         justify-content: flex-start;
-        .card-item:not(:nth-child(4n+4)){
+        .card-item:not(:nth-child(4n+4)),
+        .review-item .card-item:not(:nth-child(4n+4)){
             margin-right: 16px;
         }
     }
@@ -544,5 +557,9 @@
 
     .profile-recomendation{
         display: flex;
+    }
+
+    .profile_books-list .review-item .card-item_description{
+        right: -125px;
     }
 }

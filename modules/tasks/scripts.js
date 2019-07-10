@@ -2,8 +2,9 @@ module.exports = function () {
     $.gulp.task('scripts:lib', function () {
         return $.gulp.src([
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/popper.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js'
+            'src/static/js/popper.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'src/static/js/datepicker.min.js'
         ])
             .pipe($.concat('libs.min.js'))
             .pipe($.gulp.dest('dist/js'))

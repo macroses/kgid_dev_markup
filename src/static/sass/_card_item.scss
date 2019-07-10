@@ -260,9 +260,6 @@
     .card-item{
         min-width: 187px;
         max-width: 187px;
-        &:not(:last-child){
-            margin-right: 45px;
-        }
     }
 
     .card-item_img{
@@ -274,6 +271,16 @@
     }
     .card-item_name{
         font-size: 18px;
+    }
+}
+
+@media screen and(min-width: 1200px) {
+    .card-item{
+        min-width: 187px;
+        max-width: 187px;
+        &:not(:last-child){
+            margin-right: 45px;
+        }
     }
 }
 

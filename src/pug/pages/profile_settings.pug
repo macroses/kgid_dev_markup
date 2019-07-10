@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        
+        .wrapper
+            include ../layout/main/up_btn.pug
+            include ../layout/header/header.pug
+
+            main
+                .settings-box
+                    .profile-settings
+                        .settings-title Настройки профиля
+                            
+                        .settings-container
+                            form
+                                .feedback_modal-form
+                                    .form-item
+                                        label Имя
+                                        input(type="text" placeholder="Представьтесь пожалуйста")
+                                    .form-item
+                                        label Фамилия
+                                        input(type="text" placeholder="Номер телефона/ e-mail")
+                                        .optional опционально
+                                    .form-item
+                                        label Никнейм
+                                        input(type="text" placeholder="никнейм")
+                                    .form-item
+                                        label Немного о себе
+                                        textarea.step-item_area(placeholder="Род деятельности, хобби, цитаты...")
+                                    .form-item
+                                        input.datepicker-here(type="text" placeholder="Дата рождения")
+                                    .radio-block
+                                        label
+                                            input.inp-radio(type="radio" name="gender")
+                                            span Мужчина
+                                        label
+                                            input.inp-radio(type="radio" name="gender")
+                                            span Женщина
+
+                    .access-settings
+                        .settings-title Настройки доступа
+                            
+                        .settings-container
+                            form
+                                .feedback_modal-form
+                                    .form-item
+                                        label Почтовый ящик
+                                        input(type="email" placeholder="Не хватает вашего e-mail")
+                                    button.change-pass_btn Сменить пароль кабинета
+                    .privacy-settings
+                        .settings-title Настройки приватности
+                            
+                        .settings-container
+                            .reg-modal_btns
+                                button.fb-reg Объединить с Facebook
+                                button.vk-reg Объединить с Facebook
+                                button.inst-reg Объединить с Instagram
+
+
+            include ../layout/footer/footer.pug
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")

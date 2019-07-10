@@ -1,0 +1,79 @@
+.settings-title{
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-family: $p_semi;
+    color: $base-text-color;
+    padding: 0 14px;
+}
+
+.settings-avatar{
+    padding: 0 32px;
+}
+
+.settings-container{
+    padding: 0 32px;
+    input[type=text],
+    input[type=email] {
+        padding: 6px 8px;
+        margin-bottom: 8px;
+    }
+
+    .optional{
+        top: 5px;
+    }
+
+    .feedback_modal-form{
+        max-width: 100%;
+    }
+
+    input[type=date]::-webkit-inner-spin-button{
+        display: none;
+    }
+
+    .radio-block{
+        margin: 0;
+        span{
+            font-size: 14px;
+        }
+    }
+    textarea{
+        margin-bottom: 12px;
+    }
+}
+
+.profile-settings,
+.access-settings{
+    margin-bottom: 40px;
+}
+
+.change-pass_btn{
+    @include btn-neutral;
+    width: 100%;
+    padding: 6px 0;
+    margin-top: 24px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .settings-box{
+        margin-top: 40px;
+    }
+    
+    .profile-settings,
+    .access-settings{
+        display: flex;
+        padding: 0 40px;
+    }
+
+    .settings-title{
+        padding: 0;
+        margin-right: 24px;
+        font-size: 22px;
+        width: 213px;
+    }
+
+    .settings-container{
+        padding: 8px 0 0 0;
+        flex: auto;
+    }
+}
