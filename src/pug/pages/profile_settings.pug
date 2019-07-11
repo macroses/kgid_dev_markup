@@ -14,55 +14,146 @@ html(lang="ru")
             include ../layout/header/header.pug
 
             main
-                .settings-box
-                    .profile-settings
-                        .settings-title Настройки профиля
-                            
-                        .settings-container
-                            form
-                                .feedback_modal-form
-                                    .form-item
-                                        label Имя
-                                        input(type="text" placeholder="Представьтесь пожалуйста")
-                                    .form-item
-                                        label Фамилия
-                                        input(type="text" placeholder="Номер телефона/ e-mail")
-                                        .optional опционально
-                                    .form-item
-                                        label Никнейм
-                                        input(type="text" placeholder="никнейм")
-                                    .form-item
-                                        label Немного о себе
-                                        textarea.step-item_area(placeholder="Род деятельности, хобби, цитаты...")
-                                    .form-item
-                                        input.datepicker-here(type="text" placeholder="Дата рождения")
-                                    .radio-block
-                                        label
-                                            input.inp-radio(type="radio" name="gender")
-                                            span Мужчина
-                                        label
-                                            input.inp-radio(type="radio" name="gender")
-                                            span Женщина
+                .profile-container.set
+                    .settings-box
+                        .profile-settings.setting-item
+                            .settings-title Настройки профиля
+                                .settings-avatar
+                                    label
+                                        .user-avatar
+                                        input(type="file")
+                                        span Изменить фото на авататрке
 
-                    .access-settings
-                        .settings-title Настройки доступа
-                            
-                        .settings-container
-                            form
-                                .feedback_modal-form
-                                    .form-item
-                                        label Почтовый ящик
-                                        input(type="email" placeholder="Не хватает вашего e-mail")
-                                    button.change-pass_btn Сменить пароль кабинета
-                    .privacy-settings
-                        .settings-title Настройки приватности
-                            
-                        .settings-container
-                            .reg-modal_btns
-                                button.fb-reg Объединить с Facebook
-                                button.vk-reg Объединить с Facebook
-                                button.inst-reg Объединить с Instagram
+                            .settings-container
+                                form
+                                    .feedback_modal-form
+                                        .form-item
+                                            label Имя
+                                            input(type="text" placeholder="Ваше имя")
+                                        .form-item.invalid
+                                            label Фамилия
+                                            input(type="text" placeholder="Ваша фамилия")
+                                            .optional опционально
+                                        .form-item.valid
+                                            label Никнейм
+                                            input(type="text" placeholder="никнейм")
+                                        .form-item
+                                            label Немного о себе
+                                            textarea.step-item_area(placeholder="Род деятельности, хобби, цитаты...")
+                                        .form-item
+                                            input.datepicker-here.settings-date(type="text" placeholder="Дата рождения")
+                                        .radio-block
+                                            label
+                                                input.inp-radio(type="radio" name="gender")
+                                                span Мужчина
+                                            label
+                                                input.inp-radio(type="radio" name="gender")
+                                                span Женщина
 
+                        .access-settings.setting-item
+                            .settings-title Настройки доступа
+                                
+                            .settings-container
+                                form
+                                    .feedback_modal-form
+                                        .form-item
+                                            label Почтовый ящик
+                                            input(type="email" placeholder="Не хватает вашего e-mail")
+                                        button.change-pass_btn Сменить пароль кабинета
+                        .privacy-settings.setting-item
+                            .settings-title Настройки приватности
+                                
+                            .settings-container
+                                .privacy-btn_box
+                                    button.fb 
+                                        span Объединить с Facebook
+                                    button.vk
+                                        span Объединить с Vkontakte
+                                    button.inst
+                                        span Объединить с Instagram
+                                .show_info-box
+                                    label
+                                        input(type="checkbox")
+                                        span Отображть личные данные
+                                        .tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
+                                    Label
+                                        input(type="checkbox")
+                                        span Отображть мою активность
+                                        .tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
+                                .save-changes_box
+                                    button.save-settings_btn.disabled Сохранить изменения
+                                    a.to-books_btn(href="") К моим книгам
+
+
+                    .last_events
+                        .title Последние рецензии
+                        .event-item_list
+                            .event-item
+                                .event-item_header
+                                    .user_avatar
+                                    .event-item_title
+                                        a.user_name(href="") @nikitavsepobrito
+                                        span.event-name о книге
+                                        .event-title Сам себе MBA. Самообразование на 100%
+                                .event-item_content
+                                    p
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                            .event-item
+                                .event-item_header
+                                    .user_avatar
+                                    .event-item_title
+                                        a.user_name(href="") @nikitavsepobrito
+                                        span.event-name о книге
+                                        .event-title Сам себе MBA. Самообразование на 100%
+                                .event-item_content
+                                    p
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                                        |Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                                        |Идите к психотерапевту, может у вас послеродовая депрессия или …
+                            .event-item
+                                .event-item_header
+                                    .user_avatar
+                                    .event-item_title
+                                        a.user_name(href="") @nikitavsepobrito
+                                        span.event-name о книге
+                                        .event-title Сам себе MBA. Самообразование на 100%
+                                .event-item_content
+                                    p
+                                        |Если вы становитесь такой же как мама
+
+                        .title Популярные авторы
+                        .profile-aside_authors
+                            .event-item
+                                a(href="").popular-author
+                                    .user-avatar
+                                    .user-name Nikita Vse Pobrito
+                            .event-item
+                                a(href="").popular-author
+                                    .user-avatar
+                                    .user-name Masha Prostokvasha
+                            .event-item
+                                a(href="").popular-author
+                                    .user-avatar
+                                    .user-name Masha Prostokvasha
+
+                        .title Подборки для вас
+                        .profile_aside-compilation
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+                            a(href="").profile-event_link Лучшие научно-популярные книги
+
+                        .profile-recomendation
+                            .recomendation-item
+                                a.recomendation-item_link(href="") Новое на сайте
+                            .recomendation-item
+                                a.recomendation-item_link(href="") Идем в город
+                            .recomendation-item
+                                a.recomendation-item_link(href="") Прокачай себя и еще кого-нибудь
 
             include ../layout/footer/footer.pug
         script(src="./js/libs.min.js")

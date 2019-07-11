@@ -38,66 +38,155 @@
         </div>
       </header>
       <main>
-        <div class="settings-box">
-          <div class="profile-settings">
-            <div class="settings-title">Настройки профиля</div>
-            <div class="settings-container">
-              <form>
-                <div class="feedback_modal-form">
-                  <div class="form-item">
-                    <label>Имя</label>
-                    <input type="text" placeholder="Представьтесь пожалуйста"/>
-                  </div>
-                  <div class="form-item">
-                    <label>Фамилия</label>
-                    <input type="text" placeholder="Номер телефона/ e-mail"/>
-                    <div class="optional">опционально</div>
-                  </div>
-                  <div class="form-item">
-                    <label>Никнейм</label>
-                    <input type="text" placeholder="никнейм"/>
-                  </div>
-                  <div class="form-item">
-                    <label>Немного о себе</label>
-                    <textarea class="step-item_area" placeholder="Род деятельности, хобби, цитаты..."></textarea>
-                  </div>
-                  <div class="form-item">
-                    <input class="datepicker-here" type="text" placeholder="Дата рождения"/>
-                  </div>
-                  <div class="radio-block">
-                    <label>
-                      <input class="inp-radio" type="radio" name="gender"/><span>Мужчина</span>
-                    </label>
-                    <label>
-                      <input class="inp-radio" type="radio" name="gender"/><span>Женщина</span>
-                    </label>
-                  </div>
+        <div class="profile-container set">
+          <div class="settings-box">
+            <div class="profile-settings setting-item">
+              <div class="settings-title">Настройки профиля
+                <div class="settings-avatar">
+                  <label>
+                    <div class="user-avatar"></div>
+                    <input type="file"/><span>Изменить фото на авататрке</span>
+                  </label>
                 </div>
-              </form>
-            </div>
-          </div>
-          <div class="access-settings">
-            <div class="settings-title">Настройки доступа</div>
-            <div class="settings-container">
-              <form>
-                <div class="feedback_modal-form">
-                  <div class="form-item">
-                    <label>Почтовый ящик</label>
-                    <input type="email" placeholder="Не хватает вашего e-mail"/>
-                  </div>
-                  <button class="change-pass_btn">Сменить пароль кабинета</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="privacy-settings">
-            <div class="settings-title">Настройки приватности</div>
-            <div class="settings-container">
-              <div class="reg-modal_btns">
-                <button class="fb-reg">Объединить с Facebook</button>
-                <button class="vk-reg">Объединить с Facebook</button>
-                <button class="inst-reg">Объединить с Instagram</button>
               </div>
+              <div class="settings-container">
+                <form>
+                  <div class="feedback_modal-form">
+                    <div class="form-item">
+                      <label>Имя</label>
+                      <input type="text" placeholder="Ваше имя"/>
+                    </div>
+                    <div class="form-item invalid">
+                      <label>Фамилия</label>
+                      <input type="text" placeholder="Ваша фамилия"/>
+                      <div class="optional">опционально</div>
+                    </div>
+                    <div class="form-item valid">
+                      <label>Никнейм</label>
+                      <input type="text" placeholder="никнейм"/>
+                    </div>
+                    <div class="form-item">
+                      <label>Немного о себе</label>
+                      <textarea class="step-item_area" placeholder="Род деятельности, хобби, цитаты..."></textarea>
+                    </div>
+                    <div class="form-item">
+                      <input class="datepicker-here settings-date" type="text" placeholder="Дата рождения"/>
+                    </div>
+                    <div class="radio-block">
+                      <label>
+                        <input class="inp-radio" type="radio" name="gender"/><span>Мужчина</span>
+                      </label>
+                      <label>
+                        <input class="inp-radio" type="radio" name="gender"/><span>Женщина</span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="access-settings setting-item">
+              <div class="settings-title">Настройки доступа</div>
+              <div class="settings-container">
+                <form>
+                  <div class="feedback_modal-form">
+                    <div class="form-item">
+                      <label>Почтовый ящик</label>
+                      <input type="email" placeholder="Не хватает вашего e-mail"/>
+                    </div>
+                    <button class="change-pass_btn">Сменить пароль кабинета</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="privacy-settings setting-item">
+              <div class="settings-title">Настройки приватности</div>
+              <div class="settings-container">
+                <div class="privacy-btn_box">
+                  <button class="fb"> <span>Объединить с Facebook</span></button>
+                  <button class="vk"><span>Объединить с Vkontakte</span></button>
+                  <button class="inst"><span>Объединить с Instagram</span></button>
+                </div>
+                <div class="show_info-box">
+                  <label>
+                    <input type="checkbox"/><span>Отображть личные данные</span>
+                    <div class="tip-item" data-toggle="tooltip" data-placement="top" title="Какая-то информация">i</div>
+                  </label>
+                  <Label>
+                    <input type="checkbox"/><span>Отображть мою активность</span>
+                    <div class="tip-item" data-toggle="tooltip" data-placement="top" title="Какая-то информация">i</div>
+                  </Label>
+                </div>
+                <div class="save-changes_box">
+                  <button class="save-settings_btn disabled">Сохранить изменения</button><a class="to-books_btn" href="">К моим книгам</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="last_events">
+            <div class="title">Последние рецензии</div>
+            <div class="event-item_list">
+              <div class="event-item">
+                <div class="event-item_header">
+                  <div class="user_avatar"></div>
+                  <div class="event-item_title"><a class="user_name" href="">@nikitavsepobrito</a><span class="event-name">о книге</span>
+                    <div class="event-title">Сам себе MBA. Самообразование на 100%</div>
+                  </div>
+                </div>
+                <div class="event-item_content">
+                  <p>
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                  </p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-item_header">
+                  <div class="user_avatar"></div>
+                  <div class="event-item_title"><a class="user_name" href="">@nikitavsepobrito</a><span class="event-name">о книге</span>
+                    <div class="event-title">Сам себе MBA. Самообразование на 100%</div>
+                  </div>
+                </div>
+                <div class="event-item_content">
+                  <p>
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                    Если вы становитесь такой же как мама, то то, что вы уедете от нее ничего (почти) не изменит. 
+                    Идите к психотерапевту, может у вас послеродовая депрессия или …
+                  </p>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-item_header">
+                  <div class="user_avatar"></div>
+                  <div class="event-item_title"><a class="user_name" href="">@nikitavsepobrito</a><span class="event-name">о книге</span>
+                    <div class="event-title">Сам себе MBA. Самообразование на 100%</div>
+                  </div>
+                </div>
+                <div class="event-item_content">
+                  <p>Если вы становитесь такой же как мама</p>
+                </div>
+              </div>
+            </div>
+            <div class="title">Популярные авторы</div>
+            <div class="profile-aside_authors">
+              <div class="event-item"><a class="popular-author" href="">
+                  <div class="user-avatar"></div>
+                  <div class="user-name">Nikita Vse Pobrito</div></a></div>
+              <div class="event-item"><a class="popular-author" href="">
+                  <div class="user-avatar"></div>
+                  <div class="user-name">Masha Prostokvasha</div></a></div>
+              <div class="event-item"><a class="popular-author" href="">
+                  <div class="user-avatar"></div>
+                  <div class="user-name">Masha Prostokvasha</div></a></div>
+            </div>
+            <div class="title">Подборки для вас</div>
+            <div class="profile_aside-compilation"><a class="profile-event_link" href="">Лучшие научно-популярные книги</a><a class="profile-event_link" href="">Лучшие научно-популярные книги</a><a class="profile-event_link" href="">Лучшие научно-популярные книги</a><a class="profile-event_link" href="">Лучшие научно-популярные книги</a></div>
+            <div class="profile-recomendation">
+              <div class="recomendation-item"><a class="recomendation-item_link" href="">Новое на сайте</a></div>
+              <div class="recomendation-item"><a class="recomendation-item_link" href="">Идем в город</a></div>
+              <div class="recomendation-item"><a class="recomendation-item_link" href="">Прокачай себя и еще кого-нибудь</a></div>
             </div>
           </div>
         </div>
