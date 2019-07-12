@@ -4558,6 +4558,94 @@ footer .box {
   .profile-container.set .last_events {
     margin-left: 215px; } }
 
+.authors {
+  padding: 0 12px; }
+
+.authors-header {
+  font-size: 18px;
+  font-family: proxima_semibold;
+  color: #354052;
+  margin-bottom: 21px; }
+  .authors-header a {
+    font-size: 10px;
+    color: #fff;
+    display: inline-block;
+    font-family: proxima_bold; }
+
+.authors-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly; }
+
+.authors-item {
+  width: 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 2px;
+  margin-bottom: 16px;
+  text-align: center; }
+
+.authors-item_name {
+  color: #354052;
+  font-family: proxima_semibold;
+  line-height: 1.21; }
+
+.authors-item_rate {
+  font-size: 12px; }
+  .authors-item_rate .rate-value {
+    font-family: proxima_bold;
+    margin-right: 21px;
+    position: relative; }
+    .authors-item_rate .rate-value:after {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: url(../img/icons/star.svg) no-repeat;
+      background-size: cover;
+      right: -17px;
+      top: 0; }
+  .authors-item_rate .book-couter {
+    color: #7f8fa4; }
+
+.authors-item_img {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  background: url(https://pp.userapi.com/ERV42GvPvuVpr9MeGtRHd02vaXnf9gaezOQzfA/g4CUwXojRLU.jpg) no-repeat;
+  background-size: cover; }
+
+@media screen and (min-width: 768px) {
+  .authors-search {
+    margin: 36px 0 14px; }
+  .authors {
+    padding: 0 37px; }
+  .authors-list {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .authors-item {
+    min-width: 120px; } }
+
 .genres .card {
   border: 0;
   -webkit-box-shadow: 5px 5px 16px -5px rgba(155, 155, 155, 0.57);

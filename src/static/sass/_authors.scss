@@ -1,0 +1,93 @@
+.authors{
+    padding: 0 12px;
+}
+
+.authors-header{
+    font-size: 18px;
+    font-family: $p_semi;
+    color: $base-text-color;
+    margin-bottom: 21px;
+    a{
+        font-size: 10px;
+        color: #fff;
+        display: inline-block;
+        font-family: $p_bold;
+
+    }
+}
+
+.authors-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.authors-item{
+    width: 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.authors-item_name{
+    color: $base-text-color;
+    font-family: $p_semi;
+    line-height: 1.21;
+}
+
+.authors-item_rate{
+    font-size: 12px;
+    .rate-value{
+        font-family: $p_bold;
+        margin-right: 21px;
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 14px;
+            height: 14px;
+            background: url(../img/icons/star.svg) no-repeat;
+            background-size: cover;
+            right: -17px;
+            top: 0;
+        }
+    }
+    .book-couter{
+        color: #7f8fa4;
+    }
+}
+
+.authors-item_img{
+    width: 74px;
+    height: 74px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    background: url(https://pp.userapi.com/ERV42GvPvuVpr9MeGtRHd02vaXnf9gaezOQzfA/g4CUwXojRLU.jpg) no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .authors-search{
+        margin: 36px 0 14px;
+    }
+
+    .authors{
+        padding: 0 37px;
+    }
+
+    .authors-list{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .authors-item{
+        min-width: 120px;
+
+    }
+}
