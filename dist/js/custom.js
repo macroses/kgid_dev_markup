@@ -26,7 +26,7 @@ $(function () {
         interval: false
     });
 
-    $('.accordion-opener').click(function () {
+    $('footer .accordion-opener').click(function () {
         $(this).toggleClass('change-icon');
     });
 
@@ -180,7 +180,12 @@ $(function () {
         }
     });
 
-    // календарь
-    
+    // аккордеон для жанров
+    let genresBtn = $('#genres .card .accordion-opener');
+
+    genresBtn.click(function() {
+        $(this).children('.genres-icon').toggleClass('active');
+        $(this).parents('.card').toggleClass('active');
+    });
 
 });

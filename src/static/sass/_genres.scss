@@ -1,0 +1,205 @@
+.genres {
+    .card {
+        border: 0;
+        box-shadow: 5px 5px 16px -5px rgba(155, 155, 155, 0.57);
+        margin-bottom: 8px;
+
+        &.active {
+            background: #f9f8f8;
+            box-shadow: none;
+
+            .accordion-opener {
+                color: $base-text-color;
+            }
+
+            .genres-header_counter {
+                display: none;
+            }
+        }
+    }
+
+    .card-header {
+        background: transparent;
+        padding: 0;
+        border: 0;
+    }
+
+    .accordion-opener {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 12px 15px;
+        color: $base-btn-color;
+        font-family: $p_bold;
+    }
+
+    .card-body {
+        padding: 0 15px 16px 32px;
+    }
+
+    .accordion {
+        max-width: 856px;
+    }
+}
+
+.genres-icon {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    background: url(../img/icons/toggle-icon.svg) no-repeat;
+    background-size: contain;
+    transition: .2s;
+
+    &.active {
+        transform: rotate(180deg);
+    }
+}
+
+.genres-header_counter {
+    font-size: 12px;
+    display: inline-block;
+    color: #7f8fa4;
+    font-family: $p_reg;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.genres_item-list {
+    li {
+        a {
+            display: inline-block;
+            width: 100%;
+            font-family: $p_semi;
+            color: $base-text-color;
+            margin-bottom: 8px;
+
+            &:hover {
+                color: $base-btn-color;
+            }
+
+            span {
+                pointer-events: none;
+                font-size: 12px;
+                color: #7f8fa4;
+                display: inline-block;
+                margin-left: 18px;
+                font-family: $p_reg;
+            }
+        }
+    }
+}
+
+.genres-search {
+    position: relative;
+    margin-bottom: 18px;
+    padding: 0 12px;
+    max-width: 856px;
+
+    input {
+        width: 100%;
+        padding: 5px 8px;
+        border-radius: 4px;
+        border: solid 1px rgb(223, 227, 233);
+    }
+
+    button {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        top: 0;
+        right: 12px;
+        background: url(../img/icons/search.svg) no-repeat;
+        background-position: center;
+        border: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .genres-search {
+        margin-top: 36px;
+        margin: 36px 37px 18px;
+        padding: 0;
+        width: 287px;
+
+        input {
+            padding: 6px 8px;
+        }
+
+        button {
+            right: 0;
+        }
+    }
+
+    .genres {
+        .accordion-opener {
+            font-size: 18px;
+            color: $base-text-color;
+            font-family: $p_reg;
+            padding: 21px 15px;
+            padding-left: 37px;
+        }
+
+        .card-body {
+            padding-left: 37px;
+        }
+
+        .card {
+            &.active {
+                .genres-header_counter {
+                    display: inline-block;
+                    font-size: 12px;
+                    padding: 0 8px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    color: #fff;
+                    background: #c5d0de;
+                }
+            }
+        }
+    }
+
+    .genres_item-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 33.33333%;
+
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .genres-header_counter {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .genres {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .accordion-opener {
+            font-size: 22px;
+        }
+    }
+
+    .genres-search {
+        margin-left: 0;
+    }
+
+    .genres_item-list {
+        li {
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+}

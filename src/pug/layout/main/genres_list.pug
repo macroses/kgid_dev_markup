@@ -1,10 +1,45 @@
 #genres.accordion
-    .card.compilation
+    .card
         #genresHeadingOne.card-header
-                button.accordion-opener(type='button', data-toggle='collapse', data-target='#genresOne', aria-expanded='true', aria-controls='collapseOne')
+                button.accordion-opener(type='button', data-toggle='collapse', data-target='#genresOne', aria-expanded='false', aria-controls='genresOne')
+                    span Художественная литература 
+                        a(href="").genres-header_counter 12345
+                    .genres-icon
+                        span
+        #genresOne.collapse(aria-labelledby='genresHeadingOne')
+            .card-body
+                ul.genres_item-list
+                    li
+                        a(href="") Все книги жанра <span>24</span>
+                    li
+                        a(href="") Фантастика <span>24</span>
+                    li
+                        a(href="") Все книги жанра Все книги жанра Все книги жанра <span>24</span>
+                    li
+                        a(href="") Фантастика <span>24</span>
+                    li
+                        a(href="") Все книги жанра <span>24</span>
+                    li
+                        a(href="") Фантастика <span>24</span>
+
+    .card
+        #genresHeadingTwo.card-header
+                button.accordion-opener(type='button', data-toggle='collapse', data-target='#genresTwo', aria-expanded='false', aria-controls='genresTwo')
                     span Подборки
                     .genres-icon
                         span
-        #genresOne.collapse(aria-labelledby='genresHeadingOne', data-parent='#genres')
+        #genresTwo.collapse(aria-labelledby='genresHeadingTwo')
             .card-body
-                |123
+                ul.genres_item-list
+                    li
+                        a(href="") Все книги жанра <span>24</span>
+                    li
+                        a(href="") Фантастика <span>24</span>
+                    li
+                        a(href="") Все книги жанра <span>24</span>
+                    li
+                        a(href="") Фантастика <span>24</span>
+                    li
+                        a(href="") Все книги жанра <span>24</span>
+                    li
+                        a(href="") Фантастика <span>24</span>

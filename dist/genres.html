@@ -39,15 +39,47 @@
       </header>
       <main>
         <div class="genres">
+          <div class="genres-search">
+            <input type="text" placeholder="Поиск по жанрам"/>
+            <button class="genres-search_btn"></button>
+          </div>
           <div class="accordion" id="genres">
-            <div class="card compilation">
+            <div class="card">
               <div class="card-header" id="genresHeadingOne">
-                <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#genresOne" aria-expanded="true" aria-controls="collapseOne"><span>Подборки</span>
+                <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#genresOne" aria-expanded="false" aria-controls="genresOne"><span>Художественная литература <a class="genres-header_counter" href="">12345</a></span>
                   <div class="genres-icon"><span></span></div>
                 </button>
               </div>
-              <div class="collapse" id="genresOne" aria-labelledby="genresHeadingOne" data-parent="#genres">
-                <div class="card-body">123</div>
+              <div class="collapse" id="genresOne" aria-labelledby="genresHeadingOne">
+                <div class="card-body">
+                  <ul class="genres_item-list">
+                    <li><a href="">Все книги жанра <span>24</span></a></li>
+                    <li><a href="">Фантастика <span>24</span></a></li>
+                    <li><a href="">Все книги жанра Все книги жанра Все книги жанра <span>24</span></a></li>
+                    <li><a href="">Фантастика <span>24</span></a></li>
+                    <li><a href="">Все книги жанра <span>24</span></a></li>
+                    <li><a href="">Фантастика <span>24</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="genresHeadingTwo">
+                <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#genresTwo" aria-expanded="false" aria-controls="genresTwo"><span>Подборки</span>
+                  <div class="genres-icon"><span></span></div>
+                </button>
+              </div>
+              <div class="collapse" id="genresTwo" aria-labelledby="genresHeadingTwo">
+                <div class="card-body">
+                  <ul class="genres_item-list">
+                    <li><a href="">Все книги жанра <span>24</span></a></li>
+                    <li><a href="">Фантастика <span>24</span></a></li>
+                    <li><a href="">Все книги жанра <span>24</span></a></li>
+                    <li><a href="">Фантастика <span>24</span></a></li>
+                    <li><a href="">Все книги жанра <span>24</span></a></li>
+                    <li><a href="">Фантастика <span>24</span></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
