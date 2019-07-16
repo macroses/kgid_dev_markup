@@ -53,11 +53,11 @@ $(function () {
 
     // пробую перемещать оценку
 
-    $('.card-item_img input[type=range]').bind('mousedown', function (e) {
+    $('.card-item_img input[type=range]').bind('mousedown touchstart', function (e) {
         $(this).parent().children('.rate-num').addClass('visible-box');
         $(this).parent().parent().children('.card-item_description').children('.card-item_rating').addClass('visible-box');
     });
-    $('.card-item_img input[type=range]').bind('mouseup', function () {
+    $('.card-item_img input[type=range]').bind('mouseup touchend', function () {
         $(this).parent().children('.rate-num').removeClass('visible-box');
         $(this).parent().parent().children('.card-item_description').children('.card-item_rating').removeClass('visible-box');
     })
@@ -77,7 +77,7 @@ $(function () {
     });
 
     // modal
-    // $('#add_shelf_modal').modal('show');
+    $('#chapter-modal').modal('show');
 
 
     $(function () {
@@ -188,4 +188,84 @@ $(function () {
         $(this).parents('.card').toggleClass('active');
     });
 
+    // последние запросы
+
+    // let liWidth = $('.request-list li').width();
+    // $('.more-request_items').click(function(e) {
+    //     e.preventDefault();
+    //     $('.request-list li').css({
+    //         'transform' : `translateX(-${liWidth += liWidth}px)`, // какую-то хрень написал, но уже времени не было что-то придумывать. Визуально должно работать так.
+    //         'transition': '.5s'
+    //     });
+    // });
+
+    // Ридер
+    $('.reader-content').click(function(e) {
+        if($(this).hasClass('active')){
+            $('.reader-content, .reader-section_list, .reader-header').removeClass('active');
+            
+        }
+        else{
+            $('.reader-header').toggleClass('active');
+            
+        }
+
+        if($('.reader-header').hasClass('active')){
+            $('.reader-funcs').hide(300);
+        }
+        else{
+            $('.reader-funcs').delay(300).show(300);
+        }
+    });
+
+    $('.reader-actions button').click(function(e) {
+        $('.reader-section_list, .reader-content').addClass('active');
+    });
+});
+
+$(function() {
+
+    // Ползунок для перелистывания страниц
+    $('.settings-range input[type=range]').on('input', function(){
+        var el, newPoint, newPlace, offsetPos;
+        el = $(this);
+        var widthInp = el.width();
+        
+        newPoint = (el.val() - el.attr('min')) / (el.attr('max') - el.attr('min'));
+        offsetPos = 0.5;
+
+        if(newPoint < 0) newPlace = 0;
+        else if(newPoint > 1) newPlace = widthInp;
+        else {
+            newPlace = widthInp * newPoint + offsetPos;
+            offsetPos -= newPoint;
+        }
+        // перемещение тултипа
+        $('.output')
+            .css({
+                'left': newPlace,
+                'marginLeft': offsetPos + "%"
+            })
+            .text(el.val());
+    }).trigger('input');
+
+    // ползунок в читалке
+    $('.settings-range input[type=range]').on('input', function (e) {
+        $(e.target).css({
+            'backgroundSize': ((100 / e.target.max) * e.target.value) + '% 100%',
+        });
+    }).trigger('input');
+
+
+    $('.settings-range input[type=range]').bind('mousedown touchstart',function(){
+        $('.output').show();
+    }).bind('mouseup touchend', function() {
+        $('.output').hide();
+    });
+
+    // показать окно настроек
+    $('.show-settings_btn').click(function(e) {
+        e.preventDefault();
+
+    });
 });
