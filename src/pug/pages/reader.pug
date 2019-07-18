@@ -39,8 +39,32 @@ html(lang="ru")
                                                 button.lh-md
                                                 button.lh-lg
                                         .font-params
-                                            | А
-
+                                            button.fz-minus -
+                                            #font-carousel.carousel.slide.font-carousel(data-ride='carousel')
+                                                ol.carousel-indicators
+                                                    li.active(data-target='#font-carousel', data-slide-to='0')
+                                                    li(data-target='#font-carousel', data-slide-to='1')
+                                                    li(data-target='#font-carousel', data-slide-to='2')
+                                                    li(data-target='#font-carousel', data-slide-to='3')
+                                                .carousel-inner
+                                                    .carousel-item.active
+                                                        .font-box
+                                                            .font-example.roboto Aa
+                                                            .font-name Roboto
+                                                    .carousel-item
+                                                        .font-box
+                                                            .font-example.proxima Aa
+                                                            .font-name ProximaNova
+                                                    .carousel-item
+                                                        .font-box
+                                                            .font-example.adelle Aa
+                                                            .font-name AdelleCyrillic
+                                                    .carousel-item
+                                                        .font-box
+                                                            .font-example.opensans Aa
+                                                            .font-name Open Sans
+                                            button.fz-plus +
+                                            .result
                         .reader-actions
                             button
                                 span

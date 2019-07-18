@@ -203,11 +203,10 @@ $(function () {
     $('.reader-content').click(function(e) {
         if($(this).hasClass('active')){
             $('.reader-content, .reader-section_list, .reader-header').removeClass('active');
-            
         }
         else{
             $('.reader-header').toggleClass('active');
-            
+            $('.settings-data').hide(300);
         }
 
         if($('.reader-header').hasClass('active')){
@@ -220,11 +219,11 @@ $(function () {
 
     $('.reader-actions button').click(function(e) {
         $('.reader-section_list, .reader-content').addClass('active');
+        $('.settings-data').slideUp(300);
     });
 });
 
 $(function() {
-
     // Ползунок для перелистывания страниц
     $('.settings-range input[type=range]').on('input', function(){
         var el, newPoint, newPlace, offsetPos;
@@ -266,6 +265,118 @@ $(function() {
     // показать окно настроек
     $('.show-settings_btn').click(function(e) {
         e.preventDefault();
+        $('.settings-data').slideDown(300);
+    });
 
+    // изменение контента ридера
+
+    // выравнивание текста
+    $('.align-left').click(function(e){
+        $(this).addClass('active');
+        $('.align-center').removeClass('active');
+        if($(this).hasClass('active')){
+            $('.reader-content_container').css({
+                'textAlign': 'left'
+            });
+        }
+    });
+
+    $('.align-center').click(function(e){
+        $(this).addClass('active');
+        $('.align-left').removeClass('active');
+        if($(this).hasClass('active')){
+            $('.reader-content_container').css({
+                'textAlign': 'center'
+            });
+        }
+    });
+    // ------ выравнивание текста end
+
+    // межстрочное растояние start
+    let lhSm = $('.lh-sm');
+    let lhMd = $('.lh-md');
+    let lhLg = $('.lh-lg');
+
+    lhSm.click(function(e){
+        $(this).addClass('active');
+        $('.lh-md, .lh-lg').removeClass('active');
+        $('.reader-content_container').css({
+            'lineHeight': '1.4'
+        });
+    });
+
+    lhMd.click(function(e){
+        $(this).addClass('active');
+        $('.lh-sm, .lh-lg').removeClass('active');
+        $('.reader-content_container').css({
+            'lineHeight': '1.6'
+        });
+    });
+
+    lhLg.click(function(e){
+        $(this).addClass('active');
+        $('.lh-sm, .lh-md').removeClass('active');
+        $('.reader-content_container').css({
+            'lineHeight': '1.8'
+        });
+    });
+
+    // Изменение размера шрифта
+    let fzPlus = $('.fz-plus');
+    let fzMinus = $('.fz-minus');
+    let fzMin = 14;
+
+    fzPlus.click(function(e){
+        fzMin++;
+        $('.reader-content_container').css('fontSize', fzMin + 'px');
+        fzMinus.removeAttr('disabled');
+        if(fzMin >= 24) {
+            $(this).attr('disabled', 'disabled');
+        }
+    });
+
+    fzMinus.click(function(e){
+        fzMin--;
+        $('.reader-content_container').css('fontSize', fzMin + 'px');
+        fzPlus.removeAttr('disabled');
+        if(fzMin <= 14) {
+            $(this).attr('disabled', 'disabled');
+        }
+    });
+
+    // Изменение семейства шрифтов.
+    $('.font-carousel').carousel({
+        interval: false
+    });
+    
+    let fontCarousel = $('.font-carousel');
+    let slideCarousel = function() {
+        let index = $('.carousel-item.active', fontCarousel).index() + 1;
+        if(index === 1) {
+            $('.reader-content_container').css('fontFamily', 'Roboto');
+        } 
+        else if (index === 2) {
+            $('.reader-content_container').css('fontFamily', 'proxima_regular');
+        }
+        else if (index === 3) {
+            $('.reader-content_container').css('fontFamily', 'AdelleCyrillic');
+        } 
+        else if (index === 4) {
+            $('.reader-content_container').css('fontFamily', 'Open Sans');
+        }
+    }
+
+    fontCarousel.on('slid.bs.carousel', slideCarousel).trigger('slid.bs.carousel');
+
+
+    // смена цветовой схемы
+    $('.dark-scheme_btn').click(function(){
+        $('.reader').removeClass('default sepia').addClass('dark');
+    });
+    $('.white-scheme_btn').click(function() {
+        $('.reader').removeClass('dark sepia').addClass('default');
+    });
+    $('.sepia-scheme_btn').click(function() {
+        $('.reader').removeClass('dark default').addClass('sepia');
     });
 });

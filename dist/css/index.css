@@ -23,6 +23,10 @@
   font-family: AdelleCyrillic;
   src: url(../fonts/AdelleCyrillic-Light.ttf); }
 
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf); }
+
 * {
   margin: 0;
   padding: 0;
@@ -4983,8 +4987,120 @@ footer .box {
   .genres_item-list li a {
     font-size: 14px; } }
 
-.reader.default p {
-  color: #4a4a4a; }
+.reader {
+  height: 100%; }
+  .reader.default p {
+    color: #4a4a4a; }
+
+.reader.dark {
+  background: #4a4a4a; }
+  .reader.dark .color-scheme {
+    background: #353435; }
+  .reader.dark .reader-header {
+    background: #353435; }
+  .reader.dark .reader-actions button {
+    background: transparent; }
+    .reader.dark .reader-actions button span {
+      background: #c5d0de; }
+  .reader.dark .reader-content {
+    background: #4a4a4a; }
+  .reader.dark .reader-content_container {
+    color: #eaeaea; }
+  .reader.dark .reader-settings {
+    background: #353435; }
+  .reader.dark .reader-funcs {
+    background: #353435; }
+  .reader.dark .chapter-name, .reader.dark .settings-chapter-name, .reader.dark .settings-chapter-name,
+  .reader.dark .progress-value,
+  .reader.dark .settings-progress-value, .reader.dark .settings-progress-value {
+    color: #9b9b9b; }
+  .reader.dark .output {
+    background: #fff;
+    color: #354052; }
+  .reader.dark .reader-section_list {
+    background: #353435; }
+    .reader.dark .reader-section_list li a {
+      background: #353435;
+      color: #eaeaea; }
+  .reader.dark .settings-data {
+    background: #353435; }
+  .reader.dark .settings-data-box {
+    background: #353435; }
+  .reader.dark .font-example {
+    color: #fff; }
+  .reader.dark .font-name {
+    color: #fff; }
+  .reader.dark .align-text .align-left {
+    background: url(../img/reader/left-w.svg) no-repeat;
+    background-size: cover;
+    margin-right: 35px; }
+  .reader.dark .align-text .align-center {
+    background: url(../img/reader/center-w.svg) no-repeat;
+    background-size: cover; }
+  .reader.dark .lineheight-text .lh-sm {
+    background: url(../img/reader/lh-sm-w.svg) no-repeat;
+    background-size: cover;
+    margin-right: 21px; }
+  .reader.dark .lineheight-text .lh-md {
+    background: url(../img/reader/lh-md-w.svg) no-repeat;
+    background-size: cover;
+    margin-right: 21px; }
+  .reader.dark .lineheight-text .lh-lg {
+    background: url(../img/reader/lh-lg-w.svg) no-repeat;
+    background-size: cover; }
+  .reader.dark .show-settings_btn {
+    background-image: url(../img/reader/settings-w.svg);
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .reader.dark .show-chapters_btn {
+    background-image: url(../img/reader/content-w.svg);
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+.reader.sepia {
+  background: #f5e9d1; }
+  .reader.sepia .color-scheme {
+    background: #353435; }
+  .reader.sepia .reader-header {
+    background: #f5e9d1; }
+  .reader.sepia .reader-actions button {
+    background: transparent; }
+    .reader.sepia .reader-actions button span {
+      background: #a8aab7; }
+  .reader.sepia .reader-content_container {
+    color: #644d34; }
+  .reader.sepia .reader-funcs {
+    background: #f5e9d1; }
+  .reader.sepia .reader-settings {
+    background: #f5e9d1; }
+  .reader.sepia .settings-data {
+    background: #353435; }
+  .reader.sepia .settings-data-box {
+    background: #353435; }
+  .reader.sepia .font-example {
+    color: #fff; }
+  .reader.sepia .font-name {
+    color: #fff; }
+  .reader.sepia .align-text .align-left {
+    background: url(../img/reader/left-w.svg) no-repeat;
+    background-size: cover;
+    margin-right: 35px; }
+  .reader.sepia .align-text .align-center {
+    background: url(../img/reader/center-w.svg) no-repeat;
+    background-size: cover; }
+  .reader.sepia .lineheight-text .lh-sm {
+    background: url(../img/reader/lh-sm-w.svg) no-repeat;
+    background-size: cover;
+    margin-right: 21px; }
+  .reader.sepia .lineheight-text .lh-md {
+    background: url(../img/reader/lh-md-w.svg) no-repeat;
+    background-size: cover;
+    margin-right: 21px; }
+  .reader.sepia .lineheight-text .lh-lg {
+    background: url(../img/reader/lh-lg-w.svg) no-repeat;
+    background-size: cover; }
+  .reader.sepia .reader-section_list {
+    background: #f5e9d1; }
 
 .reader-content {
   padding: 25px 27px 36px;
@@ -5175,6 +5291,9 @@ footer .box {
       -webkit-transition: .2s;
       transition: .2s; }
 
+.reader-content_container {
+  line-height: 1.4; }
+
 .output {
   position: absolute;
   background: rgba(0, 0, 0, 0.8);
@@ -5263,7 +5382,8 @@ footer .box {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #fff; }
+  background: #fff;
+  display: none; }
 
 .color-scheme {
   display: -webkit-box;
@@ -5333,11 +5453,6 @@ footer .box {
     background: url(../img/reader/center-b.svg) no-repeat;
     background-size: cover; }
 
-.font-params {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
-
 .lineheight-text button {
   display: inline-block;
   width: 24px;
@@ -5360,5 +5475,126 @@ footer .box {
 .lineheight-text .lh-lg {
   background: url(../img/reader/lh-lg-b.svg) no-repeat;
   background-size: cover; }
+
+.font-params {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20px;
+  max-width: 146px; }
+
+.fz-plus,
+.fz-minus {
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-bottom: 70px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #f7981c; }
+
+.font-carousel {
+  width: 100%; }
+  .font-carousel .carousel-indicators {
+    margin-bottom: 2rem; }
+    .font-carousel .carousel-indicators li {
+      width: 6px;
+      height: 6px;
+      border: 1px solid #f7981c;
+      background: transparent;
+      border-radius: 50%; }
+      .font-carousel .carousel-indicators li.active {
+        background: #f7981c; }
+
+.font-box {
+  text-align: center; }
+
+.font-example {
+  font-size: 52px;
+  font-weight: 600;
+  color: #354052;
+  line-height: 0.44;
+  margin: 34px 0 20px; }
+  .font-example.roboto {
+    font-family: Roboto; }
+  .font-example.proxima {
+    font-family: proxima_regular; }
+  .font-example.adelle {
+    font-family: AdelleCyrillic; }
+  .font-example.opensans {
+    font-family: 'Open Sans'; }
+
+.font-name {
+  font-size: 10px;
+  font-family: proxima_bold;
+  text-transform: uppercase;
+  line-height: 1.7; }
+
+@media screen and (min-width: 768px) {
+  .reader-settings {
+    position: relative;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .settings-chapter {
+    display: none; }
+  .settings-range {
+    display: none; }
+  .reader-settings {
+    margin-left: auto; }
+  .reader-settings_box {
+    margin: 0 0 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .show-chapters_btn {
+    margin-right: 53px; }
+  .show-settings_btn {
+    margin-right: 40px; }
+  .settings-data {
+    min-width: 320px;
+    position: absolute;
+    top: 100%;
+    left: auto;
+    right: 0;
+    width: auto;
+    z-index: 10;
+    height: 100%; }
+  .color-scheme {
+    background: #fff; }
+  .reader-section_list {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    bottom: -155px;
+    width: 206px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    left: auto;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+    display: none; }
+    .reader-section_list.active {
+      display: block; }
+    .reader-section_list li a {
+      background: #fff; }
+  .reader-content.active {
+    background: transparent; } }
 
 /*# sourceMappingURL=../src/sourcemaps/index.css.map */
