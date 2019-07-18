@@ -241,6 +241,30 @@
         font-size: 15px;
         line-height: 1.73;
     }
+
+    .prev, .next{
+        display: block;
+        width: 25%;
+        height: 100%;
+        background: transparent;
+        position: absolute;
+        top: 0;
+    }
+
+    .prev{
+        left: 0;
+        transition: .2s;
+        &:hover{
+            background: linear-gradient(to right, rgba(0,0,0,.2), rgba(0,0,0,0));
+        }
+    }
+    .next{
+        transition: .3s;
+        right: 0;
+        &:hover{
+            background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.2));
+        }
+    }
 }
 
 .reader-header{
@@ -260,6 +284,7 @@
     &.active{
         visibility: visible;
         opacity: 1;
+        z-index: 99;
     }
 }
 

@@ -71,9 +71,21 @@
 
 .card-item_name{
     font-size: 15px;
+    max-height: 65px;
+    overflow: hidden;
     line-height: 1.2;
     font-family: $p_semi;
     color: $base-text-color;
+    position: relative;
+    &:after{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 25px;
+        background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+    }
 }
 
 .card-item_img{
@@ -289,6 +301,7 @@
 .step-item_collection{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     .card-item{
         min-width: 99px;
         max-width: 99px;

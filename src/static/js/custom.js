@@ -219,8 +219,10 @@ $(function () {
     });
 
     $('.reader-actions button').click(function(e) {
-        $('.reader-section_list, .reader-content').addClass('active');
+        $('.reader-section_list, .reader-content').show(0);
         $('.settings-data').slideUp(300);
+
+        $('.chapters-box').hide(300);
     });
 });
 
@@ -267,6 +269,7 @@ $(function() {
     $('.show-settings_btn').click(function(e) {
         e.preventDefault();
         $('.settings-data').slideDown(300);
+        $('.chapters-box, .reader-section_list').hide(300);
     });
 
     // изменение контента ридера
@@ -384,6 +387,8 @@ $(function() {
     // содержание в читалке
     $('.show-chapters_btn').click(function(e) {
         $('.chapters-box').slideDown(300);
+        $('.settings-data').hide(300);
+        $('.reader-section_list').hide(300);
     });
     $('.chapters-box .close').click(function(e) {
         $('.chapters-box').slideUp(300);

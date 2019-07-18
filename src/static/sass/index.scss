@@ -73,6 +73,15 @@ footer{
     box-shadow: none;
 }
 
+h1{
+    font-size: 26px;
+    line-height: 1.38;
+}
+h2{
+    font-size: 22px;
+    line-height: 1.45;
+}
+
 @import './header.scss';
 @import './start.scss';
 @import './compilation_section.scss';
@@ -93,3 +102,4 @@ footer{
 @import './authors.scss';
 @import './genres.scss';
 @import './reader.scss';
+@import './404.scss';

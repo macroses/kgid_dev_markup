@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        
+        .wrapper
+            include ../layout/main/up_btn.pug
+            include ../layout/header/header.pug
+
+            main
+                .err-page
+                    .err-page_box
+                        .err-page_img
+                            img(src="./img/404.png", alt="")
+                        .err-page_content
+                            .err-page_title Увы, страница не найдена
+                            .err-page_tip  Прирносим свои извинения. Похоже, что ты пытаешься перейти на страницу, которая удалена или не существует.
+                            a.to-main_link Назад на главную
+
+
+            include ../layout/footer/footer.pug
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")
