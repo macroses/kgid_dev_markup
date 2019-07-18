@@ -205,8 +205,9 @@ $(function () {
             $('.reader-content, .reader-section_list, .reader-header').removeClass('active');
         }
         else{
-            $('.reader-header').toggleClass('active');
+            $('.reader-header, .reader-settings_lgscreen').toggleClass('active');
             $('.settings-data').hide(300);
+            $('.chapters-box').slideUp(300);
         }
 
         if($('.reader-header').hasClass('active')){
@@ -379,4 +380,12 @@ $(function() {
     $('.sepia-scheme_btn').click(function() {
         $('.reader').removeClass('dark default').addClass('sepia');
     });
+
+    // содержание в читалке
+    $('.show-chapters_btn').click(function(e) {
+        $('.chapters-box').slideDown(300);
+    });
+    $('.chapters-box .close').click(function(e) {
+        $('.chapters-box').slideUp(300);
+    })
 });

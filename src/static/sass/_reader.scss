@@ -14,6 +14,7 @@
     .color-scheme{
         background: #353435;
     }
+    
     .reader-header{
         background: #353435;
     }
@@ -109,6 +110,42 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
+
+    .reader-settings_lgscreen{
+        background: #353435;
+    }
+
+    .chapter-header{
+        background: #353435;
+        color: #fff;
+    }
+
+    .chapter-list{
+        li{
+            background: #353435;
+            a{
+                background: #353435;
+                color: #fff;
+            }
+        }
+    }
+
+    .shelf-point:before{
+        background: url(../img/icons/plus-w.svg) no-repeat;
+        background-size: contain;
+    }
+    .review-point:before{
+        background: url(../img/icons/write-w.svg) no-repeat;
+        background-size: contain;
+    }
+    .share-point:before{
+        background: url(../img/icons/share-w.svg) no-repeat;
+        background-size: contain;
+    }
+    .feedback-point:before{
+        background: url(../img/icons/info-w.svg) no-repeat;
+        background-size: contain;
+    }
 }
 
 .reader.sepia{
@@ -185,14 +222,18 @@
     .reader-section_list{
         background: #f5e9d1;
     }
+
+    .reader-settings_lgscreen{
+        background: #f5e9d1;
+    }
 }
 
 .reader-content{
     padding: 25px 27px 36px;
     background: transparent;
     transition: .3s;
-    height: 90vh;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     &.active{
         background: rgba(0,0,0,.5);
     }
@@ -231,6 +272,19 @@
     max-width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
+    position: relative;
+    span{
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 16px;
+        width: 8px;
+        left: 0;
+        top: 0;
+        height: 8px;
+        transform: rotate(45deg);
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+    }
 }
 
 .reader-actions{
@@ -275,8 +329,54 @@
             border-top: 1px solid rgba(0,0,0,.1);
             font-family: $p_semi;
             text-decoration: none;
+            position: relative;
         }
     }
+}
+
+.shelf-point:before{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 10px;
+    content:'';
+    width: 16px;
+    height: 16px;
+    background: url(../img/icons/plus.svg) no-repeat;
+    background-position: left center;
+    background-size: contain;
+}
+.review-point:before{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 10px;
+    content:'';
+    width: 16px;
+    height: 16px;
+    background: url(../img/icons/write.svg) no-repeat;
+    background-position: left center;
+    background-size: contain;
+}
+.share-point:before{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 10px;
+    content:'';
+    width: 16px;
+    height: 16px;
+    background: url(../img/icons/share.svg) no-repeat;
+    background-position: left center;
+    background-size: contain;
+}
+.feedback-point:before{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 10px;
+    content:'';
+    width: 16px;
+    height: 16px;
+    background: url(../img/icons/info.svg) no-repeat;
+    background-position: left center;
+    background-size: contain;
 }
 
 .reader-funcs{
@@ -303,6 +403,33 @@
     font-size: 12px;
     color: #7f8fa4;
     font-style: italic;
+}
+
+.chapters-box{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; 
+    box-shadow: 5px 7px 21px 10px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 41px;
+    left: 0;
+    display: none;
+}
+
+.chapter-header{
+    position: relative;
+    padding-left: 12px;
+    background: #fff;
+    .close{
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: url(../img/icons/close.svg) no-repeat;
+        background-size: contain;
+    }
 }
 
 .progress-value{
@@ -390,6 +517,7 @@
 
 .reader-content_container{
     line-height: 1.4;
+    overflow: hidden;
 }
 
 .output{
@@ -412,6 +540,7 @@
     justify-content: space-between;
     padding: 0 36px;
     margin-bottom: 18px;
+    position: relative;
     button{
         display: inline-block;
         width: 21px;
@@ -453,16 +582,18 @@
 
 .chapter-list{
     li{
+        background: #fff;
         a{
             display: inline-block;
             white-space: nowrap;
-            padding: 8px 12px;
+            padding: 4px 12px;
             color: $base-text-color;
             border-bottom: 1px solid rgba(0,0,0,.1);
             width: 100%;
             max-width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
+            background: #fff;
             &.already_read{
                 font-family: $p_semi;
             }
@@ -654,6 +785,10 @@
     line-height: 1.7;
 }
 
+.reader-settings_lgscreen{
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     .reader-settings{
         position: relative;
@@ -723,8 +858,79 @@
     }
 
     .reader-content{
+        padding: 40px;
+        height: 100vh;
         &.active{
             background: transparent;
         }
+    }
+
+    .reader-header{
+        padding: 17px 24px 17px 40px;
+    }
+
+    .reader-bookname{
+        font-size: 14px;
+        padding-right: 24px;
+    }
+
+    .chapter{
+        padding: 12px 40px;
+    }
+
+    .reader-settings_lgscreen{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        transform: translateY(100%);
+        transition: .5s;
+        background: #fff;
+        &.active{
+            transform: translateY(0);
+        }
+        .settings-chapter{
+            display: flex;
+        }
+        .settings-range{
+            display: block;
+            padding: 0 40px;
+        }
+    }
+
+    .chapters-box{
+        position: absolute;
+        top: 100%;
+        left: auto;
+        right: 100%;
+        width: 320px;
+        overflow: visible;
+    }
+    .chapter-header{
+        padding-left: 21px;
+    }
+
+    .chapter-list{
+        li{
+            a{
+                padding: 4px 21px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .reader-content{
+        flex-direction: row;
+        padding: 78px 54px;
+    }
+    .reader-content_container{
+        flex: 1;
+        padding: 0 34px;
+    }
+
+    .reader-header{
+        padding: 22px 24px 22px 40px;
     }
 }
