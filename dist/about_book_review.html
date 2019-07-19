@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Start</title>
+    <link rel="stylesheet" href="css/libs.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+  </head>
+  <body>
+    <div class="popup-box">
+      <!-- можно добавлять success, info, warning, error-->
+      <div class="popup warning">Success! This is positive notification.</div>
+    </div>
+    <div class="wrapper">
+      <header>
+        <div class="header-container">
+          <!-- В header-box добавлять registered, для отображения шапки зареганных юзеров-->
+          <div class="header-box registered"><a class="logo" href=""><img src="./img/main-logo.svg" alt=""/></a>
+            <div class="header-login">
+              <button class="registration-btn">Зарегистрироваться</button>
+              <button class="sign-btn">Войти</button>
+              <div class="header-user_block">
+                <div class="header-search_btn-mobile"></div>
+                <div class="header-notice"></div>
+                <div class="header-user">
+                  <div class="header-user_avatar"></div>
+                  <!-- .dropdown-block-->
+                  <!--     .dropdown-block_item-->
+                  <!--         a(href="") Профиль-->
+                  <!--     .dropdown-block_item-->
+                  <!--         a(href="") Настройки-->
+                  <!--     .dropdown-block_item-->
+                  <!--         a(href="") Сообщения-->
+                </div>
+              </div>
+            </div>
+            <nav class="header-nav">
+              <ul>
+                <li class="active"><a href="">Что читают</a></li>
+                <li><a class="active" href="">Жанры</a></li>
+                <li><a href="">Авторы</a></li>
+                <li><a href="">Мои книги</a></li>
+              </ul>
+            </nav>
+            <!-- .header-search-->
+            <!--     .header-search_box-->
+            <!--         input(id="search-input" type="text" placeholder="Найти книгу/автора/жанр")-->
+            <!--         button.header-search_btn-->
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="all-reviews">
+          <div class="all-reviews_header"><a class="all-reviews_bookname" href="" title="Дейв Логан, Джон Кинг, Хэли Фишер-Райт «Лидер и племя. Пять уровней корпоративной культуры»">Дейв Логан, Джон Кинг, Хэли Фишер-Райт «Лидер и племя. Пять уровней корпоративной культуры»</a>
+            <div class="all-reviews-btn_block"><a class="read-fragment_link" href="">Читать отрывок</a>
+              <button class="onshelf_btn">На полку</button>
+              <button class="share_btn"> </button>
+            </div>
+          </div>
+          <div class="all-reviews_content">
+            <div class="book_item-comments">
+              <div class="compilation-section">
+                <div class="compilation-section_header">
+                  <h3 class="compilation-title">345 рецензий на книгу</h3>
+                  <div class="all-reviews_sort">
+                    <button class="sort-btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">По популярности</button>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="">По высокой оценке</a><a class="dropdown-item" href="">По низкой оценке</a><a class="dropdown-item" href="">По дате</a></div>
+                  </div>
+                </div>
+                <div class="comments-content">
+                  <div class="comment-area">
+                    <div class="comment-avatar"></div>
+                    <textarea placeholder="Я думаю, что..."></textarea>
+                  </div>
+                  <div class="comments-list">
+                    <div class="comment-item">
+                      <div class="comment-item_header">
+                        <div class="comment-avatar"></div>
+                        <div class="comment-user_data">
+                          <div class="comment-name-rate">
+                            <div class="comment-user_name">@uljana1987</div>
+                            <div class="comment-user_rate">оценка книги <span>2</span></div>
+                          </div>
+                          <div class="comment-date">вчера</div>
+                        </div>
+                      </div>
+                      <div class="comment-item_content">
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                      </div>
+                      <div class="comment-item_social">
+                        <div class="comment-social_item"><img src="./img/icons/social/like-n.svg" alt=""/><span>3</span></div>
+                        <div class="open-comment">
+                          <button> Развернуть</button>
+                        </div>
+                        <div class="comment-social_item answer"><img src="./img/icons/social/answer.svg" alt=""/><span>3</span></div>
+                        <div class="comment-social_item share"><img src="./img/icons/social/share.svg" alt=""/><span>3</span></div>
+                      </div>
+                    </div>
+                    <div class="comment-item">
+                      <div class="comment-item_header">
+                        <div class="comment-avatar"></div>
+                        <div class="comment-user_data">
+                          <div class="comment-name-rate">
+                            <div class="comment-user_name">@uljana1987</div>
+                            <div class="comment-user_rate">оценка книги <span>2</span></div>
+                          </div>
+                          <div class="comment-date">вчера</div>
+                        </div>
+                      </div>
+                      <div class="comment-item_content">
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                      </div>
+                      <div class="comment-item_social">
+                        <div class="comment-social_item"><img src="./img/icons/social/like-n.svg" alt=""/><span>3</span></div>
+                        <div class="open-comment">
+                          <button> Развернуть</button>
+                        </div>
+                        <div class="comment-social_item answer"><img src="./img/icons/social/answer.svg" alt=""/><span>3</span></div>
+                        <div class="comment-social_item share"><img src="./img/icons/social/share.svg" alt=""/><span>3</span></div>
+                      </div>
+                    </div>
+                    <div class="comment-item">
+                      <div class="comment-item_header">
+                        <div class="comment-avatar"></div>
+                        <div class="comment-user_data">
+                          <div class="comment-name-rate">
+                            <div class="comment-user_name">@uljana1987</div>
+                            <div class="comment-user_rate">оценка книги <span>2</span></div>
+                          </div>
+                          <div class="comment-date">вчера</div>
+                        </div>
+                      </div>
+                      <div class="comment-item_content">
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                      </div>
+                      <div class="comment-item_social">
+                        <div class="comment-social_item"><img src="./img/icons/social/like-n.svg" alt=""/><span>3</span></div>
+                        <div class="open-comment">
+                          <button> Развернуть</button>
+                        </div>
+                        <div class="comment-social_item answer"><img src="./img/icons/social/answer.svg" alt=""/><span>3</span></div>
+                        <div class="comment-social_item share"><img src="./img/icons/social/share.svg" alt=""/><span>3</span></div>
+                      </div>
+                    </div>
+                    <div class="comment-item">
+                      <div class="comment-item_header">
+                        <div class="comment-avatar"></div>
+                        <div class="comment-user_data">
+                          <div class="comment-name-rate">
+                            <div class="comment-user_name">@uljana1987</div>
+                            <div class="comment-user_rate">оценка книги <span>2</span></div>
+                          </div>
+                          <div class="comment-date">вчера</div>
+                        </div>
+                      </div>
+                      <div class="comment-item_content">
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                        «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет 
+                        по вкусу напоминать пирожок с вишней, но она подарит вам. Да, она не всегда будет по
+                        вкусу напоминать пирожок с вишней, но она подарит вам
+                      </div>
+                      <div class="comment-item_social">
+                        <div class="comment-social_item"><img src="./img/icons/social/like-n.svg" alt=""/><span>3</span></div>
+                        <div class="open-comment">
+                          <button> Развернуть</button>
+                        </div>
+                        <div class="comment-social_item answer"><img src="./img/icons/social/answer.svg" alt=""/><span>3</span></div>
+                        <div class="comment-social_item share"><img src="./img/icons/social/share.svg" alt=""/><span>3</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="box">
+          <nav class="header-nav">
+            <ul>
+              <li><a href="">Что читают</a></li>
+              <li><a class="active" href="">Жанры</a></li>
+              <li><a href="">Авторы</a></li>
+              <li><a href="">Мои книги</a></li>
+            </ul>
+          </nav>
+        </div>
+        <section class="footer">
+          <div class="box">
+            <div class="footer-content">
+              <div class="footer-header"><a class="logo" href=""><img src="./img/main-logo.svg" alt=""/></a>
+                <div class="footer-tagline">Книги, которые вы полюбите</div>
+                <div class="footer-tip">Читайте, ставьте оценки и делитесь с друзьями</div>
+                <button class="footer-reg_btn">Зарегистрироваться</button>
+              </div>
+              <div class="footer-main">
+                <div class="accordion" id="accordionExample">
+                  <div class="card compilation">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0">
+                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span>Подборки</span><span class="accordion-icon"><span></span><span></span></span></button>
+                      </h5>
+                    </div>
+                    <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <ul class="footer-list">
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><span>Популярные полки</span><span class="accordion-icon"><span></span><span></span></span></button>
+                      </h5>
+                    </div>
+                    <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <ul class="footer-list">
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h5 class="mb-0">
+                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><span>О компании</span><span class="accordion-icon"><span></span><span></span></span></button>
+                      </h5>
+                    </div>
+                    <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <ul class="footer-list">
+                          <li><a href="#">О проекте</a></li>
+                          <li><a href="#">Условия использования</a></li>
+                          <li><a href="#">Помощь и контакты</a></li>
+                          <li><a href="#">Согласие на получение рассылок</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copy">
+              <ul>
+                <li><a href="">© Knigigid 2019</a></li>
+                <li><a href="">Карта сайта</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">Конфиденциальность пользователя</a></li>
+                <li><a href="">Правообладателям</a></li>
+                <li><a href="">Помогите нам стать лучше <span>info@knigogid.ru</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script src="./js/libs.min.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

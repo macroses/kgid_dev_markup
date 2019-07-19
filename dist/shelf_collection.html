@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="css/index.css"/>
   </head>
   <body>
+    <div class="popup-box">
+      <!-- можно добавлять success, info, warning, error-->
+      <div class="popup warning">Success! This is positive notification.</div>
+    </div>
     <div class="wrapper">
-      <div class="up_btn"><span></span></div>
       <header>
         <div class="header-container">
           <!-- В header-box добавлять registered, для отображения шапки зареганных юзеров-->
@@ -49,12 +52,21 @@
         </div>
       </header>
       <main>
-        <div class="err-page">
-          <div class="err-page_box">
-            <div class="err-page_img"><img src="./img/404.png" alt=""/></div>
-            <div class="err-page_content">
-              <div class="err-page_title">Увы, страница не найдена</div>
-              <div class="err-page_tip"> Приносим свои извинения. Похоже, что ты пытаешься перейти на страницу, которая удалена или не существует.</div><a class="to-main_link" href="">Назад на главную</a>
+        <div class="crumbs">
+          <ul>
+            <li><a href="#">Крошка</a></li>
+            <li><a href="#">Крохотулечка</a></li>
+            <li><a class="actual-page" href="#">Крохотня</a></li>
+          </ul>
+        </div>
+        <div class="shelf_promo">
+          <div class="shelf_promo-blur"></div>
+          <div class="shelf_promo-content">
+            <div class="shelf_promo-title">Художественные книги, место действия в которых - психушка</div>
+            <div class="item-content_data"><span class="compilation_books-counter">20 книг</span><span class="dot"></span><span class="compilation_folllwers-counter">32 подписок</span></div>
+            <div class="shelf_promo-btns">
+              <button class="follow-btn">Подписаться</button>
+              <button class="share-btn">Поделиться</button>
             </div>
           </div>
         </div>

@@ -107,6 +107,35 @@ h2 {
   font-size: 22px;
   line-height: 1.45; }
 
+.crumbs {
+  padding: 12px; }
+  .crumbs ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .crumbs ul li a {
+      font-family: proxima_semibold;
+      line-height: 1.5;
+      display: inline-block;
+      position: relative;
+      color: #1991eb;
+      margin-right: 28px; }
+      .crumbs ul li a:after {
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: calc(50% - 4px);
+        right: -20px;
+        border: 4px solid transparent;
+        border-left: 8px solid #7f8fa4; }
+      .crumbs ul li a.actual-page {
+        pointer-events: none;
+        color: #7f8fa4;
+        font-family: proxima_regular; }
+        .crumbs ul li a.actual-page:after {
+          display: none; }
+
 .header-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5826,11 +5855,378 @@ footer .box {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0 8px; }
 
 .err-page_img {
-  text-align: center; }
+  text-align: center;
+  padding: 32px 0 21px; }
   .err-page_img img {
     width: 207px; }
+
+.err-page_content {
+  text-align: center;
+  margin-bottom: 100px; }
+
+.err-page_title {
+  font-size: 18px;
+  font-family: proxima_bold;
+  line-height: 1.33;
+  color: #354052;
+  margin-bottom: 16px; }
+
+.err-page_tip {
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  line-height: 1.5; }
+
+.to-main_link {
+  background: #1991eb;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  padding: 9px 37px;
+  font-family: proxima_semibold;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 4px 14px 0 rgba(75, 76, 78, 0.31);
+  box-shadow: 2px 4px 14px 0 rgba(75, 76, 78, 0.31); }
+  .to-main_link:hover {
+    color: #fff;
+    text-decoration: none;
+    -webkit-box-shadow: 0 0 4px 0 #1991eb;
+    box-shadow: 0 0 4px 0 #1991eb; }
+  .to-main_link.disabled {
+    pointer-events: none;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    background: #ced2db;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff; }
+
+@media screen and (min-width: 768px) {
+  .err-page_img {
+    padding: 50px 0 41px; }
+    .err-page_img img {
+      width: 402px; }
+  .err-page_content {
+    width: 450px;
+    margin: 0 auto 50px; }
+  .err-page_title {
+    font-size: 36px;
+    margin-bottom: 24px; } }
+
+@media screen and (min-width: 1200px) {
+  .err-page_img {
+    padding: 50px 0 41px; }
+    .err-page_img img {
+      width: 491px; }
+  .err-page_box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 1024px;
+    margin: 90px auto 140px; }
+  .err-page_tip {
+    margin-bottom: 40px; } }
+
+.all-reviews {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.all-reviews-btn_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center; }
+  .all-reviews-btn_block .read-fragment_link {
+    background: #1991eb;
+    color: #fff;
+    border-radius: 4px;
+    border: 0;
+    padding: 9px 37px;
+    font-family: proxima_semibold;
+    text-decoration: none;
+    padding: 0;
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+    margin-right: 4px;
+    padding: 7px 0; }
+    .all-reviews-btn_block .read-fragment_link:hover {
+      color: #fff;
+      text-decoration: none;
+      -webkit-box-shadow: 0 0 4px 0 #1991eb;
+      box-shadow: 0 0 4px 0 #1991eb; }
+    .all-reviews-btn_block .read-fragment_link.disabled {
+      pointer-events: none;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      background: #ced2db;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #fff; }
+  .all-reviews-btn_block .onshelf_btn {
+    background: transparent;
+    color: #354052;
+    font-family: proxima_semibold;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    padding-left: 10px;
+    margin-right: 4px;
+    background-image: url(../img/icons/plus.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 10px center; }
+    .all-reviews-btn_block .onshelf_btn:hover {
+      -webkit-box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31);
+      box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
+    .all-reviews-btn_block .onshelf_btn:active {
+      background-color: rgba(10, 10, 10, 0.08); }
+    .all-reviews-btn_block .onshelf_btn.disabled {
+      pointer-events: none;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      background: #ced2db;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #ffffff; }
+  .all-reviews-btn_block .share_btn {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: transparent;
+    color: #354052;
+    font-family: proxima_semibold;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-image: url(../img/icons/share.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center; }
+    .all-reviews-btn_block .share_btn:hover {
+      -webkit-box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31);
+      box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
+    .all-reviews-btn_block .share_btn:active {
+      background-color: rgba(10, 10, 10, 0.08); }
+    .all-reviews-btn_block .share_btn.disabled {
+      pointer-events: none;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      background: #ced2db;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #ffffff; }
+
+.all-reviews_header {
+  padding: 12px;
+  border-bottom: solid 1px #f5f2ef;
+  margin-bottom: 18px; }
+
+.all-reviews_bookname {
+  position: relative;
+  display: inline-block;
+  color: #1991eb;
+  font-family: proxima_semibold;
+  padding-left: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .all-reviews_bookname:before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    left: 3px;
+    top: calc(50% - 4px);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-left: 2px solid #1991eb;
+    border-bottom: 2px solid #1991eb; }
+
+.all-reviews_sort {
+  display: none; }
+  .all-reviews_sort .dropdown-item {
+    font-size: 14px; }
+    .all-reviews_sort .dropdown-item:hover {
+      background: #f1f4f8;
+      color: #1991eb; }
+
+.sort-btn {
+  background: transparent;
+  color: #354052;
+  font-family: proxima_semibold;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: proxima_regular;
+  padding: 8px 16px; }
+  .sort-btn:hover {
+    -webkit-box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31);
+    box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
+  .sort-btn:active {
+    background-color: rgba(10, 10, 10, 0.08); }
+  .sort-btn.disabled {
+    pointer-events: none;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    background: #ced2db;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #ffffff; }
+
+@media screen and (min-width: 768px) {
+  .all-reviews {
+    margin-top: 30px; }
+  .all-reviews_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 40px 20px; }
+  .all-reviews_bookname {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-bottom: 0; }
+  .all-reviews-btn_block {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: 24px; }
+  .all-reviews_content .compilation-section_header {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0; }
+  .all-reviews_sort {
+    display: inline-block; } }
+
+@media screen and (min-width: 1200px) {
+  .all-reviews_bookname {
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    font-size: 18px; }
+  .all-reviews-btn_block {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2; }
+    .all-reviews-btn_block .read-fragment_link {
+      margin-right: 16px; }
+    .all-reviews-btn_block .onshelf_btn {
+      margin-right: 16px; }
+  .all-reviews_content .compilation-title {
+    font-size: 26px; } }
+
+.shelf_promo-content {
+  position: relative;
+  max-width: 651px;
+  margin: 0 auto; }
+
+.shelf_promo-blur {
+  position: absolute;
+  width: 110%;
+  height: 120%;
+  top: -10%;
+  left: -5%;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  background-image: url(http://severnykavkaz.ru/wp-content/uploads/2019/02/priroda-ingushetii-1200x540.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.shelf_promo {
+  position: relative;
+  overflow: hidden;
+  background-image: url(http://severnykavkaz.ru/wp-content/uploads/2019/02/priroda-ingushetii-1200x540.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 27px 12px 32px; }
+
+.shelf_promo-title {
+  font-family: AdelleCyrillic;
+  font-size: 22px;
+  font-weight: 600;
+  width: 284px;
+  line-height: 1.32;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 18px; }
+
+.item-content_data {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 20px; }
+
+.shelf_promo-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 296px;
+  margin: 0 auto; }
+  .shelf_promo-btns button {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .shelf_promo-btns .follow-btn {
+    background: #1991eb;
+    color: #fff;
+    border-radius: 4px;
+    border: 0;
+    padding: 9px 37px;
+    font-family: proxima_semibold;
+    text-decoration: none;
+    padding: 7px 0;
+    margin-right: 8px; }
+    .shelf_promo-btns .follow-btn:hover {
+      color: #fff;
+      text-decoration: none;
+      -webkit-box-shadow: 0 0 4px 0 #1991eb;
+      box-shadow: 0 0 4px 0 #1991eb; }
+    .shelf_promo-btns .follow-btn.disabled {
+      pointer-events: none;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      background: #ced2db;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #fff; }
+  .shelf_promo-btns .share-btn {
+    background: transparent;
+    color: #354052;
+    font-family: proxima_semibold;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border-color: #dfe1e5;
+    padding-left: 20px;
+    background-image: url(../img/icons/share-w.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 10px center; }
+    .shelf_promo-btns .share-btn:hover {
+      -webkit-box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31);
+      box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
+    .shelf_promo-btns .share-btn:active {
+      background-color: rgba(10, 10, 10, 0.08); }
+    .shelf_promo-btns .share-btn.disabled {
+      pointer-events: none;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      background: #ced2db;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #ffffff; }
 
 /*# sourceMappingURL=../src/sourcemaps/index.css.map */

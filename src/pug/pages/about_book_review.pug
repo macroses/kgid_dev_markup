@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        .popup-box
+            // можно добавлять success, info, warning, error
+            .popup.warning Success! This is positive notification.
+        .wrapper
+            
+            include ../layout/header/header.pug
+
+            main
+                .all-reviews
+                    .all-reviews_header
+                        a.all-reviews_bookname(href="" title="Дейв Логан, Джон Кинг, Хэли Фишер-Райт «Лидер и племя. Пять уровней корпоративной культуры»") Дейв Логан, Джон Кинг, Хэли Фишер-Райт «Лидер и племя. Пять уровней корпоративной культуры»
+                        .all-reviews-btn_block
+                            a.read-fragment_link(href="") Читать отрывок
+                            button.onshelf_btn На полку
+                            button.share_btn 
+                    .all-reviews_content
+                        .book_item-comments
+                            .compilation-section
+                                .compilation-section_header
+                                    h3.compilation-title 345 рецензий на книгу
+                                    .all-reviews_sort
+                                        button(class="sort-btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") По популярности
+                                        .dropdown-menu
+                                            a.dropdown-item(href="") По высокой оценке
+                                            a.dropdown-item(href="") По низкой оценке
+                                            a.dropdown-item(href="") По дате
+                                .comments-content
+                                    .comment-area
+                                        .comment-avatar
+                                        textarea(placeholder="Я думаю, что...")
+                                    .comments-list
+                                        include ../layout/main/comment.pug
+                                        include ../layout/main/comment.pug
+                                        include ../layout/main/comment.pug
+                                        include ../layout/main/comment.pug
+                
+            include ../layout/footer/footer.pug
+        
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")

@@ -1,0 +1,71 @@
+.shelf_promo-content{
+    position: relative;
+    max-width: 651px;
+    margin: 0 auto;
+}
+
+.shelf_promo-blur{
+    position: absolute;
+    width: 110%;
+    height: 120%;
+    top: -10%;
+    left: -5%;
+    filter: blur(12px);
+    background-image: url(http://severnykavkaz.ru/wp-content/uploads/2019/02/priroda-ingushetii-1200x540.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.shelf_promo{
+    position: relative;
+    overflow: hidden;
+    background-image: url(http://severnykavkaz.ru/wp-content/uploads/2019/02/priroda-ingushetii-1200x540.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    padding: 27px 12px 32px;
+}
+
+.shelf_promo-title{
+    font-family: $adelle;
+    font-size: 22px;
+    font-weight: 600;
+    width: 284px;
+    line-height: 1.32;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.item-content_data{
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.shelf_promo-btns{
+    display: flex;
+    max-width: 296px;
+    margin: 0 auto;
+    button{
+        flex: 1;
+    }
+
+    .follow-btn{
+        @include btn-colored;
+        padding: 7px 0;
+        margin-right: 8px;
+    }
+    .share-btn{
+        @include btn-transparent;
+        color: #fff;
+        border-color: #dfe1e5;
+        padding-left: 20px;
+        background-image: url(../img/icons/share-w.svg);
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: 10px center;
+    }
+}

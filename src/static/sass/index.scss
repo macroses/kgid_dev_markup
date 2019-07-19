@@ -82,6 +82,41 @@ h2{
     line-height: 1.45;
 }
 
+.crumbs{
+    padding: 12px;
+    ul{
+        display: flex;
+        li{
+            a{
+                font-family: $p_semi;
+                line-height: 1.5;
+                display: inline-block;
+                position: relative;
+                color: $base-btn-color;
+                margin-right: 28px;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    top: calc(50% - 4px);
+                    right: -20px;
+                    border: 4px solid transparent;
+                    border-left: 8px solid #7f8fa4;
+                }
+                &.actual-page{
+                    pointer-events: none;
+                    color: #7f8fa4;
+                    font-family: $p_reg;
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @import './header.scss';
 @import './start.scss';
 @import './compilation_section.scss';
@@ -103,3 +138,5 @@ h2{
 @import './genres.scss';
 @import './reader.scss';
 @import './404.scss';
+@import './about_book_review.scss';
+@import './shelf_collection.scss';

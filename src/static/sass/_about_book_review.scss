@@ -1,0 +1,138 @@
+.all-reviews{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.all-reviews-btn_block{
+    display: flex;
+    text-align: center;
+    .read-fragment_link{
+        @include btn-colored;
+        padding: 0;
+        flex: 4;
+        margin-right: 4px;
+        padding: 7px 0;
+    }
+
+    .onshelf_btn{
+        @include btn-transparent;
+        flex: 3;
+        padding-left: 10px;
+        margin-right: 4px;
+        background-image: url(../img/icons/plus.svg);
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: 10px center;
+    }
+
+    .share_btn{
+        flex: 1;
+        @include btn-transparent;
+        background-image: url(../img/icons/share.svg);
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+    }
+}
+
+.all-reviews_header{
+    padding: 12px;
+    border-bottom: solid 1px rgb(245, 242, 239);
+    margin-bottom: 18px;
+}
+
+.all-reviews_bookname{
+    position: relative;
+    display: inline-block;
+    color: $base-btn-color;
+    font-family: $p_semi;
+    padding-left: 12px;
+    margin-bottom: 12px;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        left: 3px;
+        top: calc(50% - 4px);
+        transform: rotate(45deg);
+        border-left: 2px solid $base-btn-color;
+        border-bottom: 2px solid $base-btn-color;
+    }
+}
+
+.all-reviews_sort{
+    display: none;
+    .dropdown-item{
+        font-size: 14px;
+        &:hover{
+            background: #f1f4f8;
+            color: $base-btn-color;
+        }
+    }
+}
+
+.sort-btn{
+    @include btn-transparent;
+    font-family: $p_reg;
+    padding: 8px 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .all-reviews{
+        margin-top: 30px;
+    }
+    .all-reviews_header{
+        display: flex;
+        align-items: center;
+        padding: 0 40px 20px;
+    }
+
+    .all-reviews_bookname{
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .all-reviews-btn_block{
+        flex: 1;
+        margin-left: 24px;
+    }
+
+    .all-reviews_content{
+        .compilation-section_header{
+            justify-content: space-between;
+            padding: 0;
+        }
+    }
+
+    .all-reviews_sort{
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .all-reviews_bookname{
+        flex: 3;
+        font-size: 18px;
+    }
+    .all-reviews-btn_block{
+        flex: 2;
+        .read-fragment_link{
+            margin-right: 16px;
+        }
+        .onshelf_btn{
+            margin-right: 16px;
+        }
+    }
+    
+    .all-reviews_content{
+        .compilation-title{
+            font-size: 26px;
+        }
+    }
+}

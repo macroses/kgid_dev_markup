@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        .popup-box
+            // можно добавлять success, info, warning, error
+            .popup.warning Success! This is positive notification.
+        .wrapper
+            
+            include ../layout/header/header.pug
+
+            main
+                include ../layout/main/breadcrumbs.pug
+                .shelf_promo
+                    .shelf_promo-blur
+                    .shelf_promo-content
+                        .shelf_promo-title Художественные книги, место действия в которых - психушка
+                        .item-content_data
+                            span.compilation_books-counter 20 книг
+                            span.dot
+                            span.compilation_folllwers-counter 32 подписок
+                        .shelf_promo-btns
+                            button.follow-btn Подписаться
+                            button.share-btn Поделиться
+                
+            include ../layout/footer/footer.pug
+        
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")
