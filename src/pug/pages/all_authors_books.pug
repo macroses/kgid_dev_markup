@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Start
+        link(rel="stylesheet", href="css/libs.css")
+        link(rel="stylesheet", href="css/index.css")
+    body
+        .popup-box
+            // можно добавлять success, info, warning, error
+            .popup.warning Success! This is positive notification.
+        .wrapper
+            
+            include ../layout/header/header.pug
+
+            main
+                include ../layout/main/breadcrumbs.pug
+
+                .all_authors_books
+                    .all_authors_books-title Оскар Уайльд. Книги автора
+                    .all_authors_books-sort
+                        .all_authors_books-search
+                            input(type="text" placeholder="Поиск по книгам автора")
+                            button
+                        .all-reviews_sort
+                            button(class="sort-btn dropdown-toggle pop" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") По популярности
+                            .dropdown-menu
+                                a.dropdown-item(href="") По высокой оценке
+                                a.dropdown-item(href="") По низкой оценке
+                                a.dropdown-item(href="") По дате
+                            button(class="sort-btn dropdown-toggle" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") На всех языках
+                            .dropdown-menu
+                                a.dropdown-item(href="") По высокой оценке
+                                a.dropdown-item(href="") По низкой оценке
+                                a.dropdown-item(href="") По дате
+                    
+                    
+                    .collection-list_box
+                        .collection-list
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                
+
+            include ../layout/footer/footer.pug
+        
+        script(src="./js/libs.min.js")
+        script(src="./js/custom.js")

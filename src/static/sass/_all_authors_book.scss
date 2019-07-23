@@ -1,0 +1,110 @@
+.all_authors_books-sort{
+    margin-bottom: 8px;
+    padding: 0 12px;
+    .all-reviews_sort{
+        display: flex;
+    }
+
+    .dropdown-toggle::after{
+        vertical-align: middle;
+    }
+
+    .sort-btn{
+        padding: 6px 15px;
+        font-size: 12px;
+        flex: auto;
+        display: inline-block;
+        &.pop{
+            margin-right: 18px;
+        }
+    }
+}
+
+.all_authors_books{
+    max-width: 1115px;
+    margin: 0 auto;
+}
+
+
+
+.all_authors_books-title{
+    margin: 10px 0 20px;
+    font-size: 18px;
+    padding: 0 12px;
+    font-family: $p_semi;
+    line-height: 1.33;
+}
+
+.all_authors_books-search{
+    position: relative;
+    input{
+        width: 100%;
+        padding: 6px 24px 6px 12px;
+        border-radius: 4px;
+        border: solid 1px rgb(223, 227, 233);
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    button{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: url(../img/icons/search.svg) no-repeat;
+        background-size: contain;
+        border: 0;
+
+        position: absolute;
+        right: 11px;
+        top: 11px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .all_authors_books-sort{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        margin-bottom: 16px;
+
+        .sort-btn{
+            font-size: 14px;
+        }
+    }
+
+    .all_authors_books-search{
+        order: 1;
+        input{
+            margin-bottom: 0;
+            width: 210px;
+        }
+    }
+
+    .all_authors_books-title{
+        padding: 0 40px;
+        margin-bottom: 12px;
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .all_authors_books{
+        padding: 0;
+    }
+
+    .all_authors_books-title{
+        padding: 0;
+    }
+
+    .all_authors_books-sort{
+        padding: 0;
+    }
+
+    .all_authors_books-search{
+        input{
+            margin-bottom: 0;
+            width: 310px;
+        }
+    }
+
+}

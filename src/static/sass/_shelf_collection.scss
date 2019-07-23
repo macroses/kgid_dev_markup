@@ -1,3 +1,8 @@
+.user_shelf-item{
+    max-width: 1440px;
+    margin: 0 auto 24px;
+}
+
 .shelf_promo-content{
     position: relative;
     max-width: 651px;
@@ -67,5 +72,154 @@
         background-repeat: no-repeat;
         background-size: 16px;
         background-position: 10px center;
+    }
+}
+
+
+.shelf_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0;
+}
+
+.shelf_user-avatar{
+    width: 32px;
+    height: 32px;
+    background: url(https://vignette.wikia.nocookie.net/thestudents/images/f/f1/Acaa5870ce8abdef0b35b9a204964b91.jpg/revision/latest?cb=20180621145642) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 18px;
+}
+
+.shelf_user-name{
+    font-family: $p_semi;
+    display: flex;
+    align-items: center;
+    margin-right: 11px;
+    a{
+        display: inline-block;
+        max-width: 80px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $base-text-color;
+    }
+}
+
+.shelf_user-date{
+    color: #7f8fa4;
+}
+
+.shelf_user-post{
+    padding: 0 12px;
+    text-align: center;
+    color: $base-text-color;
+    margin-bottom: 32px;
+}
+
+.collection-list_box{
+    
+    &:after{
+        overflow: hidden;
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+    }
+}
+
+.collection-list{
+    max-width: 1115px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 0 12px;
+
+    &:after{
+        content: 'i i i i i i';
+        word-spacing: 138px;
+        padding-left: 138px;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
+}
+
+.collection-list_item{
+    width: auto;
+    display: inline-block;
+
+    .card-item_name{
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 600px){
+}
+
+@media screen and (min-width: 768px){
+
+    .shelf_promo-title{
+        font-size: 36px;
+        line-height: 1.22;
+        width: 650px;
+    }
+
+    .shelf_promo{
+        padding: 32px 12px 38px;
+    }
+
+    .shelf_user-post{
+        font-size: 18px;
+        line-height: 1.56;
+        padding: 0 40px;
+        margin-bottom: 50px;
+    }
+
+    .shelf_user{
+        margin: 27px 0 16px;
+    }
+
+    .shelf_user-name a{
+        max-width: 200px;
+    }
+
+    .collection-list{
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .collection-list{
+        &:after{
+            content: 'i i i i i i i i i i i i i i';
+            word-spacing: 187px;
+            padding-left: 187px;
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .shelf_user-post{
+        max-width: 650px;
+        margin: 0 auto 72px;
+    }
+
+    .shelf_promo-title{
+        margin-bottom: 42px;
+    }
+
+    .shelf_promo{
+        padding: 40px 12px 44px;
+    }
+
+    .collection-list{
+        padding: 0;
     }
 }

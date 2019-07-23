@@ -1,77 +1,78 @@
 // можно добавить класс .colored, чтобы окрасить секцию в серый цвет.
-.recomendation-section.colored
-    .box
-        .recomendation-list
-            #carouselExampleCaptions.carousel.slide(data-ride='carousel')
-                ol.carousel-indicators
-                    li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
-                    li(data-target='#carouselExampleCaptions', data-slide-to='1')
-                    li(data-target='#carouselExampleCaptions', data-slide-to='2')
+.advice-section.colored
+    .advice-section_list
+        #advice-section_carousel.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+                li.active(data-target='#advice-section_carousel', data-slide-to='0')
+                li(data-target='#advice-section_carousel', data-slide-to='1')
+                li(data-target='#advice-section_carousel', data-slide-to='2')
 
-                .carousel-inner
-                    .carousel-item.active
-                        .carousel-item_box
-                            .recomendation-item
+            .carousel-inner
+                .carousel-item.active 
+                    .advice-item
+                        .review-item
+                            .review-item_card
                                 include ./card_item.pug
-                                .recomendation-item_data
+                                .review-item_card-data
                                     ul.recomendation-item_values
                                         li 345
-                                        li 12
-                                        li 985
-                                    .recomendation-item_header Счастливый принц и другие сказки
-                                    .recomendation-item_content Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают
-                            .recomendation-item
+                                        li 66
+                                    .book_item-author
+                                        a(href="") Оскар Уайлд
+                                        .book_item-name Лидер и племя. Пять уровней корпоративной культуры
+                        .review-item
+                            .review-item_card
                                 include ./card_item.pug
-                                .recomendation-item_data
+                                .review-item_card-data
                                     ul.recomendation-item_values
                                         li 345
-                                        li 12
-                                        li 985
-                                    .recomendation-item_header Счастливый принц и другие сказки
-                                    .recomendation-item_content Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают
+                                        li 66
+                                    .book_item-author
+                                        a(href="") Оскар Уайлд
+                                        .book_item-name Лидер и племя. Пять уровней корпоративной культуры
 
-                    .carousel-item
-                        .carousel-item_box
-                            .recomendation-item
+                .carousel-item 
+                    .advice-item
+                        .review-item
+                            .review-item_card
                                 include ./card_item.pug
-                                .recomendation-item_data
+                                .review-item_card-data
                                     ul.recomendation-item_values
                                         li 345
-                                        li 12
-                                        li 985
-                                    .recomendation-item_header Счастливый принц и другие сказки
-                                    .recomendation-item_content Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают
-                            .recomendation-item
+                                        li 66
+                                    .book_item-author
+                                        a(href="") Оскар Уайлд
+                                        .book_item-name Лидер и племя. Пять уровней корпоративной культуры
+                        .review-item
+                            .review-item_card
                                 include ./card_item.pug
-                                .recomendation-item_data
+                                .review-item_card-data
                                     ul.recomendation-item_values
                                         li 345
-                                        li 12
-                                        li 985
-                                    .recomendation-item_header Счастливый принц и другие сказки
-                                    .recomendation-item_content Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают
-
-                    .carousel-item
-                        .carousel-item_box
-                            .recomendation-item
+                                        li 66
+                                    .book_item-author
+                                        a(href="") Оскар Уайлд
+                                        .book_item-name Лидер и племя. Пять уровней корпоративной культуры
+                    
+                .carousel-item 
+                    .advice-item
+                        .review-item
+                            .review-item_card
                                 include ./card_item.pug
-                                .recomendation-item_data
+                                .review-item_card-data
                                     ul.recomendation-item_values
                                         li 345
-                                        li 12
-                                        li 985
-                                    .recomendation-item_header Счастливый принц и другие сказки
-                                    .recomendation-item_content Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают
-                            .recomendation-item
+                                        li 66
+                                    .book_item-author
+                                        a(href="") Оскар Уайлд
+                                        .book_item-name Лидер и племя. Пять уровней корпоративной культуры
+                        .review-item
+                            .review-item_card
                                 include ./card_item.pug
-                                .recomendation-item_data
+                                .review-item_card-data
                                     ul.recomendation-item_values
                                         li 345
-                                        li 12
-                                        li 985
-                                    .recomendation-item_header Счастливый принц и другие сказки
-                                    .recomendation-item_content Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают Обучение по программе МВА – дорогостоящее удовольствие и не всегда оправданное вложение средств. Даже самые престижные бизнес-школы, вроде Гарвардской или Уортонской, предлагают
-
-            //- .recomendation-list_item
-            //-     include ./card_item.pug
-                
+                                        li 66
+                                    .book_item-author
+                                        a(href="") Оскар Уайлд
+                                        .book_item-name Лидер и племя. Пять уровней корпоративной культуры

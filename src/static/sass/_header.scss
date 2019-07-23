@@ -23,11 +23,33 @@
 }
 
 .header-notice{
+    position: relative;
     width: 19px;
     height: 19px;
     background: url(../img/icons/bell.svg) no-repeat;
-    background-size: cover;
+    background-size: 15px;
+    background-position: 0 0;
     margin-left: 24px;
+    cursor: pointer;
+    &:hover{
+        background-position: 0 -42px;
+    }
+    &:active{
+        background-position: 0 -82px;
+    }
+    &.new-notice{
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 6px;
+            top: 0;
+            right: 0;
+            background: #1991eb;
+            box-shadow: 0 0 4px 0 rgb(25, 145, 235);
+        }
+    }
 }
 
 .header-user_avatar{
@@ -182,6 +204,157 @@
     display: none;
 }
 
+.notice-box{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    padding: 16px;
+    cursor: default;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 5px 7px 21px 10px rgba(0, 0, 0, 0.08);
+    border: solid 1px rgb(223, 227, 233);
+    z-index: 5;
+    display: none;
+}
+
+.notice-item{
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+    cursor: default;
+    .user-avatar{
+        width: 34px;
+        height: 34px;
+        box-shadow: 0 0 8px 0 rgba(26, 61, 82, 0.18);
+        border-radius: 50%;
+        background: url(https://st4.cannypic.com/thumbs/15/158423_632_canny_pic.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &.new{
+        &:after{
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: $base-btn-color;
+            right: 0px;
+            top: 11px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.notice-item.system{
+    padding: 12px 0 16px;
+    border-top: 1px solid #eaeef3;
+    border-bottom: 1px solid #eaeef3;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.notice-item.old{
+    .notice-item_content{
+        color: #a3a5b1;
+        font-family: $p_reg;
+    }
+    a{
+        color: $base-text-color;
+    }
+}
+
+.sys-notice_title{
+    font-size: 16px;
+    font-family: $p_semi;
+    line-height: 1.38;
+    color: $base-text-color;
+    margin-bottom: 5px;
+}
+
+.sys-notice_tip{
+    font-size: 12px;
+    color: #a3a5b1;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.sys-notice_form{
+    display: flex;
+    input{
+        border: 1px solid #dfe3e9;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-right: 0;
+        padding-left: 8px;
+        flex: 3;
+    }
+
+    button{
+        @include btn-colored;
+        padding: 7px 0;
+        flex: 2;
+        margin-left: -3px;
+    }
+}
+
+.notice-item_destination{
+    margin-right: 11px;
+}
+
+.notice-item_content{
+    font-size: 12px;
+    font-family: $p_semi;
+    line-height: 1.25;
+    overflow: hidden;
+    position: relative;
+    max-width: 210px;
+    a{
+        color: $base-btn-color;
+        font-family: $p_bold;
+    }
+}
+
+.content-avatar{
+    width: 34px;
+    height: 54px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 rgba(26, 61, 82, 0.18);
+    background: url(https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375) no-repeat;
+    background-size: cover;
+}
+
+.notice-message{
+    color: #a3a5b1;
+    font-family: $p_reg;
+    font-size: 12px;
+    a{
+        font-family: $p_bold;
+        color: $base-text-color;
+    }
+}
+
+.all-notices_btn{
+    color: $base-btn-color;
+    background: transparent;
+    border: 0;
+    font-family: $p_semi;
+    line-height: 1.75;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .header-user_block{
+        position: relative;
+    }
+
+    .header-notice{
+        position: unset;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .header-nav {

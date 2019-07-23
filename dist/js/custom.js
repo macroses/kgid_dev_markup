@@ -30,6 +30,17 @@ $(function () {
         $(this).toggleClass('change-icon');
     });
 
+    // открытие уведомлений
+    $('.header-notice').click(function (e) {
+        $('.notice-box').show(300);
+    });
+
+    $(document).click(function (event) {
+        if ($(event.target).closest(".header-notice").length) return;
+        $(".notice-box").hide("300");
+        event.stopPropagation();
+    });
+
 
     // Дестроим карусель на больших экранах
     $(window).resize(carouselResize);
@@ -124,44 +135,44 @@ $(function () {
     });
 
     // показать уведомление о добавлении книги
-    $('.add_shelf_book-list_item').click(function(){
+    $('.add_shelf_book-list_item').click(function () {
         $('.popup-box').show().fadeOut(2000);
     });
 
     // настройки создания книжной полки
-    $('.create_shelf_btn').click(function(e){
+    $('.create_shelf_btn').click(function (e) {
         $('.create_shelf_box').toggleClass('create');
         $('.create_shelf_settings').slideToggle("slow");
     });
 
-    $('.secret-shelf input').change(function(){
-        if(this.checked) {
+    $('.secret-shelf input').change(function () {
+        if (this.checked) {
             $('.secret-shelf span').text('Закрытая')
-        } else{
+        } else {
             $('.secret-shelf span').text('Открытая')
         }
     });
 
-    $('.add_description-btn').click(function(){
+    $('.add_description-btn').click(function () {
         $('.shelf_name-description').slideToggle('slow');
     });
 
     // открытие отрывка книги
-    $('.open-fragment_btn').click(function() {
+    $('.open-fragment_btn').click(function () {
         $('.book_item-fragment p').toggleClass('open');
-        if($('.book_item-fragment p').hasClass('open')){
+        if ($('.book_item-fragment p').hasClass('open')) {
             $(this).text('Свернуть');
-        } else{
+        } else {
             $(this).text('Развернуть');
         }
     });
 
     // Открыть комментарий
-    $('.open-comment button').click(function() {
+    $('.open-comment button').click(function () {
         $('.comment-item_content').toggleClass('open');
-        if($('.comment-item_content').hasClass('open')){
+        if ($('.comment-item_content').hasClass('open')) {
             $(this).text('Свернуть');
-        } else{
+        } else {
             $(this).text('Развернуть');
         }
     });
@@ -169,13 +180,13 @@ $(function () {
 
     // кнопка настроек в профиле.
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
         let cont = $('.book_item-menu_btn');
 
-        if(!cont.is(e.target) && cont.has(e.target).length === 0) {
+        if (!cont.is(e.target) && cont.has(e.target).length === 0) {
             $('.book_item-menu_btn .dropdown-block').fadeOut(0);
         }
-        else{
+        else {
             $('.book_item-menu_btn .dropdown-block').fadeIn(0);
         }
     });
@@ -183,7 +194,7 @@ $(function () {
     // аккордеон для жанров
     let genresBtn = $('#genres .card .accordion-opener');
 
-    genresBtn.click(function() {
+    genresBtn.click(function () {
         $(this).children('.genres-icon').toggleClass('active');
         $(this).parents('.card').toggleClass('active');
     });
@@ -200,25 +211,25 @@ $(function () {
     // });
 
     // Ридер
-    $('.reader-content').click(function(e) {
-        if($(this).hasClass('active')){
+    $('.reader-content').click(function (e) {
+        if ($(this).hasClass('active')) {
             $('.reader-content, .reader-section_list, .reader-header').removeClass('active');
         }
-        else{
+        else {
             $('.reader-header, .reader-settings_lgscreen').toggleClass('active');
             $('.settings-data').hide(300);
             $('.chapters-box').slideUp(300);
         }
 
-        if($('.reader-header').hasClass('active')){
+        if ($('.reader-header').hasClass('active')) {
             $('.reader-funcs').hide(300);
         }
-        else{
+        else {
             $('.reader-funcs').delay(300).show(300);
         }
     });
 
-    $('.reader-actions button').click(function(e) {
+    $('.reader-actions button').click(function (e) {
         $('.reader-section_list, .reader-content').show(0);
         $('.settings-data').slideUp(300);
 
@@ -226,18 +237,18 @@ $(function () {
     });
 });
 
-$(function() {
+$(function () {
     // Ползунок для перелистывания страниц
-    $('.settings-range input[type=range]').on('input', function(){
+    $('.settings-range input[type=range]').on('input', function () {
         var el, newPoint, newPlace, offsetPos;
         el = $(this);
         var widthInp = el.width();
-        
+
         newPoint = (el.val() - el.attr('min')) / (el.attr('max') - el.attr('min'));
         offsetPos = 0.5;
 
-        if(newPoint < 0) newPlace = 0;
-        else if(newPoint > 1) newPlace = widthInp;
+        if (newPoint < 0) newPlace = 0;
+        else if (newPoint > 1) newPlace = widthInp;
         else {
             newPlace = widthInp * newPoint + offsetPos;
             offsetPos -= newPoint;
@@ -259,14 +270,14 @@ $(function() {
     }).trigger('input');
 
 
-    $('.settings-range input[type=range]').bind('mousedown touchstart',function(){
+    $('.settings-range input[type=range]').bind('mousedown touchstart', function () {
         $('.output').show();
-    }).bind('mouseup touchend', function() {
+    }).bind('mouseup touchend', function () {
         $('.output').hide();
     });
 
     // показать окно настроек
-    $('.show-settings_btn').click(function(e) {
+    $('.show-settings_btn').click(function (e) {
         e.preventDefault();
         $('.settings-data').slideDown(300);
         $('.chapters-box, .reader-section_list').hide(300);
@@ -275,20 +286,20 @@ $(function() {
     // изменение контента ридера
 
     // выравнивание текста
-    $('.align-left').click(function(e){
+    $('.align-left').click(function (e) {
         $(this).addClass('active');
         $('.align-center').removeClass('active');
-        if($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $('.reader-content_container').css({
                 'textAlign': 'left'
             });
         }
     });
 
-    $('.align-center').click(function(e){
+    $('.align-center').click(function (e) {
         $(this).addClass('active');
         $('.align-left').removeClass('active');
-        if($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $('.reader-content_container').css({
                 'textAlign': 'center'
             });
@@ -301,7 +312,7 @@ $(function() {
     let lhMd = $('.lh-md');
     let lhLg = $('.lh-lg');
 
-    lhSm.click(function(e){
+    lhSm.click(function (e) {
         $(this).addClass('active');
         $('.lh-md, .lh-lg').removeClass('active');
         $('.reader-content_container').css({
@@ -309,7 +320,7 @@ $(function() {
         });
     });
 
-    lhMd.click(function(e){
+    lhMd.click(function (e) {
         $(this).addClass('active');
         $('.lh-sm, .lh-lg').removeClass('active');
         $('.reader-content_container').css({
@@ -317,7 +328,7 @@ $(function() {
         });
     });
 
-    lhLg.click(function(e){
+    lhLg.click(function (e) {
         $(this).addClass('active');
         $('.lh-sm, .lh-md').removeClass('active');
         $('.reader-content_container').css({
@@ -330,20 +341,20 @@ $(function() {
     let fzMinus = $('.fz-minus');
     let fzMin = 14;
 
-    fzPlus.click(function(e){
+    fzPlus.click(function (e) {
         fzMin++;
         $('.reader-content_container').css('fontSize', fzMin + 'px');
         fzMinus.removeAttr('disabled');
-        if(fzMin >= 24) {
+        if (fzMin >= 24) {
             $(this).attr('disabled', 'disabled');
         }
     });
 
-    fzMinus.click(function(e){
+    fzMinus.click(function (e) {
         fzMin--;
         $('.reader-content_container').css('fontSize', fzMin + 'px');
         fzPlus.removeAttr('disabled');
-        if(fzMin <= 14) {
+        if (fzMin <= 14) {
             $(this).attr('disabled', 'disabled');
         }
     });
@@ -352,19 +363,19 @@ $(function() {
     $('.font-carousel').carousel({
         interval: false
     });
-    
+
     let fontCarousel = $('.font-carousel');
-    let slideCarousel = function() {
+    let slideCarousel = function () {
         let index = $('.carousel-item.active', fontCarousel).index() + 1;
-        if(index === 1) {
+        if (index === 1) {
             $('.reader-content_container').css('fontFamily', 'Roboto');
-        } 
+        }
         else if (index === 2) {
             $('.reader-content_container').css('fontFamily', 'proxima_regular');
         }
         else if (index === 3) {
             $('.reader-content_container').css('fontFamily', 'AdelleCyrillic');
-        } 
+        }
         else if (index === 4) {
             $('.reader-content_container').css('fontFamily', 'Open Sans');
         }
@@ -374,23 +385,23 @@ $(function() {
 
 
     // смена цветовой схемы
-    $('.dark-scheme_btn').click(function(){
+    $('.dark-scheme_btn').click(function () {
         $('.reader').removeClass('default sepia').addClass('dark');
     });
-    $('.white-scheme_btn').click(function() {
+    $('.white-scheme_btn').click(function () {
         $('.reader').removeClass('dark sepia').addClass('default');
     });
-    $('.sepia-scheme_btn').click(function() {
+    $('.sepia-scheme_btn').click(function () {
         $('.reader').removeClass('dark default').addClass('sepia');
     });
 
     // содержание в читалке
-    $('.show-chapters_btn').click(function(e) {
+    $('.show-chapters_btn').click(function (e) {
         $('.chapters-box').slideDown(300);
         $('.settings-data').hide(300);
         $('.reader-section_list').hide(300);
     });
-    $('.chapters-box .close').click(function(e) {
+    $('.chapters-box .close').click(function (e) {
         $('.chapters-box').slideUp(300);
     })
 });

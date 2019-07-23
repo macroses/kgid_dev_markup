@@ -17,18 +17,83 @@ html(lang="ru")
 
             main
                 include ../layout/main/breadcrumbs.pug
-                .shelf_promo
-                    .shelf_promo-blur
-                    .shelf_promo-content
-                        .shelf_promo-title Художественные книги, место действия в которых - психушка
-                        .item-content_data
-                            span.compilation_books-counter 20 книг
-                            span.dot
-                            span.compilation_folllwers-counter 32 подписок
-                        .shelf_promo-btns
-                            button.follow-btn Подписаться
-                            button.share-btn Поделиться
-                
+                .user_shelf-item
+                    .shelf_promo
+                        .shelf_promo-blur
+                        .shelf_promo-content
+                            .shelf_promo-title Художественные книги, место действия в которых - психушка
+                            .item-content_data
+                                span.compilation_books-counter 20 книг
+                                span.dot
+                                span.compilation_folllwers-counter 32 подписок
+                            .shelf_promo-btns
+                                button.follow-btn Подписаться
+                                button.share-btn Поделиться
+
+                    .shelf_user-message
+                        .shelf_user
+                            .shelf_user-avatar
+                            .shelf_user-name
+                                a(href="" title="sveltstvecsveltstvecsveltstvecveltstvecsveltstvecsveltstvec") @sveltstvecsveltstvecsveltstvecveltstvecsveltstvecsveltstvec
+                            .shelf_user-date 7 мая 2019 г., 16:10
+                        .shelf_user-post
+                            | «За гранью привычного вас ждёт потрясающая, волшебная жизнь. Да, она не всегда будет по вкусу напоминать пирожок с вишней, но она подарит вам.
+
+                    .collection-list_box
+                        .collection-list
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                            .collection-list_item
+                                include ../layout/main/card_item.pug
+                        //- .container-fluid
+                        //-     .row
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+                        //-         .col-sm-6.col-md-3.col-lg-2
+                        //-             include ../layout/main/card_item.pug
+
+
+
+                    include ../layout/main/pagination.pug
+
             include ../layout/footer/footer.pug
         
         script(src="./js/libs.min.js")

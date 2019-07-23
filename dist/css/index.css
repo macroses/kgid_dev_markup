@@ -107,35 +107,6 @@ h2 {
   font-size: 22px;
   line-height: 1.45; }
 
-.crumbs {
-  padding: 12px; }
-  .crumbs ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .crumbs ul li a {
-      font-family: proxima_semibold;
-      line-height: 1.5;
-      display: inline-block;
-      position: relative;
-      color: #1991eb;
-      margin-right: 28px; }
-      .crumbs ul li a:after {
-        position: absolute;
-        content: '';
-        width: 8px;
-        height: 8px;
-        top: calc(50% - 4px);
-        right: -20px;
-        border: 4px solid transparent;
-        border-left: 8px solid #7f8fa4; }
-      .crumbs ul li a.actual-page {
-        pointer-events: none;
-        color: #7f8fa4;
-        font-family: proxima_regular; }
-        .crumbs ul li a.actual-page:after {
-          display: none; }
-
 .header-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,11 +131,30 @@ h2 {
   margin-left: 24px; }
 
 .header-notice {
+  position: relative;
   width: 19px;
   height: 19px;
   background: url(../img/icons/bell.svg) no-repeat;
-  background-size: cover;
-  margin-left: 24px; }
+  background-size: 15px;
+  background-position: 0 0;
+  margin-left: 24px;
+  cursor: pointer; }
+  .header-notice:hover {
+    background-position: 0 -42px; }
+  .header-notice:active {
+    background-position: 0 -82px; }
+  .header-notice.new-notice {
+    position: relative; }
+    .header-notice.new-notice:after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      top: 0;
+      right: 0;
+      background: #1991eb;
+      -webkit-box-shadow: 0 0 4px 0 #1991eb;
+      box-shadow: 0 0 4px 0 #1991eb; }
 
 .header-user_avatar {
   width: 24px;
@@ -299,6 +289,162 @@ h2 {
 
 .registration-btn {
   display: none; }
+
+.notice-box {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  padding: 16px;
+  cursor: default;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 7px 21px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 5px 7px 21px 10px rgba(0, 0, 0, 0.08);
+  border: solid 1px #dfe3e9;
+  z-index: 5;
+  display: none; }
+
+.notice-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  position: relative;
+  cursor: default; }
+  .notice-item .user-avatar {
+    width: 34px;
+    height: 34px;
+    -webkit-box-shadow: 0 0 8px 0 rgba(26, 61, 82, 0.18);
+    box-shadow: 0 0 8px 0 rgba(26, 61, 82, 0.18);
+    border-radius: 50%;
+    background: url(https://st4.cannypic.com/thumbs/15/158423_632_canny_pic.jpg) no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .notice-item.new:after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #1991eb;
+    right: 0px;
+    top: 11px;
+    border-radius: 50%; }
+
+.notice-item.system {
+  padding: 12px 0 16px;
+  border-top: 1px solid #eaeef3;
+  border-bottom: 1px solid #eaeef3;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 16px; }
+
+.notice-item.old .notice-item_content {
+  color: #a3a5b1;
+  font-family: proxima_regular; }
+
+.notice-item.old a {
+  color: #354052; }
+
+.sys-notice_title {
+  font-size: 16px;
+  font-family: proxima_semibold;
+  line-height: 1.38;
+  color: #354052;
+  margin-bottom: 5px; }
+
+.sys-notice_tip {
+  font-size: 12px;
+  color: #a3a5b1;
+  line-height: 1.25;
+  margin-bottom: 12px; }
+
+.sys-notice_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .sys-notice_form input {
+    border: 1px solid #dfe3e9;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 0;
+    padding-left: 8px;
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3; }
+  .sys-notice_form button {
+    background: #1991eb;
+    color: #fff;
+    border-radius: 4px;
+    border: 0;
+    padding: 9px 37px;
+    font-family: proxima_semibold;
+    text-decoration: none;
+    padding: 7px 0;
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    margin-left: -3px; }
+    .sys-notice_form button:hover {
+      color: #fff;
+      text-decoration: none;
+      -webkit-box-shadow: 0 0 4px 0 #1991eb;
+      box-shadow: 0 0 4px 0 #1991eb; }
+    .sys-notice_form button.disabled {
+      pointer-events: none;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      background: #ced2db;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #fff; }
+
+.notice-item_destination {
+  margin-right: 11px; }
+
+.notice-item_content {
+  font-size: 12px;
+  font-family: proxima_semibold;
+  line-height: 1.25;
+  overflow: hidden;
+  position: relative;
+  max-width: 210px; }
+  .notice-item_content a {
+    color: #1991eb;
+    font-family: proxima_bold; }
+
+.content-avatar {
+  width: 34px;
+  height: 54px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 8px 0 rgba(26, 61, 82, 0.18);
+  box-shadow: 0 0 8px 0 rgba(26, 61, 82, 0.18);
+  background: url(https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375) no-repeat;
+  background-size: cover; }
+
+.notice-message {
+  color: #a3a5b1;
+  font-family: proxima_regular;
+  font-size: 12px; }
+  .notice-message a {
+    font-family: proxima_bold;
+    color: #354052; }
+
+.all-notices_btn {
+  color: #1991eb;
+  background: transparent;
+  border: 0;
+  font-family: proxima_semibold;
+  line-height: 1.75;
+  width: 100%;
+  text-align: center; }
+
+@media screen and (max-width: 400px) {
+  .header-user_block {
+    position: relative; }
+  .header-notice {
+    position: unset; } }
 
 @media screen and (min-width: 768px) {
   .header-nav {
@@ -4173,6 +4319,68 @@ footer .box {
   line-height: 1.5;
   margin-bottom: 8px; }
 
+.profile.profile-review .profile_data {
+  background: #fff; }
+
+.profile.profile-review .profile_self-info p:after {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white); }
+
+.follow-box {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .follow-box .follow-btn {
+    background: #1991eb;
+    color: #fff;
+    border-radius: 4px;
+    border: 0;
+    padding: 9px 37px;
+    font-family: proxima_semibold;
+    text-decoration: none;
+    margin-right: 4px;
+    padding: 7px 37px; }
+    .follow-box .follow-btn:hover {
+      color: #fff;
+      text-decoration: none;
+      -webkit-box-shadow: 0 0 4px 0 #1991eb;
+      box-shadow: 0 0 4px 0 #1991eb; }
+    .follow-box .follow-btn.disabled {
+      pointer-events: none;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      background: #ced2db;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #fff; }
+  .follow-box .all-reviews_sort {
+    display: block; }
+  .follow-box .sort-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 34px;
+    height: 36px;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    padding: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .follow-box .sort-btn span {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #d8d8d8; }
+
 @media screen and (min-width: 768px) {
   .profile_data {
     display: -webkit-box;
@@ -6127,6 +6335,10 @@ footer .box {
   .all-reviews_content .compilation-title {
     font-size: 26px; } }
 
+.user_shelf-item {
+  max-width: 1440px;
+  margin: 0 auto 24px; }
+
 .shelf_promo-content {
   position: relative;
   max-width: 651px;
@@ -6228,5 +6440,252 @@ footer .box {
       -webkit-box-shadow: none;
       box-shadow: none;
       color: #ffffff; }
+
+.shelf_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 18px 0; }
+
+.shelf_user-avatar {
+  width: 32px;
+  height: 32px;
+  background: url(https://vignette.wikia.nocookie.net/thestudents/images/f/f1/Acaa5870ce8abdef0b35b9a204964b91.jpg/revision/latest?cb=20180621145642) no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 18px; }
+
+.shelf_user-name {
+  font-family: proxima_semibold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 11px; }
+  .shelf_user-name a {
+    display: inline-block;
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #354052; }
+
+.shelf_user-date {
+  color: #7f8fa4; }
+
+.shelf_user-post {
+  padding: 0 12px;
+  text-align: center;
+  color: #354052;
+  margin-bottom: 32px; }
+
+.collection-list_box:after {
+  overflow: hidden;
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0; }
+
+.collection-list {
+  max-width: 1115px;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 0 12px; }
+  .collection-list:after {
+    content: 'i i i i i i';
+    word-spacing: 138px;
+    padding-left: 138px;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden; }
+
+.collection-list_item {
+  width: auto;
+  display: inline-block; }
+  .collection-list_item .card-item_name {
+    text-align: left; }
+
+@media screen and (min-width: 768px) {
+  .shelf_promo-title {
+    font-size: 36px;
+    line-height: 1.22;
+    width: 650px; }
+  .shelf_promo {
+    padding: 32px 12px 38px; }
+  .shelf_user-post {
+    font-size: 18px;
+    line-height: 1.56;
+    padding: 0 40px;
+    margin-bottom: 50px; }
+  .shelf_user {
+    margin: 27px 0 16px; }
+  .shelf_user-name a {
+    max-width: 200px; }
+  .collection-list {
+    padding: 0 40px; } }
+
+@media screen and (min-width: 1024px) {
+  .collection-list:after {
+    content: 'i i i i i i i i i i i i i i';
+    word-spacing: 187px;
+    padding-left: 187px;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden; } }
+
+@media screen and (min-width: 1200px) {
+  .shelf_user-post {
+    max-width: 650px;
+    margin: 0 auto 72px; }
+  .shelf_promo-title {
+    margin-bottom: 42px; }
+  .shelf_promo {
+    padding: 40px 12px 44px; }
+  .collection-list {
+    padding: 0; } }
+
+.crumbs {
+  padding: 12px;
+  max-width: 1115px;
+  margin: 0 auto; }
+  .crumbs ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .crumbs ul li a {
+      font-family: proxima_semibold;
+      line-height: 1.5;
+      display: inline-block;
+      position: relative;
+      color: #1991eb;
+      margin-right: 28px; }
+      .crumbs ul li a:after {
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: calc(50% - 4px);
+        right: -20px;
+        border: 4px solid transparent;
+        border-left: 8px solid #7f8fa4; }
+      .crumbs ul li a.actual-page {
+        pointer-events: none;
+        color: #7f8fa4;
+        font-family: proxima_regular; }
+        .crumbs ul li a.actual-page:after {
+          display: none; }
+
+@media screen and (min-width: 768px) {
+  .crumbs {
+    margin: 32px auto 16px;
+    padding: 0 40px; } }
+
+@media screen and (min-width: 1200px) {
+  .crumbs {
+    padding: 0; } }
+
+.all_authors_books-sort {
+  margin-bottom: 8px;
+  padding: 0 12px; }
+  .all_authors_books-sort .all-reviews_sort {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .all_authors_books-sort .dropdown-toggle::after {
+    vertical-align: middle; }
+  .all_authors_books-sort .sort-btn {
+    padding: 6px 15px;
+    font-size: 12px;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    display: inline-block; }
+    .all_authors_books-sort .sort-btn.pop {
+      margin-right: 18px; }
+
+.all_authors_books {
+  max-width: 1115px;
+  margin: 0 auto; }
+
+.all_authors_books-title {
+  margin: 10px 0 20px;
+  font-size: 18px;
+  padding: 0 12px;
+  font-family: proxima_semibold;
+  line-height: 1.33; }
+
+.all_authors_books-search {
+  position: relative; }
+  .all_authors_books-search input {
+    width: 100%;
+    padding: 6px 24px 6px 12px;
+    border-radius: 4px;
+    border: solid 1px #dfe3e9;
+    margin-bottom: 8px;
+    font-size: 14px; }
+  .all_authors_books-search button {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/icons/search.svg) no-repeat;
+    background-size: contain;
+    border: 0;
+    position: absolute;
+    right: 11px;
+    top: 11px; }
+
+@media screen and (min-width: 768px) {
+  .all_authors_books-sort {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 16px; }
+    .all_authors_books-sort .sort-btn {
+      font-size: 14px; }
+  .all_authors_books-search {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
+    .all_authors_books-search input {
+      margin-bottom: 0;
+      width: 210px; }
+  .all_authors_books-title {
+    padding: 0 40px;
+    margin-bottom: 12px;
+    font-size: 26px; } }
+
+@media screen and (min-width: 1200px) {
+  .all_authors_books {
+    padding: 0; }
+  .all_authors_books-title {
+    padding: 0; }
+  .all_authors_books-sort {
+    padding: 0; }
+  .all_authors_books-search input {
+    margin-bottom: 0;
+    width: 310px; } }
+
+.advice-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.advice-section_list {
+  max-width: 1115px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=../src/sourcemaps/index.css.map */

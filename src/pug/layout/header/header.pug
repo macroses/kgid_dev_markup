@@ -11,7 +11,37 @@ header
 
                 .header-user_block
                     .header-search_btn-mobile
+                    // добавлять к header-notice класс new-notice, для появления синего индикатора
                     .header-notice
+                        .notice-box
+                            ul.notice-list
+                                .notice-item.new
+                                    .notice-item_destination
+                                        .user-avatar
+                                    .notice-item_content
+                                        | <a href="">Марина Федорова</a> подписалась на вашу полку <a href="">"Наполнение энергией"</a> <span class="notice-date">3 дня назад</span>
+                                        | <a href="">Марина Федорова</a> подписалась на вашу полку <a href="">"Наполнение энергией"</a> <span class="notice-date">3 дня назад</span>
+                                .notice-item.new
+                                    .notice-item_destination
+                                        .content-avatar
+                                    .notice-item_content
+                                        | Книга <a href="">Оскар Уайльд. Счастливый принц и другие сказки</a> добавлена в вашу подборку <span class="notice-date">3 дня назад</span>
+                                .notice-item
+                                    .notice-message
+                                        |Вы сможете переименовать свой аккаунт на странице: <a href="">https://www.knigogid.ru/account</a> <span class="notice-date">3 дня назад</span>
+                                .notice-item.system
+                                    .sys-notice_title Добавьте e-mail в ваш аккаунт
+                                    .sys-notice_tip Адрес почты нужен, чтобы иметь возможность восстановить утеряный пароль.
+                                    .sys-notice_form
+                                        input(type="text" placeholder="e-mail")
+                                        button Сохранить
+                                .notice-item.old
+                                    .notice-item_destination
+                                        .content-avatar
+                                    .notice-item_content
+                                        | Книга <a href="">Оскар Уайльд. Счастливый принц и другие сказки</a> добавлена в вашу подборку <span class="notice-date">3 дня назад</span>
+                            button.all-notices_btn все уведомления
+
                     .header-user
                         .header-user_avatar
                         // .dropdown-block

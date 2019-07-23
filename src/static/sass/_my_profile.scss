@@ -405,6 +405,54 @@
     margin-bottom: 8px;
 }
 
+// for another profile
+
+.profile.profile-review{
+    .profile_data{
+        background: #fff;
+    }
+
+    .profile_self-info{
+        p{
+            &:after{
+                background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+            }
+        }
+    }
+}
+
+.follow-box{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .follow-btn{
+        @include btn-colored;
+        margin-right: 4px;
+        padding: 7px 37px;
+    }
+
+    .all-reviews_sort{
+        display: block;
+    }
+
+    .sort-btn{
+        display: flex;
+        width: 34px;
+        height: 36px;
+        justify-content: space-evenly;
+        padding: 0;
+        align-items: center;
+        span{
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #d8d8d8;
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     .profile_data{
         display: flex;
