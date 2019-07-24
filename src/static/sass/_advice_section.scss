@@ -1,8 +1,85 @@
-.advice-item{
-    display: flex;
+.advice-section{
+    display: none;
 }
 
 .advice-section_list{
     max-width: 1115px;
     margin: 0 auto;
+    padding: 84px 0 60px;
+
+    .carousel{
+        padding-bottom: 67px;
+    }
+
+    .carousel-indicators{
+        
+        li{
+            width: 6px;
+            height: 6px;
+            border: 1px solid #f7981c;
+            background: transparent;
+            border-radius: 50%;
+            margin: 0 8px;
+            &.active{
+                background: #f7981c;
+            }
+        }
+    }
+}
+
+.advice-item{
+    display: flex;
+    .review-item{
+        flex: 1;
+    }
+
+    .recomendation-item_values{
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .card-item_description{
+        display: none;
+    }
+
+    .book_item-author{
+        margin: 0;
+        .book_item-author-link{
+            display: none;
+        }
+    }
+
+    .book_item-name{
+        font-size: 22px;
+        font-weight: bold;
+        font-family: $adelle;
+        line-height: 1.41;
+        margin-bottom: 8px;
+    }
+
+    .user_rate-box{
+        display: none;
+    }
+}
+
+.advice-descr_fragment {
+    line-height: 1.5;
+    height: 88px;
+    position: relative;
+    overflow: hidden;
+    &:after{
+        position: absolute;
+        content: '';
+        width: 100px;
+        height: 25px;
+        background: linear-gradient(to right, rgba(255,255,255,0), #f9f8f8);
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .advice-section{
+        display: block;
+    }
 }
