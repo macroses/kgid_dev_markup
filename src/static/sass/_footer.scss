@@ -143,16 +143,22 @@ footer{
                 height: 12px;
                 background: #7f8fa4;
             }
+            span{
+                color: #178e9b;
+            }
             a{
                 @include link-neutral-light;
                 font-size: 13px;
-                span{
-                    font-weight: bold;
-                }
+                
+            }
+            .footer-brand_link{
+                font-weight: bold;
             }
         }
     }
 }
+
+
 
 @media screen and (min-width: 768px) {
     .footer-content{
@@ -163,12 +169,12 @@ footer{
 
     .footer-header{
         flex: 1;
-        max-width: 206px;
+        // max-width: 206px;
         margin-right: 32px;
     }
 
     .footer-main{
-        flex: 2;
+        flex: 3;
         .accordion{
             display: flex;
             flex-direction: column;
@@ -213,7 +219,6 @@ footer{
     }
 
     .footer-reg_btn{
-        width: auto;
         padding: 8px 36px;
     }
 
@@ -267,6 +272,11 @@ footer{
         .card{
             flex: 1;
         }
+
+        .accordion-opener{
+            font-size: 18px;
+            color: $base-text-color;
+        }
     }
 
     .footer .logo img{
@@ -274,7 +284,6 @@ footer{
     }
 
     .footer-content{
-        padding: 20px 30px;
         position: relative;
         &:after{
             content: '';
@@ -287,11 +296,6 @@ footer{
             right: -34px;
             bottom: -32px;
         }
-    }
-
-    .accordion-opener{
-        font-size: 18px;
-        color: $base-text-color;
     }
 
     .footer-list li a{

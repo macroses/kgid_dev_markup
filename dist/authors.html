@@ -61,14 +61,13 @@
                   </div>
                 </div>
                 <div class="header-user">
-                  <div class="header-user_avatar"></div>
-                  <!-- .dropdown-block-->
-                  <!--     .dropdown-block_item-->
-                  <!--         a(href="") Профиль-->
-                  <!--     .dropdown-block_item-->
-                  <!--         a(href="") Настройки-->
-                  <!--     .dropdown-block_item-->
-                  <!--         a(href="") Сообщения-->
+                  <div class="header-user_avatar">
+                    <div class="dropdown-block">
+                      <div class="dropdown-block_item"><a href="">Профиль</a></div>
+                      <div class="dropdown-block_item"><a href="">Настройки</a></div>
+                      <div class="dropdown-block_item"><a href="">Сообщения</a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,10 +79,12 @@
                 <li><a href="">Мои книги</a></li>
               </ul>
             </nav>
-            <!-- .header-search-->
-            <!--     .header-search_box-->
-            <!--         input(id="search-input" type="text" placeholder="Найти книгу/автора/жанр")-->
-            <!--         button.header-search_btn-->
+            <div class="header-search">
+              <div class="header-search_box">
+                <input id="search-input" type="text" placeholder="Найти книгу/автора/жанр"/>
+                <button class="header-search_btn"></button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -108,7 +109,7 @@
             </ul><a class="more-request_items" href="">еще</a>
           </div>
           <div class="authors-box">
-            <div class="authors-header">Самые обсуждаемые авторы<a class="another-authors_link" href="">Еще 23</a></div>
+            <h2 class="authors-header">Самые обсуждаемые авторы<a class="another-authors_link" href="">Еще 23</a></h2>
             <ul class="authors-list">
               <li><a class="authors-item" href="">
                   <div class="authors-item_img"> </div>
@@ -135,6 +136,7 @@
                   <div class="authors-item_name">Айн Рид</div>
                   <div class="authors-item_rate"><span class="rate-value">6.5</span><span class="book-couter">5 книг</span></div></a></li>
             </ul>
+            <h1 class="alphabet-header">Авторы</h1>
             <div class="alphabet-list">
               <li><a class="all-authors_link" href="">Все</a></li>
               <li><a href="">а</a></li>
@@ -293,7 +295,7 @@
             </div>
             <div class="footer-copy">
               <ul>
-                <li><a href="">© Knigigid 2019</a></li>
+                <li><a class="footer-brand_link" href="">© Knigigid 2019</a></li>
                 <li><a href="">Карта сайта</a></li>
                 <li><a href="">Жалобы</a></li>
                 <li><a href="">Конфиденциальность пользователя</a></li>

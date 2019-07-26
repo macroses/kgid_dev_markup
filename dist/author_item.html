@@ -60,14 +60,13 @@
                   </div>
                 </div>
                 <div class="header-user">
-                  <div class="header-user_avatar"></div>
-                  <!-- .dropdown-block-->
-                  <!--     .dropdown-block_item-->
-                  <!--         a(href="") Профиль-->
-                  <!--     .dropdown-block_item-->
-                  <!--         a(href="") Настройки-->
-                  <!--     .dropdown-block_item-->
-                  <!--         a(href="") Сообщения-->
+                  <div class="header-user_avatar">
+                    <div class="dropdown-block">
+                      <div class="dropdown-block_item"><a href="">Профиль</a></div>
+                      <div class="dropdown-block_item"><a href="">Настройки</a></div>
+                      <div class="dropdown-block_item"><a href="">Сообщения</a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -79,10 +78,12 @@
                 <li><a href="">Мои книги</a></li>
               </ul>
             </nav>
-            <!-- .header-search-->
-            <!--     .header-search_box-->
-            <!--         input(id="search-input" type="text" placeholder="Найти книгу/автора/жанр")-->
-            <!--         button.header-search_btn-->
+            <div class="header-search">
+              <div class="header-search_box">
+                <input id="search-input" type="text" placeholder="Найти книгу/автора/жанр"/>
+                <button class="header-search_btn"></button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -92,7 +93,7 @@
           <div class="author_item-about">
             <div class="author_item-card">
               <div class="card-item">
-                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                   <input class="range-mix" type="range" value="0" min="0" max="10"/>
                   <div class="rate-num"> </div>
                   <div class="user_rate-box">10</div>
@@ -114,15 +115,15 @@
             <div class="author_item-content">
               <div class="book_item-menu tablet">
                 <ul class="recomendation-item_values">
-                  <li>345</li>
-                  <li>66</li>
-                  <li>26647</li>
+                  <li data-toggle="tooltip" data-placement="top" title="количество рецензий">345</li>
+                  <li data-toggle="tooltip" data-placement="top" title="добавлено на полки">66</li>
+                  <li data-toggle="tooltip" data-placement="top" title="количество просмотров">26647</li>
                 </ul><a class="bug-report_btn" href=""><span>i</span> Сообщить об ошибке</a>
               </div>
-              <div class="authors-fulname">Oscar Fingal O'Flahertie Wills Wilde</div>
-              <div class="authors_name-translate">Оскар Уайльд 
-                <div class="authors_date">16.10.1854 – 30.11.1900</div>
-              </div>
+              <div class="authors-fulname"> <span> Oscar Fingal O'Flahertie Wills Wilde</span></div>
+              <h1 class="authors_name-translate">Оскар Уайльд 
+                <div class="authors_date"><strong title="Дата рождения и смерти">16.10.1854 – 30.11.1900</strong></div>
+              </h1>
               <ul class="authors_books-counter">
                 <li><a href="">57 произведений</a></li>
                 <li><a href="">1023 изданий</a></li>
@@ -142,6 +143,7 @@
                 <li><a href="">Биографии</a></li>
               </ul>
               <div class="authors_biography">
+                <h2 class="book_item-fragment_header">Краткая биография</h2>
                 <p>
                   Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
                   Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец. 
@@ -167,6 +169,7 @@
                 <button class="open-fragment_btn">Развернуть</button>
               </div>
               <div class="authors_content">
+                <h2 class="book_item-fragment_header">Библиография</h2>
                 <div class="authors_content-genre">Романы</div>
                 <div class="authors_content-item"><span class="year">1890</span><a href="">Портрет Дориана Грея / The Picture of Dorian Gray  </a></div>
                 <div class="authors_content-item"><span class="year">1890</span><a href="">Портрет Дориана Грея / The Picture of Dorian Gray</a></div>
@@ -183,95 +186,97 @@
             <div class="compilation-section_header">
               <h3 class="compilation-title">Лучшие новинки</h3><a class="compilation-link_all" href="">Все</a>
             </div>
-            <div class="compilation-section_list">
-              <div class="card-item">
-                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
-                  <input class="range-mix" type="range" value="0" min="0" max="10"/>
-                  <div class="rate-num"> </div>
-                  <div class="user_rate-box">10</div>
-                  <div class="card-select_item">
-                    <label>
-                      <input type="checkbox"/><span></span>
-                    </label>
+            <div class="compilation-section_list-box">
+              <div class="compilation-section_list">
+                <div class="card-item">
+                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                    <div class="rate-num"> </div>
+                    <div class="user_rate-box">10</div>
+                    <div class="card-select_item">
+                      <label>
+                        <input type="checkbox"/><span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="card-item_description">
+                    <div class="card-item_rating">
+                      <div class="average_rate">4.8</div>
+                      <div class="votes_counter">548 оценок</div>
+                    </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
                   </div>
                 </div>
-                <div class="card-item_description">
-                  <div class="card-item_rating">
-                    <div class="average_rate">4.8</div>
-                    <div class="votes_counter">548 оценок</div>
-                  </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
-                </div>
-              </div>
-              <div class="card-item">
-                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
-                  <input class="range-mix" type="range" value="0" min="0" max="10"/>
-                  <div class="rate-num"> </div>
-                  <div class="user_rate-box">10</div>
-                  <div class="card-select_item">
-                    <label>
-                      <input type="checkbox"/><span></span>
-                    </label>
+                <div class="card-item">
+                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                    <div class="rate-num"> </div>
+                    <div class="user_rate-box">10</div>
+                    <div class="card-select_item">
+                      <label>
+                        <input type="checkbox"/><span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="card-item_description">
+                    <div class="card-item_rating">
+                      <div class="average_rate">4.8</div>
+                      <div class="votes_counter">548 оценок</div>
+                    </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
                   </div>
                 </div>
-                <div class="card-item_description">
-                  <div class="card-item_rating">
-                    <div class="average_rate">4.8</div>
-                    <div class="votes_counter">548 оценок</div>
-                  </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
-                </div>
-              </div>
-              <div class="card-item">
-                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
-                  <input class="range-mix" type="range" value="0" min="0" max="10"/>
-                  <div class="rate-num"> </div>
-                  <div class="user_rate-box">10</div>
-                  <div class="card-select_item">
-                    <label>
-                      <input type="checkbox"/><span></span>
-                    </label>
+                <div class="card-item">
+                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                    <div class="rate-num"> </div>
+                    <div class="user_rate-box">10</div>
+                    <div class="card-select_item">
+                      <label>
+                        <input type="checkbox"/><span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="card-item_description">
+                    <div class="card-item_rating">
+                      <div class="average_rate">4.8</div>
+                      <div class="votes_counter">548 оценок</div>
+                    </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
                   </div>
                 </div>
-                <div class="card-item_description">
-                  <div class="card-item_rating">
-                    <div class="average_rate">4.8</div>
-                    <div class="votes_counter">548 оценок</div>
-                  </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
-                </div>
-              </div>
-              <div class="card-item">
-                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
-                  <input class="range-mix" type="range" value="0" min="0" max="10"/>
-                  <div class="rate-num"> </div>
-                  <div class="user_rate-box">10</div>
-                  <div class="card-select_item">
-                    <label>
-                      <input type="checkbox"/><span></span>
-                    </label>
+                <div class="card-item">
+                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                    <div class="rate-num"> </div>
+                    <div class="user_rate-box">10</div>
+                    <div class="card-select_item">
+                      <label>
+                        <input type="checkbox"/><span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="card-item_description">
+                    <div class="card-item_rating">
+                      <div class="average_rate">4.8</div>
+                      <div class="votes_counter">548 оценок</div>
+                    </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
                   </div>
                 </div>
-                <div class="card-item_description">
-                  <div class="card-item_rating">
-                    <div class="average_rate">4.8</div>
-                    <div class="votes_counter">548 оценок</div>
-                  </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
-                </div>
-              </div>
-              <div class="card-item">
-                <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
-                  <input class="range-mix" type="range" value="0" min="0" max="10"/>
-                  <div class="rate-num"> </div>
-                  <div class="user_rate-box">10</div>
-                  <div class="card-select_item">
-                    <label>
-                      <input type="checkbox"/><span></span>
-                    </label>
+                <div class="card-item">
+                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <input class="range-mix" type="range" value="0" min="0" max="10"/>
+                    <div class="rate-num"> </div>
+                    <div class="user_rate-box">10</div>
+                    <div class="card-select_item">
+                      <label>
+                        <input type="checkbox"/><span></span>
+                      </label>
+                    </div>
                   </div>
-                </div>
-                <div class="card-item_description">
-                  <div class="card-item_rating">
-                    <div class="average_rate">4.8</div>
-                    <div class="votes_counter">548 оценок</div>
-                  </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
+                  <div class="card-item_description">
+                    <div class="card-item_rating">
+                      <div class="average_rate">4.8</div>
+                      <div class="votes_counter">548 оценок</div>
+                    </div><a class="card-item_author" href="" title="Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз">Джим КоллинзДжим КоллинзДжим КоллинзДжим КоллинзДжим Коллинз</a><a class="card-item_name" href="" title="45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера 45 татуировок менеджера ">45 татуировок менеджера  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -282,7 +287,7 @@
             <div class="review-item">
               <div class="review-item_card">
                 <div class="card-item">
-                  <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                     <input class="range-mix" type="range" value="0" min="0" max="10"/>
                     <div class="rate-num"> </div>
                     <div class="user_rate-box">10</div>
@@ -350,7 +355,7 @@
             <div class="review-item">
               <div class="review-item_card">
                 <div class="card-item">
-                  <div class="card-item_img"><a href=""><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt=""/></a>
+                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                     <input class="range-mix" type="range" value="0" min="0" max="10"/>
                     <div class="rate-num"> </div>
                     <div class="user_rate-box">10</div>
@@ -523,7 +528,7 @@
             </div>
             <div class="footer-copy">
               <ul>
-                <li><a href="">© Knigigid 2019</a></li>
+                <li><a class="footer-brand_link" href="">© Knigigid 2019</a></li>
                 <li><a href="">Карта сайта</a></li>
                 <li><a href="">Жалобы</a></li>
                 <li><a href="">Конфиденциальность пользователя</a></li>

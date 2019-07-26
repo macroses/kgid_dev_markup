@@ -18,9 +18,9 @@ html(lang="ru")
                     .book_item-container
                         .book_item-menu
                             ul.recomendation-item_values
-                                li 345
-                                li 66
-                                li 26647
+                                li(data-toggle="tooltip" data-placement="top" title="количество рецензий") 345
+                                li(data-toggle="tooltip" data-placement="top" title="добавлено на полки") 66
+                                li(data-toggle="tooltip" data-placement="top" title="количество просмотров") 26647
                             .book_item-menu_btn
                                 span
                                 span
@@ -28,6 +28,7 @@ html(lang="ru")
                         .book_item-content
                             .l-side
                                 include ../layout/main/card_item.pug
+                                h3.book_item-shoplist_header Купить книгу
                                 ul.book_item-shoplist
                                     li
                                         a(href="")
@@ -54,14 +55,15 @@ html(lang="ru")
                         .book_item-about
                             .book_item-menu.tablet
                                 ul.recomendation-item_values
-                                    li 345
-                                    li 66
-                                    li 26647
+                                    li(data-toggle="tooltip" data-placement="top" title="количество рецензий") 345
+                                    li(data-toggle="tooltip" data-placement="top" title="добавлено на полки") 66
+                                    li(data-toggle="tooltip" data-placement="top" title="количество просмотров") 26647
                                 a.bug-report_btn(href="") <span>i</span> Сообщить об ошибке
                             .book_item-func
                                 .book_item-author
-                                    a(href="") Оскар Уайлд
-                                .book_item-name Лидер и племя. Пять уровней корпоративной культуры
+                                    span
+                                        a(href="" title="Автор книги Оскар Уайлд") Оскар Уайлд
+                                h1.book_item-name Лидер и племя. Пять уровней корпоративной культуры
                                 .book_item-description 
                                     ul
                                         li манн, иванов и фербер
@@ -69,13 +71,13 @@ html(lang="ru")
                                         li 201 страница
                                         li на 2 часа
                                 .book_item-btn_block
-                                    button.read-fragment_btn Читать отрывок
+                                    button.read-fragment_btn(title="Читать книгу онлайн") Читать отрывок
                                     button.plus +
                                     .dropdown-box
                                         button.buy-book_btn.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Скачать
                                         .dropdown-menu
-                                            a.dropdown-item(href="#") book.fb2
-                                            a.dropdown-item(href="#") book.epub
+                                            a.dropdown-item(href="#" title="скачать книгу в формате fb2") book.fb2
+                                            a.dropdown-item(href="#" title="скачать книгу в формате epub") book.epub
                                 ul.tags-list
                                     li
                                         a(href="") Биографии
@@ -94,6 +96,7 @@ html(lang="ru")
                                     li
                                         a(href="") Биографии
                                 .book_item-fragment
+                                    h2.book_item-fragment_header Описание книги
                                     p
                                         |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
                                         |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец.
@@ -126,7 +129,7 @@ html(lang="ru")
 
                             .book_item_onshelf-info
                                 .compilation-section_header
-                                    h3.compilation-title Лучшие новинки
+                                    h3.compilation-title Полки с этой книгой
                                     a.compilation-link_all(href="") Все
                                 ul.book_item_onshelf-info_list
                                     li
@@ -150,7 +153,7 @@ html(lang="ru")
                     .book_item-comments
                         .compilation-section
                             .compilation-section_header
-                                h3.compilation-title Рецензии
+                                h3.compilation-title Рецензий на книгу
                                 a.compilation-link_all(href="#") Все
                             .comments-content
                                 .comment-area

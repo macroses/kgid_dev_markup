@@ -3,7 +3,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    margin-bottom: 12px;
+    // margin-bottom: 12px;
 }
 
 .compilation-title{
@@ -22,6 +22,7 @@
     padding: 0 11px;
     border-radius: 4px;
     background: #516173;
+    text-transform: uppercase;
     &:hover{
         color: #fff;
         text-decoration: none;
@@ -32,8 +33,10 @@
     display: flex;
     flex-wrap: nowrap;
     padding-bottom: 12px;
+    padding-top: 12px;
     margin-bottom: 20px;
     justify-content: flex-start;
+    overflow: visible;
     overflow-x: scroll;
 }
 
@@ -57,14 +60,12 @@
     }
 
     .compilation-section_header{
-        margin-bottom: 24px;
+        margin-bottom: 12px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .compilation-section_header{
-        padding-left: 33px;
-    }
+    
     .compilation-section_list{
         overflow: visible;
     }

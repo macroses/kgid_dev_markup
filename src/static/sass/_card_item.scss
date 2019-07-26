@@ -59,6 +59,7 @@
 
 .card-item_author{
     font-size: 12px;
+    
     line-height: 1.75;
     color: $base-text-color;
 
@@ -67,6 +68,9 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    &:hover{
+        color: #2ea2f8;
+    }
 }
 
 .card-item_name{
@@ -85,6 +89,9 @@
         width: 100px;
         height: 25px;
         background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+    }
+    &:hover{
+        color: #2ea2f8;
     }
 }
 
@@ -283,6 +290,7 @@
     }
     .card-item_name{
         font-size: 18px;
+        margin-top: -3px;
     }
 }
 

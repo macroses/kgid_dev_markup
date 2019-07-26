@@ -25,10 +25,18 @@ ul{
 a{
     text-decoration: none;
     color: $base-text-color;
+    outline: 0;
+    &:hover{
+        color: #2ea2f8;
+    }
 }
 
 button{
     cursor: pointer;
+    outline: 0;
+    &:focus{
+        outline: 0;
+    }
 }
 
 .wrapper{
@@ -46,9 +54,15 @@ footer{
 }
 
 .box{
-    max-width: 1200px;
-    padding: 0 12px;
-    margin: 0 auto 0 auto;
+    max-width: 1115px;
+    padding: 0 0 0 12px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+    .box{
+        padding: 0 0;
+    }
 }
 
 .colored{

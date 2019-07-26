@@ -254,17 +254,23 @@
     .prev{
         left: 0;
         transition: .2s;
-        &:hover{
-            background: linear-gradient(to right, rgba(0,0,0,.2), rgba(0,0,0,0));
-        }
+        background-image: url(../img/icons/arr-left.svg);
+        background-repeat: no-repeat;
+        background-size: 25px 83px;
+        background-position: 20px center;
     }
     .next{
         transition: .3s;
         right: 0;
-        &:hover{
-            background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.2));
-        }
+        background-image: url(../img/icons/arr-right.svg);
+        background-repeat: no-repeat;
+        background-size: 25px 83px;
+        background-position: right 20px center;
     }
+}
+
+.reader-content.second-page{
+    text-align: right;
 }
 
 .reader-header{
@@ -850,9 +856,9 @@
     .settings-data{
         min-width: 320px;
         position: absolute;
-        top: 100%;
+        top: calc(100% + 17px);
         left: auto;
-        right: 0;
+        right: 40px;
         width: auto;
         z-index: 10;
         height: 100%;
@@ -864,7 +870,7 @@
     .reader-section_list{
         position: absolute;
         right: 0;
-        top: 100%;
+        top: calc(100% + 17px);
         bottom: -155px;
         width: 206px;
         transform: translateY(0);
@@ -926,9 +932,9 @@
 
     .chapters-box{
         position: absolute;
-        top: 100%;
+        top: calc(100% + 17px);
         left: auto;
-        right: 100%;
+        right: calc(100% - 20px);
         width: 320px;
         overflow: visible;
     }
@@ -943,6 +949,11 @@
             }
         }
     }
+
+    .chapter-name{
+        overflow: visible;
+        text-overflow: unset;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -953,9 +964,20 @@
     .reader-content_container{
         flex: 1;
         padding: 0 34px;
+        columns: 2;
+        column-gap: 50px;
+        &.single{
+            columns: 1;
+        }
     }
 
     .reader-header{
         padding: 22px 24px 22px 40px;
+    }
+
+    .settings-data,
+    .reader-section_list,
+    .chapters-box{
+        top: calc(100% + 22px);
     }
 }

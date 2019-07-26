@@ -213,6 +213,16 @@
     }
 }
 
+.book_item-fragment_header{
+    font-family: $p_semi;
+}
+
+.book_item-shoplist_header{
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
 .open-fragment_btn{
     background: transparent;
     border: 0;
@@ -237,7 +247,6 @@
     background: #f9f8f8;
     padding: 16px;
     margin-bottom: 16px;
-    margin-top: 16px;
     li{
         font-size: 12px;
         font-family: $p_semi;

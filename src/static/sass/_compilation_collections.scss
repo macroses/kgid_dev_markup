@@ -2,7 +2,7 @@
     display: flex;
     overflow-x: scroll;
     color: #fff;
-    padding: 0px 0 32px;
+    padding: 12px 0 32px;
 }
 
 .compilation-collections_item{
@@ -26,12 +26,18 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 7px 5px 20px 0 rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    transition: .3s;
     .item-blur{
         position: absolute;
         content: '';
         left: 0;
         top: 0;
         filter: blur(20px);
+    }
+
+    &:hover{
+        box-shadow: none;
     }
 }
 
@@ -133,8 +139,7 @@
         flex-wrap: wrap;
         justify-content: center;
         color: #fff;
-        padding: 0px 0 32px;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .compilation-collections_item{

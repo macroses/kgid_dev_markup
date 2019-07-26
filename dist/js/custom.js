@@ -32,12 +32,12 @@ $(function () {
 
     // открытие уведомлений
     $('.header-notice').click(function (e) {
-        $('.notice-box').show(300);
+        $('.notice-box').show(0);
     });
 
     $(document).click(function (event) {
         if ($(event.target).closest(".header-notice").length) return;
-        $(".notice-box").hide("300");
+        $(".notice-box").hide(0);
         event.stopPropagation();
     });
 
@@ -84,7 +84,13 @@ $(function () {
     // показать мобильное меню.
 
     $('.header-user').click(function () {
-        $('.dropdown-block').toggleClass('open');
+        $('.dropdown-block').show(0).toggleClass('open');
+    });
+
+    $(document).click(function (event) {
+        if ($(event.target).closest(".header-user").length) return;
+        $(".dropdown-block").hide(0).removeClass('open');
+        event.stopPropagation();
     });
 
     // modal
@@ -301,7 +307,7 @@ $(function () {
         $('.align-left').removeClass('active');
         if ($(this).hasClass('active')) {
             $('.reader-content_container').css({
-                'textAlign': 'center'
+                'textAlign': 'justify'
             });
         }
     });
@@ -403,5 +409,37 @@ $(function () {
     });
     $('.chapters-box .close').click(function (e) {
         $('.chapters-box').slideUp(300);
-    })
+    });
+
+    // reader fullscreen
+    document.addEventListener('click', function (e) {
+
+        if (!e.target.hasAttribute('data-toggle-fullscreen')) return;
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        } else {
+            document.documentElement.requestFullscreen();
+        }
+    }, false);
+
+    // show single page in reader
+    $('.single-page_btn').click(function(e) {
+        $('.reader-content_container').toggleClass('single');
+    });
+
+    // authors list
+    let letterStr = $('.alphabet-list li a').not('.all-authors_link');
+    let headerText = $('.alphabet-header');
+
+    letterStr.click(function (e) {
+        e.preventDefault();
+        let text = $(this).text();
+        headerText.text('Выбран автор на букву' + ' ' + '"' + text.toUpperCase() + '"');
+    });
+
+    $('.all-authors_link').click(function (e) {
+        e.preventDefault();
+        headerText.text('Авторы')
+    });
+
 });

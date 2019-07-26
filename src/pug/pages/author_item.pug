@@ -22,13 +22,15 @@ html(lang="ru")
                         .author_item-content
                             .book_item-menu.tablet
                                 ul.recomendation-item_values
-                                    li 345
-                                    li 66
-                                    li 26647
+                                    li(data-toggle="tooltip" data-placement="top" title="количество рецензий") 345
+                                    li(data-toggle="tooltip" data-placement="top" title="добавлено на полки") 66
+                                    li(data-toggle="tooltip" data-placement="top" title="количество просмотров") 26647
                                 a.bug-report_btn(href="") <span>i</span> Сообщить об ошибке
-                            .authors-fulname Oscar Fingal O'Flahertie Wills Wilde
-                            .authors_name-translate Оскар Уайльд 
-                                .authors_date 16.10.1854 – 30.11.1900
+                            .authors-fulname 
+                                span  Oscar Fingal O'Flahertie Wills Wilde
+                            h1.authors_name-translate Оскар Уайльд 
+                                .authors_date
+                                    strong(title="Дата рождения и смерти") 16.10.1854 – 30.11.1900
                             ul.authors_books-counter
                                 li
                                     a(href="") 57 произведений
@@ -58,6 +60,7 @@ html(lang="ru")
                                 li
                                     a(href="") Биографии
                             .authors_biography
+                                h2.book_item-fragment_header Краткая биография
                                 p
                                     |Оскар Уайльд — английский и ирландский драматург, поэт, прозаик и критик.
                                     |Полное имя — Оскар Фингал О'Флаэрти Уиллс Уайльд. По происхождению — ирландец. 
@@ -81,6 +84,7 @@ html(lang="ru")
                                     |— светская дама, писавшая стихи об Ирландии и 
                                 button.open-fragment_btn Развернуть
                             .authors_content
+                                h2.book_item-fragment_header Библиография
                                 .authors_content-genre Романы
                                 .authors_content-item
                                     span.year 1890

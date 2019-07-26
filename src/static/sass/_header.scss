@@ -108,6 +108,8 @@
     }
     &.open{
         transform: translateY(0);
+        display: block;
+        overflow: visible;
     }
 }
 
@@ -120,6 +122,12 @@
 
 .header-login {
     display: flex;
+}
+
+.wrapper.start{
+    .header-nav:after{
+        display: none;
+    }
 }
 
 .header-nav {
@@ -178,6 +186,7 @@
 .header-search {
     width: 100%;
     position: relative;
+    margin-top: 8px;
 
     input {
         width: 100%;
@@ -399,10 +408,6 @@
             a{
                 background: #fff;
             }
-        }
-        &.open{
-            height: 0;
-            overflow: hidden;
         }
     }
 }
