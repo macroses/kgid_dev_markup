@@ -614,9 +614,16 @@ h2 {
   margin-bottom: 65px; }
 
 .promo-img {
-  max-width: 100%; }
-  .promo-img img {
-    width: 100%; }
+  max-width: 100%;
+  position: relative;
+  height: 176px; }
+
+.promo-img_box {
+  background: url(../img/promo-start.webp) no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
 
 .promo-title_header {
   color: #354052;
