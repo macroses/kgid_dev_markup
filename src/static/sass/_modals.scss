@@ -16,6 +16,7 @@
         position: absolute;
         top: 8px;
         right: 8px;
+        z-index: 10;
         span{
             display: inline-block;
             width: 24px;
@@ -509,6 +510,10 @@
 
 .step-item_area{
     margin-bottom: 32px;
+    border-radius: 4px;
+    &:focus{
+        border: 1px solid #2ea2f8;
+    }
 }
 
 .step-item_three{
@@ -655,10 +660,12 @@
         padding: 0;
         font-family: $p_semi;
         padding: 7px 17px;
+        margin-left: -10px;
     }
 
     .link-content{
-        border-radius: 4px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
         border: 1px solid #dfe3e9;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
         padding: 7px 12px;
@@ -677,6 +684,19 @@
     }
     .modal-dialog{
         max-width: 600px;
+    }
+
+    .form-item{
+        &.valid{
+            input, textarea{
+                border: 1px solid #78cd84;
+            }
+        }
+        &.invalid{
+            input, textarea{
+                border: 1px solid #f85359;
+            }
+        }
     }
 }
 
@@ -728,11 +748,9 @@
             right: 16px;
             top: calc(50% - 8px);
             left: auto;
-            background: gray;
+            background: url(../img/icons/info.svg) no-repeat;
             z-index: 20;
             opacity: 1;
-            font-size: 14px;
-            color: #fff;
             text-align: center;
         }
     }
@@ -983,6 +1001,9 @@
         border-radius: 4px;
         border: 1px solid #dfe3e9;
         font-family: $p_semi;
+        &:focus{
+            border: 1px solid $base-btn-color;
+        }
     }
 }
 
@@ -1042,6 +1063,9 @@
         border: 1px solid #dfe3e9;
         resize: vertical;
         height: 76px;
+        &:focus{
+            border: 1px solid $base-btn-color;
+        }
     }
 }
 

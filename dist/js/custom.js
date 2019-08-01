@@ -1,5 +1,8 @@
 $(function () {
 
+    // кастомный скролл
+    $('.scrollbar-inner').scrollbar({});
+
     // шапочку фиксируем
     $(window).scroll(function () {
         var height = $(window).scrollTop();
@@ -12,7 +15,13 @@ $(function () {
 
     // открытие поиска в десктопной версии шапки
     $('.header-search_btn').click(function () {
-        $('.header-search_box input').addClass('open');
+        $('.header-search_box input').toggleClass('open');
+    });
+
+    $(document).click(function (event) {
+        if ($(event.target).closest(".header-search_btn").length) return;
+        $(".header-search_box input").removeClass('open');
+        event.stopPropagation();
     });
 
     //   ползунок
@@ -32,7 +41,7 @@ $(function () {
 
     // открытие уведомлений
     $('.header-notice').click(function (e) {
-        $('.notice-box').show(0);
+        $('.notice-box').toggle(0);
     });
 
     $(document).click(function (event) {
@@ -40,7 +49,6 @@ $(function () {
         $(".notice-box").hide(0);
         event.stopPropagation();
     });
-
 
     // Дестроим карусель на больших экранах
     $(window).resize(carouselResize);
@@ -84,7 +92,7 @@ $(function () {
     // показать мобильное меню.
 
     $('.header-user').click(function () {
-        $('.dropdown-block').show(0).toggleClass('open');
+        $('.dropdown-block').toggle();
     });
 
     $(document).click(function (event) {
@@ -135,10 +143,33 @@ $(function () {
 
     // добавляем blur при открытии модального окна
     $('.modal').on('show.bs.modal', function () {
-        $('.wrapper').toggleClass('blur_bg');
+        $('.wrapper').toggleClass('blur-bg');
     }).on('hide.bs.modal', function () {
-        $('.wrapper').toggleClass('blur_bg');
+        $('.wrapper').toggleClass('blur-bg');
     });
+
+    // для body добавляем класс, чтобы запретить прокрутку при открытии поиска
+    $('#search-input').click(function(e) {
+        e.preventDefault();
+
+        $('.wrapper').addClass('blur-bg');
+        $('.search-win').show();
+        $('.search-win_top-inp input[type=text]').focus();
+        $('body').addClass('modal-open');
+    });
+
+    $('.search-win_close-btn').click(function(e) {
+        e.preventDefault();
+
+        $('.wrapper').removeClass('blur-bg');
+        $('.search-win').hide();
+        $('body').removeClass('modal-open');
+    });
+
+    $('.clear-text_btn').click(function(e) {
+        e.preventDefault();
+        $('.search-win_top-inp input[type=text]').val('');
+    })
 
     // показать уведомление о добавлении книги
     $('.add_shelf_book-list_item').click(function () {
@@ -442,4 +473,23 @@ $(function () {
         headerText.text('Авторы')
     });
 
+
+    // кнопка наверх
+    let upBtn = $('.up_btn');
+
+    $(window).scroll(function(e) {
+
+        if ($(this).scrollTop() >= 300) {
+            upBtn.fadeIn('slow');
+        } else {
+            upBtn.fadeOut('slow');
+        }
+
+    });
+
+    upBtn.click(function(e) {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500)
+    });
 });

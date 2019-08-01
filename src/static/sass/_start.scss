@@ -58,12 +58,14 @@
         order: 1;
         width: 50%;
         position: relative;
-        img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 500px;
-        }
+    }
+
+    .promo-img_box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120%;
+        height: 356px;
     }
 
     .promo-title_header{
@@ -86,13 +88,6 @@
         margin-right: auto;
     }
 
-    .promo-img{
-        position: relative;
-        img{
-            width: 700px;
-        }
-    }
-
     .promo-title{
         max-width: 580px;
         margin-top: 70px;
@@ -111,4 +106,12 @@
         font-size: 14px;
         padding: 10px 55px;
     }
+
+    .promo-img_box{
+        height: 513px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
 }

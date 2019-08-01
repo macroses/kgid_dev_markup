@@ -44,6 +44,9 @@
         border: solid 1px rgb(223, 227, 233);
         margin-bottom: 8px;
         font-size: 14px;
+        &:focus{
+            border: 1px solid $base-btn-color;
+        }
     }
     button{
         display: inline-block;

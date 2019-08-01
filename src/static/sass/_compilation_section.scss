@@ -6,6 +6,10 @@
     // margin-bottom: 12px;
 }
 
+.compilation-section{
+    padding-top: 47px;
+}
+
 .compilation-title{
     font-family: $p_semi;
     color: $base-text-color;
@@ -36,8 +40,8 @@
     padding-top: 12px;
     margin-bottom: 20px;
     justify-content: flex-start;
-    overflow: visible;
-    overflow-x: scroll;
+    // overflow: visible;
+    // overflow-x: scroll;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,15 +62,32 @@
     .compilation-section_list{
         justify-content: center;
     }
-
-    .compilation-section_header{
-        margin-bottom: 12px;
-    }
 }
 
 @media screen and (min-width: 1200px) {
     
     .compilation-section_list{
         overflow: visible;
+    }
+
+
+    .compilation-section{
+    
+        .scroll-wrapper{
+            overflow: visible!important;
+        }
+
+        .scroll-wrapper > .scroll-content{
+            overflow: visible!important;
+        }
+
+        .scrollbar-inner > .scroll-element.scroll-y{
+            display: none;
+        }
+    }
+
+    .compilation-title{
+        font-size: 26px;
+        margin-right: 16px;
     }
 }

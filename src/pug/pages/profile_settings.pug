@@ -9,8 +9,12 @@ html(lang="ru")
         link(rel="stylesheet", href="css/index.css")
     body
         
+        .popup-box
+            // можно добавлять success, info, warning, error
+            .popup.warning Success! This is positive notification.
+        include ../layout/main/search_result.pug
+        .up_btn
         .wrapper
-            include ../layout/main/up_btn.pug
             include ../layout/header/header.pug
 
             main

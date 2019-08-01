@@ -11,6 +11,8 @@ html(lang="ru")
         .popup-box
             // можно добавлять success, info, warning, error
             .popup.warning Success! This is positive notification.
+        include ../layout/main/search_result.pug
+        .up_btn
         .wrapper.start
             
             include ../layout/header/header.pug
@@ -19,7 +21,6 @@ html(lang="ru")
                 section.promo
                     .promo-img
                         .promo-img_box
-                            //- img(src="./img/promo-start.webp", alt="")
                     .promo-title
                         h1.promo-title_header Получите персональную <span>книжную подборку</span>
                         .promo-title_tip Расскажите, какие книги вам нравятся!
@@ -27,15 +28,81 @@ html(lang="ru")
                 // добавляем в card-item .norange, чтобы убрать ползунок.
                 include ../layout/main/compilation_section.pug
 
+                .compilation-section
+                    .box
+                        .compilation-section_header
+                            h3.compilation-title Бестселлеры
+                            a.compilation-link_all(href="") Все
+                    .collection-list_box
+                        .scrollbar-inner
+                            .collection-list
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+
                 include ../layout/main/tips_carousel.pug
 
                 include ../layout/main/compilation_collections.pug
 
                 include ../layout/main/recomendation_section.pug
 
+                .compilation-section
+                    .box
+                        .compilation-section_header
+                            h3.compilation-title Самые популярные за все время
+                            a.compilation-link_all(href="") Все
+                    .collection-list_box
+                        .scrollbar-inner
+                            .collection-list
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+                                .collection-list_item
+                                    include ../layout/main/card_item.pug
+
+                include ../layout/main/compilation_collections.pug
+
             include ../layout/footer/footer.pug
-        
-            include ../layout/main/modals.pug
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#reg-modal')
+                | Регистрация/вход
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#check-modal')
+                | Проверяйте почту
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#reset-pass-modal')
+                | Восстановление пароля            
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#user-help-modal')
+                | User help button
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#share-book_modal')
+                | Поделиться книгой
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#feedback_modal')
+                | Обратная связь
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#post-impression_modal')
+                | Оставить отзыв
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#authors_modal')
+                | Авторам и правообладателям
+            button.btn.btn-primary(type='button', data-toggle='modal', data-target='#add_shelf_modal')
+                | Добавить на полку/ создать полку
+
+        include ../layout/main/modals.pug
         
         script(src="./js/libs.min.js")
         script(src="./js/custom.js")

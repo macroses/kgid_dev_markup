@@ -3,7 +3,7 @@ module.exports = function () {
         return $.gulp.src([
             'node_modules/jquery/dist/jquery.min.js',
             'src/static/js/popper.min.js',
-            'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+            'src/static/js/jquery.scrollbar.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'src/static/js/datepicker.min.js'
         ])

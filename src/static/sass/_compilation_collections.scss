@@ -1,8 +1,9 @@
 .compilation-collections{
     display: flex;
-    overflow-x: scroll;
     color: #fff;
-    padding: 12px 0 32px;
+    padding: 16px 12px 32px;
+    max-width: 1115px;
+    margin: 0 auto;
 }
 
 .compilation-collections_item{
@@ -119,6 +120,10 @@
         }
     }
 
+    .compilation-collections{
+        padding: 24px 40px 32px;
+    }
+
     .item-content_title{
         font-size: 26px;
     }
@@ -140,6 +145,7 @@
         justify-content: center;
         color: #fff;
         overflow: visible;
+        padding: 24px 0 32px;
     }
 
     .compilation-collections_item{

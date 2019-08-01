@@ -1,9 +1,4 @@
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#reg-modal')
-    | Регистрация/вход
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#check-modal')
-    | Проверяйте почту
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#reset-pass-modal')
-    | Восстановление пароля
+
 #reg-modal.modal.fade.reg-modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
         .modal-content
@@ -96,8 +91,6 @@ button.btn.btn-primary(type='button', data-toggle='modal', data-target='#reset-p
 
 //- user help
 
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#user-help-modal')
-    | User help button
 
 #user-help-modal.modal.fade.user-help-modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
@@ -198,8 +191,7 @@ button.btn.btn-primary(type='button', data-toggle='modal', data-target='#user-he
                         .bottombg
 
 // Поделиться книгой
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#share-book_modal')
-    | Поделиться книгой
+
 
 #share-book_modal.modal.fade.share-book_modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
@@ -227,8 +219,6 @@ button.btn.btn-primary(type='button', data-toggle='modal', data-target='#share-b
                     button.copy-link_btn Копировать ссылку
 
 // Обратная связь
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#feedback_modal')
-    | Обратная связь
 
 #feedback_modal.modal.fade.feedback_modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
@@ -241,14 +231,14 @@ button.btn.btn-primary(type='button', data-toggle='modal', data-target='#feedbac
             .modal-body
                 form
                     .feedback_modal-form
-                        .form-item
+                        .form-item.valid
                             label Ваше имя
-                            input(type="text" placeholder="Представьтесь, пожалуйста")
-                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
-                        .form-item
+                            input.sec-inp_type(type="text" placeholder="Представьтесь, пожалуйста")
+                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация")
+                        .form-item.invalid
                             label Контакты
                             input(type="text" placeholder="Номер телефона/ e-mail")
-                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация") i
+                            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация")
                         .form-item
                             label Жалоба/ просьба
                             textarea.step-item_area(placeholder="Род деятельности, хобби, цитаты...")
@@ -259,8 +249,6 @@ button.btn.btn-primary(type='button', data-toggle='modal', data-target='#feedbac
                             button.submit-form_btn Опубликовать
 
 // Впечатления о книге
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#post-impression_modal')
-    | Оставить отзыв
 
 #post-impression_modal.modal.fade.post-impression_modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
@@ -288,8 +276,7 @@ button.btn.btn-primary(type='button', data-toggle='modal', data-target='#post-im
                                     button.submit-form_btn Опубликовать
                                     
 // Авторам и правообладателям
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#authors_modal')
-    | Авторам и правообладателям
+
 
 #authors_modal.modal.fade.authors_modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
@@ -338,8 +325,6 @@ button.btn.btn-primary(type='button', data-toggle='modal', data-target='#authors
                             button.submit-form_btn Опубликовать
 
 // Добавить на полку/ создать полку
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#add_shelf_modal')
-    | Добавить на полку/ создать полку
 
 #add_shelf_modal.modal.fade.add_shelf_modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')

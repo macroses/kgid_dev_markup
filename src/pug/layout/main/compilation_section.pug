@@ -1,13 +1,31 @@
+//- .compilation-section
+//-     .box
+//-         .compilation-section_header
+//-             h3.compilation-title Лучшие новинки
+//-             a.compilation-link_all(href="") Все
+        
+//-         .scrollbar-inner
+//-             .compilation-section_list
+//-                 include ./card_item.pug
+//-                 include ./card_item.pug
+//-                 include ./card_item.pug
+//-                 include ./card_item.pug
+//-                 include ./card_item.pug
 .compilation-section
     .box
         .compilation-section_header
             h3.compilation-title Лучшие новинки
             a.compilation-link_all(href="") Все
-        
-        .compilation-section_list-box
-            .compilation-section_list
-                include ./card_item.pug
-                include ./card_item.pug
-                include ./card_item.pug
-                include ./card_item.pug
-                include ./card_item.pug
+    .collection-list_box
+        .scrollbar-inner
+            .collection-list
+                .collection-list_item
+                    include card_item.pug
+                .collection-list_item
+                    include card_item.pug
+                .collection-list_item
+                    include card_item.pug
+                .collection-list_item
+                    include card_item.pug
+                .collection-list_item
+                    include card_item.pug

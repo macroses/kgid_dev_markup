@@ -1,0 +1,214 @@
+.search-win{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    background: rgba(0,0,0, .3);
+    z-index: 999;
+    display: none;
+}
+
+.search-win_box{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.search-win_top{
+    margin-bottom: 5px;
+}
+
+.search-win_top-inp{
+    position: relative;
+    flex: auto;
+    input{
+        width: 100%;
+        padding: 5px 40px 5px 8px;
+        border-radius: 4px;
+        border: solid 1px rgb(223, 227, 233);
+    }
+}
+
+.clear-text_btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 36px;
+    background: url(../img/icons/clear-search.svg) no-repeat;
+    background-size: 11px;
+    background-position: center;
+    border: 0;
+    opacity: .5;
+}
+
+.search-win_top{
+    display: flex;
+    align-items: center;
+}
+
+.search-win_close-btn{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/icons/search-arrow.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 0;
+    margin-right: 8px;
+}
+
+
+.search-results{
+    box-shadow: 5px 7px 21px 10px rgba(0, 0, 0, 0.08);
+    border: solid 1px rgb(223, 227, 233);
+    max-height: 80vh;
+}
+
+.search-result_list-authors{
+    border-bottom: 1px solid #e2e7ee;
+}
+
+.result_list{
+    padding: 8px 16px 10px 10px;
+    display: flex;
+    &.author{
+        background: #f9f8f8;
+    }
+    &.book{
+        background: #fff;
+        align-items: flex-start;
+    }
+}
+
+.search-res_img{
+    border-radius: 4px;
+    background-image: url(https://pp.userapi.com/e1dVLUGRxZQJg5Mjr8vaGopBE4wlUYUS8MMa0A/G__P-hGbKN4.jpg?ava=1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 14px;
+    min-width: 40px;
+    &.author{
+        width: 40px;
+        height: 40px;
+    }
+    &.book{
+        width: 40px;
+        height: 62px;
+        box-shadow: 0 0 8px 0 rgba(26, 61, 82, 0.18);
+    }
+}
+
+.search-res_contetnt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: auto;
+}
+
+.search-res_content-name{
+    font-family: $p_semi;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    &::selection{
+        background: red;
+    }
+}
+
+.search-res_content-rate{
+    .rate-box{
+        font-size: 18px;
+        font-family: $p_bold;
+        text-align: right;
+    }
+
+    .rate-counter{
+        font-size: 10px;
+        color: #7f8fa4;
+        white-space: nowrap;
+    }
+}
+
+.res_content-author{
+    font-size: 12px;
+    color: #7f8fa4;
+    font-family: $p_reg;
+}
+
+.all-results_link{
+    display: block;
+    background: #f1f4f8;
+    color: $base-btn-color;
+    padding: 9px 0 11px;
+    text-align: center;
+    font-family: $p_semi;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.search-result_list-authors{
+    .res_content-title{
+        &::selection{
+            background: rgba(247, 152, 28, .5);
+        }
+        &::-moz-selection{
+            background: rgba(247, 152, 28, .5);
+        }
+    }
+}
+.search-result_list-books{
+    .res_content-title{
+        &::selection{
+            background: rgba(247, 152, 28, .5);
+        }
+        &::-moz-selection{
+            background: rgba(247, 152, 28, .5);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .search-results{
+        max-height: 600px;
+    }
+
+    .search-result_list-authors{
+        .res_content-title{
+            font-size: 18px;
+            font-family: $p_bold;
+        }
+    }
+
+    .search-result_list-books{
+        .res_content-title{
+            font-size: 18px;
+        }
+    }
+
+    .res_content-author{
+        font-size: 14px;
+    }
+
+    .search-res_content-rate .rate-counter{
+        font-size: 12px;
+    }
+
+    .all-results_link{
+        display: block;
+        background: #f1f4f8;
+        color: $base-btn-color;
+        padding: 9px 0 11px;
+        text-align: center;
+        font-family: $p_semi;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

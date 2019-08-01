@@ -39,6 +39,14 @@ button{
     }
 }
 
+input[type=text],
+textarea{
+    outline: 0;
+    &:focus{
+        outline: 0;
+    }
+}
+
 .wrapper{
     height: 100%;
     display: flex;
@@ -59,6 +67,12 @@ footer{
     margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+    .box{
+        padding: 0 0 0 40px;
+    }
+} 
+
 @media screen and (min-width: 1200px) {
     .box{
         padding: 0 0;
@@ -67,18 +81,13 @@ footer{
 
 .colored{
     background: #f9f8f8;
+    .card-item_name:after{
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #f9f8f8);
+    }
 }
 
-.blur_bg_box{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: rgba(0,0,0,.3);
-    background-attachment: fixed;
-    filter: blur(10px);
+.blur-bg{
+    filter: blur(20px);
 }
 
 .btn-disabled{
@@ -122,3 +131,4 @@ h2{
 @import './crumbs.scss';
 @import './all_authors_book.scss';
 @import './advice_section.scss';
+@import './search_window.scss';
