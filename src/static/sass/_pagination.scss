@@ -44,7 +44,7 @@
         border-color: #2ea2f8;
         box-shadow: none;
     }
-    &[disabled]{
+    &.disabled{
         background: #f1f4f8;
         border: 0;
         pointer-events: none;

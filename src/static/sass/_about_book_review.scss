@@ -64,6 +64,12 @@
         border-left: 2px solid $base-btn-color;
         border-bottom: 2px solid $base-btn-color;
     }
+
+    &.stick{
+        position: fixed;
+        width: 100%;
+        top: 50px;
+    }
 }
 
 .all-reviews_sort{

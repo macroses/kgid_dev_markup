@@ -137,7 +137,7 @@
     <div class="up_btn"></div>
     <div class="wrapper">
       <header>
-        <div class="header-container">
+        <div class="header-container fixed">
           <!-- В header-box добавлять registered, для отображения шапки зареганных юзеров-->
           <div class="header-box registered"><a class="logo" href=""><img src="./img/main-logo.svg" alt=""/></a>
             <div class="header-login">
@@ -148,7 +148,7 @@
                 <!-- добавлять к header-notice класс new-notice, для появления синего индикатора-->
                 <div class="header-notice">
                   <div class="notice-box">
-                    <ul class="notice-list">
+                    <div class="notice-list">
                       <div class="notice-item new">
                         <div class="notice-item_destination">
                           <div class="user-avatar"></div>
@@ -181,7 +181,7 @@
                         </div>
                         <div class="notice-item_content">Книга <a href="">Оскар Уайльд. Счастливый принц и другие сказки</a> добавлена в вашу подборку <span class="notice-date">3 дня назад</span></div>
                       </div>
-                    </ul>
+                    </div>
                     <button class="all-notices_btn">все уведомления</button>
                   </div>
                 </div>
@@ -219,7 +219,7 @@
           <div class="author_item-about">
             <div class="author_item-card">
               <div class="card-item">
-                <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                   <input class="range-mix" type="range" value="0" min="0" max="10"/>
                   <div class="rate-num"> </div>
                   <div class="user_rate-box">10</div>
@@ -247,9 +247,7 @@
                 </ul><a class="bug-report_btn" href=""><span>i</span> Сообщить об ошибке</a>
               </div>
               <div class="authors-fulname"> <span> Oscar Fingal O'Flahertie Wills Wilde</span></div>
-              <h1 class="authors_name-translate">Оскар Уайльд 
-                <div class="authors_date"><strong title="Дата рождения и смерти">16.10.1854 – 30.11.1900</strong></div>
-              </h1>
+              <h1 class="authors_name-translate">Оскар Уайльд <span class="authors_date"><strong title="Дата рождения и смерти">16.10.1854 – 30.11.1900</strong></span></h1>
               <ul class="authors_books-counter">
                 <li><a href="">57 произведений</a></li>
                 <li><a href="">1023 изданий</a></li>
@@ -318,7 +316,7 @@
               <div class="collection-list">
                 <div class="collection-list_item">
                   <div class="card-item">
-                    <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                       <input class="range-mix" type="range" value="0" min="0" max="10"/>
                       <div class="rate-num"> </div>
                       <div class="user_rate-box">10</div>
@@ -338,7 +336,7 @@
                 </div>
                 <div class="collection-list_item">
                   <div class="card-item">
-                    <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                       <input class="range-mix" type="range" value="0" min="0" max="10"/>
                       <div class="rate-num"> </div>
                       <div class="user_rate-box">10</div>
@@ -358,7 +356,7 @@
                 </div>
                 <div class="collection-list_item">
                   <div class="card-item">
-                    <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                       <input class="range-mix" type="range" value="0" min="0" max="10"/>
                       <div class="rate-num"> </div>
                       <div class="user_rate-box">10</div>
@@ -378,7 +376,7 @@
                 </div>
                 <div class="collection-list_item">
                   <div class="card-item">
-                    <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                       <input class="range-mix" type="range" value="0" min="0" max="10"/>
                       <div class="rate-num"> </div>
                       <div class="user_rate-box">10</div>
@@ -398,7 +396,7 @@
                 </div>
                 <div class="collection-list_item">
                   <div class="card-item">
-                    <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                    <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                       <input class="range-mix" type="range" value="0" min="0" max="10"/>
                       <div class="rate-num"> </div>
                       <div class="user_rate-box">10</div>
@@ -425,7 +423,7 @@
             <div class="review-item">
               <div class="review-item_card">
                 <div class="card-item">
-                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                  <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                     <input class="range-mix" type="range" value="0" min="0" max="10"/>
                     <div class="rate-num"> </div>
                     <div class="user_rate-box">10</div>
@@ -493,7 +491,7 @@
             <div class="review-item">
               <div class="review-item_card">
                 <div class="card-item">
-                  <div class="card-item_img"><a href="" alt="Книга 45 татуировок менеджера" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
+                  <div class="card-item_img"><a href="" title="Книга 45 татуировок менеджера"><img src="https://avatars.mds.yandex.net/get-pdb/224945/f358b199-97c2-45f4-a565-433a62935ec6/s375" alt="книга 45 татуировок менеджера 45 татуировок менеджера" title="книга 45 татуировок менеджера 45 татуировок менеджера"/></a>
                     <input class="range-mix" type="range" value="0" min="0" max="10"/>
                     <div class="rate-num"> </div>
                     <div class="user_rate-box">10</div>
@@ -562,7 +560,7 @@
         </div>
         <div class="comment-pagination">
           <div class="pagination">
-            <div class="pagination-container"><a class="prev-btn" href="" disabled="disabled"></a>
+            <div class="pagination-container"><a class="prev-btn disabled" href=""></a>
               <ul class="page-list">
                 <li><a href="">1</a></li>
                 <li class="dots">...</li>

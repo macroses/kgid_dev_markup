@@ -8,9 +8,12 @@ html(lang="ru")
         link(rel="stylesheet", href="css/libs.css")
         link(rel="stylesheet", href="css/index.css")
     body
-        .popup-box
+        .popup-box.success
+            .popup-msg Success! This is positive notification.
+            span.tip-item(data-toggle="tooltip", data-placement="top", title="Какая-то информация")
+            button.popup-close_btn
             // можно добавлять success, info, warning, error
-            .popup.warning Success! This is positive notification.
+            // Когда появляется попап системных уведомлений - в header-box надо добавить .blur-bg
         include ../layout/main/search_result.pug
         .up_btn
         .wrapper.start

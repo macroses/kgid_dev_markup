@@ -6,10 +6,12 @@ $(function () {
     // шапочку фиксируем
     $(window).scroll(function () {
         var height = $(window).scrollTop();
-        if (height > 50) {
-            $('.header-box').addClass('fixed');
+        if (height > 1) {
+            $('.header-nav').addClass('hid');
+            $('.header-box').addClass('scrolled');
         } else {
-            $('.header-box').removeClass('fixed');
+            $('.header-nav').removeClass('hid');
+            $('.header-box').removeClass('scrolled');
         }
     });
 
@@ -17,6 +19,11 @@ $(function () {
     $('.header-search_btn').click(function () {
         $('.header-search_box input').toggleClass('open');
     });
+
+    // открытие поиска в мобильной версии шапки
+    $('.header-search_btn-mobile').click(function(e) {
+        $('.header-search').slideToggle(300);
+    })
 
     $(document).click(function (event) {
         if ($(event.target).closest(".header-search_btn").length) return;
@@ -125,10 +132,17 @@ $(function () {
         });
     });
 
+    let inpPass = $('.reg-modal_input.pass');
+
     $('.show-pass').click(function (e) {
         $(this).toggleClass('show');
+        if(inpPass.attr('type') == 'password') {
+            inpPass.attr('type', 'text')
+        }
+        else{
+            inpPass.attr('type', 'password');
+        }
     });
-
 
     // прыгаем по шагам в модальном окне
     let $nextBtn = $('.next-step_btn');
@@ -492,4 +506,21 @@ $(function () {
             scrollTop: 0
         }, 500)
     });
+
+    // прилеплять блоки при прокрутке
+
+    let headerHeight = $('.header-box').height();
+    
+    $(window).scroll(function(e) {
+        let headerHeight = $('.header-box').height();
+        let winScroll = $(window).scrollTop();
+
+        if(winScroll >= headerHeight + 55) {
+            $('.all-reviews_bookname').addClass('stick')
+        }
+        else{
+            $('.all-reviews_bookname').removeClass('stick');
+        }
+    })
+
 });

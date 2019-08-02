@@ -55,6 +55,7 @@ textarea{
 
 main{
     flex: 1 0 auto;
+    margin-top: 120px;
 }
 
 footer{
@@ -104,6 +105,7 @@ h2{
     font-size: 22px;
     line-height: 1.45;
 }
+
 
 @import './header.scss';
 @import './start.scss';

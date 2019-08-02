@@ -150,7 +150,7 @@
         display: none;
     }
 
-    span{
+    span:not(.tip-item){
         position: relative;
         display: inline-block;
         padding-left: 24px;
@@ -319,6 +319,7 @@
             overflow: hidden;
             border-radius: 50%;
             box-shadow: 5px 2px 22px 0 rgba(74, 74, 74, 0.33);
+            display: block;
         }
     }
 }

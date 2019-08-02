@@ -137,7 +137,7 @@
     <div class="up_btn"></div>
     <div class="wrapper">
       <header>
-        <div class="header-container">
+        <div class="header-container fixed">
           <!-- В header-box добавлять registered, для отображения шапки зареганных юзеров-->
           <div class="header-box registered"><a class="logo" href=""><img src="./img/main-logo.svg" alt=""/></a>
             <div class="header-login">
@@ -148,7 +148,7 @@
                 <!-- добавлять к header-notice класс new-notice, для появления синего индикатора-->
                 <div class="header-notice">
                   <div class="notice-box">
-                    <ul class="notice-list">
+                    <div class="notice-list">
                       <div class="notice-item new">
                         <div class="notice-item_destination">
                           <div class="user-avatar"></div>
@@ -181,7 +181,7 @@
                         </div>
                         <div class="notice-item_content">Книга <a href="">Оскар Уайльд. Счастливый принц и другие сказки</a> добавлена в вашу подборку <span class="notice-date">3 дня назад</span></div>
                       </div>
-                    </ul>
+                    </div>
                     <button class="all-notices_btn">все уведомления</button>
                   </div>
                 </div>
@@ -219,8 +219,7 @@
             <div class="profile-settings setting-item">
               <div class="settings-title">Настройки профиля
                 <div class="settings-avatar">
-                  <label>
-                    <div class="user-avatar"></div>
+                  <label><span class="user-avatar"></span>
                     <input type="file"/><span>Изменить фото на авататрке</span>
                   </label>
                 </div>
@@ -284,12 +283,10 @@
                 </div>
                 <div class="show_info-box">
                   <label>
-                    <input type="checkbox"/><span>Отображть личные данные</span>
-                    <div class="tip-item" data-toggle="tooltip" data-placement="top" title="Какая-то информация">i</div>
+                    <input type="checkbox"/><span>Отображть личные данные</span><span class="tip-item" data-toggle="tooltip" data-placement="top" title="Какая-то информация">i</span>
                   </label>
                   <Label>
-                    <input type="checkbox"/><span>Отображть мою активность</span>
-                    <div class="tip-item" data-toggle="tooltip" data-placement="top" title="Какая-то информация">i</div>
+                    <input type="checkbox"/><span>Отображть мою активность</span><span class="tip-item" data-toggle="tooltip" data-placement="top" title="Какая-то информация">i</span>
                   </Label>
                 </div>
                 <div class="save-changes_box">

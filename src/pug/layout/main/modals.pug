@@ -16,7 +16,7 @@
                             .form-item.valid
                                 input.reg-modal_input(type="email" placeholder="E-mail")
                             .form-item.invalid
-                                input.reg-modal_input(type="password" placeholder="Пароль")
+                                input.reg-modal_input.pass(type="password" placeholder="Пароль")
                                 .show-pass
                                     img(src="./img/icons/eye.svg", alt="")
                                 .optional опционально
@@ -131,7 +131,7 @@
                             .form-item
                                 input.reg-modal_input(type="text" placeholder="Фамилия")
                             .form-item
-                                input.reg-modal_input(type="date" placeholder="Дата рождения")
+                                input.reg-modal_input(type="date")
                             .radio-block
                                 label
                                     input.inp-radio(type="radio" name="gender")
@@ -201,7 +201,7 @@
                 button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') 
             .modal-body
-                .social-list
+                ul.social-list
                     li
                         a.vk(href="")
                     li
@@ -304,11 +304,11 @@
                         .radio-block
                             label
                                 input.inp-radio(type="radio" name="gender")
-                                span Я против размещения
+                                span.radioblock-text Я против размещения
                             label
                                 input.inp-radio(type="radio" name="gender")
-                                span Я не против размещения
-                                p На сайте будет доступен только небольшой отрывок для чтения онлайн, без возможности скачивания. Ознакомительный фрагмент позволяет заинтересовать читателя произведением.
+                                span.radioblock-text Я не против размещения
+                                span.radioblock-tip На сайте будет доступен только небольшой отрывок для чтения онлайн, без возможности скачивания. Ознакомительный фрагмент позволяет заинтересовать читателя произведением.
                         
                         .content-percentage
                             label Разрешенный фрагмент
