@@ -151,7 +151,7 @@ h2 {
   .header-box .header-user_block {
     display: none; }
   .header-box.scrolled {
-    padding: 12px 12px 0 12px; }
+    padding: 12px; }
 
 .header-container.fixed {
   position: fixed;
@@ -160,6 +160,10 @@ h2 {
   background: #fff;
   z-index: 11;
   width: 100%; }
+
+.header-container.scrolled {
+  -webkit-box-shadow: 0 0 3px 0 rgba(75, 76, 78, 0.14);
+  box-shadow: 0 0 3px 0 rgba(75, 76, 78, 0.14); }
 
 .header-user {
   margin-left: 24px; }
@@ -198,7 +202,9 @@ h2 {
   background: url(https://st4.cannypic.com/thumbs/15/158423_632_canny_pic.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s; }
 
 .header-box.registered .registration-btn,
 .header-box.registered .sign-btn {
@@ -331,7 +337,10 @@ h2 {
   background: url(../img/icons/search.svg) no-repeat;
   background-size: contain;
   border: 0;
-  outline: 0; }
+  outline: 0;
+  z-index: 5;
+  padding: 6px;
+  display: inline-block; }
 
 .registration-btn {
   display: none; }
@@ -530,8 +539,7 @@ h2 {
   .header-box {
     padding: 26px 37px 26px; }
     .header-box.scrolled {
-      padding: 12px 37px;
-      border-bottom: 1px solid lightgray; }
+      padding: 12px 37px; }
   .dropdown-block {
     position: absolute;
     top: calc(100% + 10px);
@@ -550,6 +558,9 @@ h2 {
       padding: 5px 37px; }
       .header-box.scrolled .logo img {
         width: 149px; }
+      .header-box.scrolled .header-user_avatar {
+        width: 30px;
+        height: 30px; }
   .sign-btn {
     background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f2f4f7));
     background: linear-gradient(to bottom, #fefefe, #f2f4f7);
@@ -618,6 +629,8 @@ h2 {
     justify-content: center; }
     .header-nav ul li a {
       font-size: 14px; }
+    .header-nav ul li.active:after {
+      bottom: -9px; }
   .header-search {
     margin: 0;
     margin-left: auto;
@@ -625,16 +638,18 @@ h2 {
     width: auto;
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
-    order: -1; }
+    order: -1;
+    display: block; }
     .header-search input {
       width: 0;
       border: 1px solid transparent;
       -webkit-transition: .2s;
       transition: .2s;
-      padding: 9px 25px 9px 9px; }
+      padding: 0; }
       .header-search input.open {
         width: 180px;
-        border: 1px solid #dfe3e9; }
+        border: 1px solid #dfe3e9;
+        padding: 8px 25px 8px 9px; }
   .header-search_btn-mobile {
     display: none; }
   .header-user {
@@ -643,10 +658,10 @@ h2 {
     .header-user:after {
       content: '';
       position: absolute;
-      height: 100%;
+      height: 25px;
       width: 1px;
       background: lightgray;
-      bottom: 0;
+      bottom: 3px;
       left: -32px; }
   .header-notice {
     margin-left: 16px; }
@@ -2287,8 +2302,7 @@ footer .box {
     margin-bottom: 8px; }
 
 .step-item_collection {
-  height: 450px;
-  overflow-y: scroll; }
+  height: 450px; }
   .step-item_collection .card-select_item {
     display: block; }
 
@@ -6593,6 +6607,12 @@ footer .box {
   padding: 12px;
   border-bottom: solid 1px #f5f2ef;
   margin-bottom: 18px; }
+  .all-reviews_header.scrolled {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+    background: #fff;
+    z-index: 10; }
 
 .all-reviews_bookname {
   position: relative;
@@ -6616,10 +6636,6 @@ footer .box {
     transform: rotate(45deg);
     border-left: 2px solid #1991eb;
     border-bottom: 2px solid #1991eb; }
-  .all-reviews_bookname.stick {
-    position: fixed;
-    width: 100%;
-    top: 50px; }
 
 .all-reviews_sort {
   display: none; }
@@ -6655,6 +6671,33 @@ footer .box {
   .sort-btn:focus {
     outline: 0; }
 
+.up_btn-header {
+  display: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f2f4f7));
+  background: linear-gradient(to bottom, #fefefe, #f2f4f7);
+  color: #354052;
+  font-family: proxima_semibold;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 9px 37px;
+  outline: 0;
+  padding: 0; }
+  .up_btn-header.disabled {
+    pointer-events: none;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    background: #ced2db;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff; }
+  .up_btn-header:focus {
+    outline: 0; }
+  .up_btn-header:hover {
+    -webkit-box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31);
+    box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
+  .up_btn-header:active {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
 @media screen and (min-width: 768px) {
   .all-reviews {
     margin-top: 30px; }
@@ -6665,7 +6708,7 @@ footer .box {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 40px 20px; }
+    padding: 21px 40px 12px; }
   .all-reviews_bookname {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -6699,7 +6742,40 @@ footer .box {
     .all-reviews-btn_block .onshelf_btn {
       margin-right: 16px; }
   .all-reviews_content .compilation-title {
-    font-size: 26px; } }
+    font-size: 26px; }
+  .all-reviews_header {
+    -webkit-transition: .3s linear;
+    transition: .3s linear; }
+    .all-reviews_header.scrolled {
+      -webkit-transition: .3s;
+      transition: .3s;
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      -webkit-transform: translatex(100px);
+      transform: translatex(100px);
+      width: 100%;
+      top: 0;
+      right: 0;
+      margin-left: auto;
+      z-index: 20;
+      padding: 3px 0 2px; }
+      .all-reviews_header.scrolled .onshelf_btn,
+      .all-reviews_header.scrolled .share_btn {
+        opacity: 0;
+        visibility: hidden;
+        display: none; }
+      .all-reviews_header.scrolled .up_btn-header {
+        -webkit-box-flex: 4;
+        -ms-flex: 4;
+        flex: 4; }
+      .all-reviews_header.scrolled .all-reviews_bookname {
+        -webkit-box-flex: 7;
+        -ms-flex: 7;
+        flex: 7; }
+      .all-reviews_header.scrolled .all-reviews-btn_block .read-fragment_link {
+        -webkit-box-flex: 5;
+        -ms-flex: 5;
+        flex: 5; } }
 
 .user_shelf-item {
   max-width: 1440px;
@@ -6940,6 +7016,13 @@ footer .box {
   .collection-list_item {
     margin: 0; } }
 
+.crumbs-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+  background: #fff;
+  z-index: 10; }
+
 .crumbs {
   padding: 12px;
   max-width: 1115px;
@@ -6978,7 +7061,7 @@ footer .box {
 
 @media screen and (min-width: 1200px) {
   .crumbs {
-    padding: 0; } }
+    padding: 12px 0; } }
 
 .all_authors_books-sort {
   margin-bottom: 8px;

@@ -153,8 +153,9 @@
                             li.fill
                             li
                         .step-item_header Некто, выберите >3 книг, чтобы сформировалась подборка
+                        
                         .step-item_collection_box
-                            .step-item_collection
+                            .step-item_collection.scrollbar-inner
                                 include ./card_item.pug
                                 include ./card_item.pug
                                 include ./card_item.pug
@@ -276,7 +277,6 @@
                                     button.submit-form_btn Опубликовать
                                     
 // Авторам и правообладателям
-
 
 #authors_modal.modal.fade.authors_modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')

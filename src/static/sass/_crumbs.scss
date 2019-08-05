@@ -1,3 +1,10 @@
+.crumbs-box{
+    position: sticky;
+    top: 40px;
+    background: #fff;
+    z-index: 10;
+}
+
 .crumbs{
     padding: 12px;
     max-width: 1115px;
@@ -44,6 +51,6 @@
 
 @media screen and (min-width: 1200px) {
     .crumbs{
-        padding: 0;
+        padding: 12px 0;
     }
 }

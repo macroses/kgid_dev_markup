@@ -8,10 +8,10 @@ $(function () {
         var height = $(window).scrollTop();
         if (height > 1) {
             $('.header-nav').addClass('hid');
-            $('.header-box').addClass('scrolled');
+            $('.header-box, .header-container, .all-reviews_header').addClass('scrolled');
         } else {
             $('.header-nav').removeClass('hid');
-            $('.header-box').removeClass('scrolled');
+            $('.header-box, .header-container, .all-reviews_header').removeClass('scrolled');
         }
     });
 
@@ -489,14 +489,14 @@ $(function () {
 
 
     // кнопка наверх
-    let upBtn = $('.up_btn');
+    let upBtn = $('.up_btn, .up_btn-header');
 
     $(window).scroll(function(e) {
 
-        if ($(this).scrollTop() >= 300) {
+        if ($(this).scrollTop() >= 100) {
             upBtn.fadeIn('slow');
         } else {
-            upBtn.fadeOut('slow');
+            upBtn.fadeOut(0);
         }
 
     });
@@ -506,21 +506,4 @@ $(function () {
             scrollTop: 0
         }, 500)
     });
-
-    // прилеплять блоки при прокрутке
-
-    let headerHeight = $('.header-box').height();
-    
-    $(window).scroll(function(e) {
-        let headerHeight = $('.header-box').height();
-        let winScroll = $(window).scrollTop();
-
-        if(winScroll >= headerHeight + 55) {
-            $('.all-reviews_bookname').addClass('stick')
-        }
-        else{
-            $('.all-reviews_bookname').removeClass('stick');
-        }
-    })
-
 });

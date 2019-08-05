@@ -39,6 +39,13 @@
     padding: 12px;
     border-bottom: solid 1px rgb(245, 242, 239);
     margin-bottom: 18px;
+
+    &.scrolled{
+        position: sticky;
+        top: 40px;
+        background: #fff;
+        z-index: 10;
+    }
 }
 
 .all-reviews_bookname{
@@ -64,12 +71,6 @@
         border-left: 2px solid $base-btn-color;
         border-bottom: 2px solid $base-btn-color;
     }
-
-    &.stick{
-        position: fixed;
-        width: 100%;
-        top: 50px;
-    }
 }
 
 .all-reviews_sort{
@@ -89,6 +90,12 @@
     padding: 8px 16px;
 }
 
+.up_btn-header{
+    display: none;
+    @include btn-neutral;
+    padding: 0;
+}
+
 @media screen and (min-width: 768px) {
     .all-reviews{
         margin-top: 30px;
@@ -96,7 +103,7 @@
     .all-reviews_header{
         display: flex;
         align-items: center;
-        padding: 0 40px 20px;
+        padding: 21px 40px 12px;
     }
 
     .all-reviews_bookname{
@@ -141,4 +148,39 @@
             font-size: 26px;
         }
     }
+
+    .all-reviews_header{
+        transition: .3s linear;
+        &.scrolled{
+            transition: .3s;
+            transform: translateY(50px);
+            transform: translatex(100px);
+            width: 100%;
+            top: 0;
+            right: 0;
+            margin-left: auto;
+            z-index: 20;
+            padding: 3px 0 2px;
+            .onshelf_btn,
+            .share_btn{
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+            }
+
+            .up_btn-header{
+                flex: 4;
+            }
+
+            .all-reviews_bookname{
+                flex: 7;
+            }
+
+            .all-reviews-btn_block .read-fragment_link{
+                flex: 5;
+            }
+        }
+    }
+
+    
 }
