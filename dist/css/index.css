@@ -6709,6 +6709,8 @@ footer .box {
     -ms-flex-align: center;
     align-items: center;
     padding: 21px 40px 12px; }
+    .all-reviews_header.scrolled .up_btn-header {
+      display: none; }
   .all-reviews_bookname {
     -webkit-box-flex: 1;
     -ms-flex: 1;

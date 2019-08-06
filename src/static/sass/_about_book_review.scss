@@ -104,6 +104,11 @@
         display: flex;
         align-items: center;
         padding: 21px 40px 12px;
+        &.scrolled{
+            .up_btn-header{
+                display: none;
+            }
+        }
     }
 
     .all-reviews_bookname{

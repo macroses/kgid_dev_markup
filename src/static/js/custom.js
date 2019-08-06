@@ -499,6 +499,9 @@ $(function () {
             upBtn.fadeOut(0);
         }
 
+        if($(window).width() <= 768) {
+            $('.up_btn-header').hide();
+        }
     });
 
     upBtn.click(function(e) {
