@@ -489,7 +489,8 @@ $(function () {
 
 
     // кнопка наверх
-    let upBtn = $('.up_btn, .up_btn-header');
+    let upBtn = $('.up_btn');
+    let upBtnHeader = $('.up_btn-header');
 
     $(window).scroll(function(e) {
 
@@ -505,6 +506,11 @@ $(function () {
     });
 
     upBtn.click(function(e) {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500)
+    });
+    upBtnHeader.click(function(e) {
         $('html, body').animate({
             scrollTop: 0
         }, 500)

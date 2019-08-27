@@ -105,9 +105,7 @@
         align-items: center;
         padding: 21px 40px 12px;
         &.scrolled{
-            .up_btn-header{
-                display: none;
-            }
+            
         }
     }
 
@@ -175,6 +173,7 @@
 
             .up_btn-header{
                 flex: 4;
+                display: inline-block;
             }
 
             .all-reviews_bookname{

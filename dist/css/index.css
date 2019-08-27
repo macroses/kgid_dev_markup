@@ -586,7 +586,8 @@ h2 {
       box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
     .sign-btn:active {
       -webkit-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none;
+      background: #f2f4f7; }
   .registration-btn {
     background: #1991eb;
     color: #fff;
@@ -886,10 +887,19 @@ h2 {
     .card-item a:not(.card-item_name) {
       width: 100%;
       height: 100%;
-      display: inline-block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      border-radius: 10px;
+      overflow: hidden;
       text-decoration: none; }
     .card-item img {
-      max-width: 100%;
       height: 100%;
       border-radius: 10px; }
   .card-item.norange input[type='range'] {
@@ -2567,7 +2577,8 @@ footer .box {
     box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
   .cancel-form_btn:active {
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    background: #f2f4f7; }
 
 .submit-form_btn {
   background: #1991eb;
@@ -3177,7 +3188,8 @@ footer .box {
     box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
   .buy-book_btn:active {
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    background: #f2f4f7; }
 
 .share-book_btn {
   background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f2f4f7));
@@ -3206,7 +3218,8 @@ footer .box {
     box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
   .share-book_btn:active {
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    background: #f2f4f7; }
 
 .dropdown-box {
   margin-bottom: 16px; }
@@ -4853,7 +4866,8 @@ footer .box {
     box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
   .change-pass_btn:active {
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    background: #f2f4f7; }
 
 .privacy-btn_box {
   display: -webkit-box;
@@ -6696,7 +6710,8 @@ footer .box {
     box-shadow: 0 0 4px 0 rgba(75, 76, 78, 0.31); }
   .up_btn-header:active {
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    background: #f2f4f7; }
 
 @media screen and (min-width: 768px) {
   .all-reviews {
@@ -6709,8 +6724,6 @@ footer .box {
     -ms-flex-align: center;
     align-items: center;
     padding: 21px 40px 12px; }
-    .all-reviews_header.scrolled .up_btn-header {
-      display: none; }
   .all-reviews_bookname {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -6769,7 +6782,8 @@ footer .box {
       .all-reviews_header.scrolled .up_btn-header {
         -webkit-box-flex: 4;
         -ms-flex: 4;
-        flex: 4; }
+        flex: 4;
+        display: inline-block; }
       .all-reviews_header.scrolled .all-reviews_bookname {
         -webkit-box-flex: 7;
         -ms-flex: 7;
