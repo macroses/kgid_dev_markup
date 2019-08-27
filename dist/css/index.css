@@ -625,13 +625,17 @@ h2 {
     -webkit-box-flex: 1;
     -ms-flex: auto;
     flex: auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .header-nav ul li a {
-      font-size: 14px; }
-    .header-nav ul li.active:after {
-      bottom: -9px; }
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .header-nav ul {
+      padding-left: 20px; }
+      .header-nav ul li {
+        margin: 0 44px; }
+        .header-nav ul li a {
+          font-size: 14px; }
+        .header-nav ul li.active:after {
+          bottom: -9px; }
   .header-search {
     margin: 0;
     margin-left: auto;
@@ -699,7 +703,7 @@ h2 {
   height: 257px; }
 
 .promo-img_box {
-  background: url(../img/promo-start.webp) no-repeat;
+  background: url(../img/promo-start.png) no-repeat;
   background-position: center;
   background-size: contain;
   width: 100%;
@@ -1207,7 +1211,6 @@ h2 {
   .tips-carousel .tips-item {
     text-align: center; }
     .tips-carousel .tips-item img {
-      width: 268px;
       height: 196px;
       margin-bottom: 16px; }
 
@@ -1279,7 +1282,6 @@ h2 {
   .tips-carousel .carousel-indicators {
     bottom: 30px; }
   .tips-carousel .tips-item img {
-    width: 322px;
     height: 236px; } }
 
 @media screen and (min-width: 1024px) {
@@ -1310,7 +1312,6 @@ h2 {
     width: 100%;
     line-height: 1.15; }
   .tips-carousel .tips-item img {
-    width: 335px;
     height: 245px;
     margin: 0 auto 32px; }
   .tips-carousel_text {

@@ -501,9 +501,11 @@
     .header-nav {
         display: flex;
         flex: auto;
-        justify-content: center;
+        justify-content: flex-start;
         ul {
+            padding-left: 20px;
             li {
+                margin: 0 44px;
                 a {
                     font-size: 14px;
                 }
