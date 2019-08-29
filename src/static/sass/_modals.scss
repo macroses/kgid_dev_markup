@@ -58,7 +58,7 @@
 }
 
 .reg-modal_form{
-    margin-top: 32px;
+    margin-top: 16px;
     text-align: center;
     label{
         margin-bottom: -5px;
@@ -73,7 +73,7 @@
     }
 
     .sep{
-        margin: 11px 0;
+        margin: 10px 0;
         color: #9b9b9b;
         line-height: 1.5;
         text-align: center;
@@ -93,6 +93,7 @@
         margin-bottom: 4px;
         font-family: $p_semi;
         padding-left: 30px;
+        box-shadow: 2px 4px 14px 0 rgba(74, 74, 74, 0.28);
     }
 }
 
@@ -118,8 +119,9 @@
     a{
         font-family: $p_bold;
         color: $base-text-color;
-        text-decoration: none;
+        text-decoration: underline;
         &:hover{
+            text-decoration: none;
             color: $base-btn-color;
         }
     }
@@ -137,7 +139,8 @@
         outline: 0;
 	
 		&::-webkit-input-placeholder {
-			color: #999;
+            color: #7f8fa4;
+            font-size: 12px;
 		}
 		&:focus{
             outline: none;
@@ -184,7 +187,11 @@
 	font-size: 10px;
 	font-family: $p_semi;
 	color: $base-text-color;
-	margin: 0 0 13px;
+    margin: -10px 0 13px;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
 }
 
 .form-item{
@@ -193,8 +200,8 @@
         &:after{
             content: '';
             position: absolute;
-            top: 10px;
-            right: 8px;
+            top: 39px;
+            right: 42px;
             width: 7px;
             height: 7px;
             background: url(../img/icons/valid.svg) no-repeat;
@@ -210,8 +217,8 @@
         &:after{
             content: '';
             position: absolute;
-            top: 8px;
-            right: 6px;
+            top: 37px;
+            right: 42px;
             width: 13px;
             height: 13px;
             background: url(../img/icons/invalid.svg) no-repeat;
@@ -257,7 +264,7 @@
 
 .check-email{
     text-align: center;
-    padding: 108px 0 180px;
+    padding: 108px 0 163px;
 }
 
 .check-email_header{
@@ -313,7 +320,7 @@
 
 .user-help_steps{
     display: flex;
-    width: 64px;
+    width: 80px;
     justify-content: space-between;
     margin: 27px auto 0px;
     li{
@@ -361,6 +368,7 @@
         background-size: cover;
         background-position: center;
         overflow: hidden;
+        box-shadow: 4px 5px 32px 0 rgba(75, 76, 78, 0.31);
         img{
             width: inherit;
         }
@@ -375,12 +383,8 @@
         height: 45px;
         right: 0;
         bottom: 0;
-        background: linear-gradient(137deg, rgb(25, 145, 235), rgba(78, 42, 206, 0.99));
         border-radius: 50%;
-        img{
-            width: 30px;
-            height: 24px;
-        }
+        background: url(../img/icons/camera.svg) no-repeat;
     }
 }
 
@@ -392,7 +396,7 @@
     font-weight: bold;
     line-height: 1.38;
     max-width: 320px;
-    margin: 0 auto 38px;
+    margin: 0 auto 28px;
 }
 
 .step-item_tip{
@@ -421,6 +425,7 @@
 .cancel-step_link{
     color: #9b9b9b;
     margin-bottom: 18px;
+    text-decoration: underline;
     &:hover{
         text-decoration: none;
     }
@@ -486,10 +491,10 @@
             &:after{
                 content: '';
                 position: absolute;
-                width: 8px;
-                height: 8px;
-                top: 6px;
-                left: 4px;
+                width: 6px;
+                height: 6px;
+                top: 7px;
+                left: 5px;
                 background: #fff;
                 display: none;
                 border-radius: 50%;
@@ -626,6 +631,7 @@
     list-style: none;
     flex-wrap: wrap;
     margin-bottom: 32px;
+    margin-top: -1rem;
     li{
         a{
             display: inline-block;
@@ -664,8 +670,8 @@
         white-space: nowrap;
         @include btn-colored;
         padding: 0;
-        font-family: $p_semi;
-        padding: 7px 17px;
+        font-family: $p_reg;
+        padding: 7px 18px;
         margin-left: -10px;
     }
 
@@ -711,10 +717,10 @@
     font-family: $p_semi;
     line-height: 1.38;
     color: $base-text-color;
-    margin-bottom: 28px;
     p{
         line-height: 1.5;
         font-size: 14px;
+        margin-top: 4px;
         font-family: $p_reg;
     }
 }
@@ -723,7 +729,9 @@
     margin: 0 auto;
     max-width: 400px;
     label{
-        font-size: 10px;
+        font-size: 12px;
+        color: $base-text-color;
+        font-family: $p_semi;
         margin-bottom: 4px;
     }
     input, textarea{
@@ -759,6 +767,10 @@
             opacity: 1;
             text-align: center;
         }
+    }
+
+    .sec-inp_type{
+        margin-bottom: 16px;
     }
 }
 
@@ -811,7 +823,8 @@
         font-size: 14px;
         font-family: $p_reg;
         line-height: 1.5;
-        margin-bottom: 24px;
+        margin-bottom: 8px;
+        margin-top: 4px;
     }
 }
 
@@ -869,6 +882,16 @@
 
 
 .authors_modal{
+
+    .form-item{
+        input[type=text] {
+            margin-bottom: 8px;
+        }
+        .tip-item{
+            top: 50%;
+        }
+    }
+
     .reg-modal_header{
         padding-top: 56px;
         padding-bottom: 0;
@@ -899,14 +922,19 @@
             .radioblock-text{
                 padding-left: 26px;
                 margin-bottom: 8px;
+                font-family: $p_reg
             }
         }
         .radioblock-text{
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.75;
             color: $base-text-color;
             margin-bottom: 0;
             padding-left: 26px;
+        }
+
+        .modal-dialog .form-item input[type=text]{
+            margin-bottom: 16px;
         }
 
         input:checked + .radioblock-text {
@@ -968,8 +996,10 @@
 
 .add_shelf_book-list{
     height: 400px;
-    overflow-y: scroll;
     margin-bottom: 16px;
+    .shelf-container{
+        margin-bottom: 0;
+    }
 }
 
 .create_shelf_box .tip{
@@ -1010,6 +1040,11 @@
         &:focus{
             border: 1px solid $base-btn-color;
         }
+
+        &::-webkit-input-placeholder {
+            color: #7f8fa4;
+            font-family: $p_reg;
+		}
     }
 }
 
@@ -1079,7 +1114,7 @@
     color: $base-btn-color;
     background: none;
     border: 0;
-    text-decoration: underline;
+    text-decoration: none;
     display: none;
     font-family: $p_semi;
     line-height: 1.5;

@@ -47,10 +47,26 @@
 }
 
 .buy-book_btn{
-    @include btn-neutral;
+    @include btn-transparent;
     text-align: left;
-    padding: 6px 0;
+    padding: 6px 24px 6px 16px!important;
     text-align: center;
+    position: relative;
+    &:after{
+        display: none;
+    }
+    &:before{
+        position: absolute;
+        content: '';
+        width: 6px;
+        right: 0;
+        height: 6px;
+        top: calc(50% - 4px);
+        border-right: 1px solid #c5d0de;
+        margin-right: 10px;
+        transform: rotate(45deg);
+        border-bottom: 1px solid #c5d0de;
+    }
 }
 
 .share-book_btn{
@@ -112,6 +128,10 @@
                 width: 1px;
                 background: #7f8fa4;
             }
+
+            a{
+                color: $base-btn-color;
+            }
         }
     }
 }
@@ -169,8 +189,8 @@
     &.add_comment-btn{
         span {
             &:before{
-                background: url(../img/icons/write.svg) no-repeat;
-                background-size: cover;
+                background: url(../img/icons/write-dark.svg) no-repeat;
+                background-size: contain;
             }
         }
     }
@@ -215,12 +235,16 @@
 
 .book_item-fragment_header{
     font-family: $p_semi;
+    color: rgba(255,255,255,0.1);
+    font-size: 0;
 }
 
 .book_item-shoplist_header{
     font-size: 18px;
     margin-bottom: 8px;
     margin-top: 16px;
+    color: rgba(255,255,255,0.1);
+    font-size: 0;
 }
 
 .open-fragment_btn{
@@ -237,7 +261,7 @@
 }
 
 .add_to_shelf-btn{
-    margin-right: 8px;
+    margin-right: 4px;
     background: url(../img/icons/plus.svg) no-repeat;
 
 }
@@ -245,11 +269,11 @@
 .book_item-shoplist{
     display: none;
     background: #f9f8f8;
-    padding: 16px;
+    padding: 16px 49px;
     margin-bottom: 16px;
     li{
         font-size: 12px;
-        font-family: $p_semi;
+        
         margin-bottom: 4px;
         a{
             display: flex;
@@ -257,6 +281,9 @@
             justify-content: space-between;
             line-height: 1.83;
             text-decoration: none;
+            span:first-child{
+                font-weight: bold;
+            }
         }
     }
 }
@@ -358,7 +385,7 @@
 
     .book_item-container{
         display: flex;
-        padding: 40px;
+        padding: 0 40px;
     }
     
     .book_item-menu{
@@ -390,7 +417,7 @@
     }
 
     .add_comment-btn{
-        margin-right: 8px;
+        margin-right: 4px;
     }
 
     .btn-item.share-btn{
@@ -407,9 +434,7 @@
         }
     }
 
-    .read-fragment_btn{
-        margin-right: 4px;
-    }
+    
 
     .rightholders-btn{
         display: inline-block;
@@ -417,6 +442,13 @@
 
     .bug-report_btn{
         display: inline;
+    }
+
+    .book_item-btn_block{
+        .read-fragment_btn{
+            margin-right: 4px;
+            padding: 7px 40px;
+        }
     }
 
     .book_item-author{
@@ -445,6 +477,10 @@
     .book_item-container{
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    .book_item-content{
+        margin-right: 96px;
     }
 
     .book_item-container .card-item{
@@ -483,7 +519,7 @@
     }
 
     .book_item-btn_block .btn-item{
-        padding: 7px 15px 7px 36px;
+        padding: 15px 24px 15px 48px;
     }
 
     .book_item_onshelf-info{
@@ -501,7 +537,7 @@
 
     .book_item_onshelf-info_list{
         li{
-            width: 30%;
+            width: 26%;
             .name, .value{
                 font-size: 14px;
             }

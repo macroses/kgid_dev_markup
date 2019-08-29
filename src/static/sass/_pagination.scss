@@ -55,13 +55,19 @@
     margin-right: 24px;
     &:before{
         content: '';
-        border: 8px solid transparent;
-        border-right: 8px solid #a8aab7;
-        width: 8px;
-        height: 8px;
+        background: url(../img/icons/prev.svg) no-repeat;
+        background-size: auto;
+        width: 10px;
+        height: 10px;
         position: absolute;
-        top: 8px;
-        left: 6px;
+        top: calc(50% - 5px);
+        left: calc(50% - 5px);
+    }
+
+    &:active{
+        &:before{
+            background: url(../img/icons/prev-blue.svg) no-repeat;
+        }
     }
 }
 
@@ -69,12 +75,17 @@
     margin-left: 24px;
     &:before{
         content: '';
-        border: 8px solid transparent;
-        border-left: 8px solid #a8aab7;
-        width: 8px;
-        height: 8px;
+        background: url(../img/icons/next.svg) no-repeat;
+        background-size: auto;
+        width: 10px;
+        height: 10px;
         position: absolute;
-        top: 8px;
-        left: 13px;
+        top: calc(50% - 5px);
+        left: calc(50% - 2px);
+    }
+    &:active{
+        &:before{
+            background: url(../img/icons/next-blue.svg) no-repeat;
+        }
     }
 }

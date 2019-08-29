@@ -1,6 +1,6 @@
 .book_item-comments{
     .compilation-section_header{
-        padding: 0 12px;
+        padding: 12px 0px;
     }
     .review-item{
         .card-item_author{
@@ -19,14 +19,21 @@
     textarea{
         height: 40px;
         resize: vertical;
-        flex: auto;
+        width: 100%;
         border-radius: 4px;
         border: 1px solid #dfe3e9;
         padding: 8px 10px;
+        flex: auto;
         &:focus{
             border: 1px solid $base-btn-color;
         }
+
+        &::-webkit-input-placeholder {
+            color: #7f8fa4;
+		}
     }
+
+
 }
 
 .comment-avatar{
@@ -63,6 +70,7 @@
 
 .comment-user_rate{
     font-size: 10px;
+    color: $base-text-color;
     span{
         font-size: 18px;
         color: #f7981c;
@@ -79,6 +87,7 @@
 .comment-date{
     font-size: 10px;
     color: #7f8fa4;
+    margin-top: -5px;
 }
 
 .comment-item_content{
@@ -86,6 +95,9 @@
     overflow: hidden;
     position: relative;
     margin-bottom: 8px;
+    color: $base-text-color;
+    line-height: 1.5;
+    font-size: 14px;
     &:after{
         content: '';
         position: absolute;

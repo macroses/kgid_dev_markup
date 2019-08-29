@@ -109,8 +109,7 @@
                         .upload-avatar
                             input.inputfile(type="file" name="file" id="file")
                             label(for="file")
-                            span 
-                                img(src="./img/icons/camera.svg", alt="")
+                            span
 
                         .step-item_header Добро пожаловать в Knigogid, Некто!
                         .step-item_tip Ваши ответы на следующие вопросы помогут помогут собрать подборку специально для вас.
@@ -336,12 +335,13 @@
                     span(aria-hidden='true') 
             .modal-body
                 .add_shelf_book_container
-                    .add_shelf_book-list
-                        include ./book_on_shelf.pug
-                        include ./book_on_shelf.pug
-                        include ./book_on_shelf.pug
-                        include ./book_on_shelf.pug
-                        include ./book_on_shelf.pug
+                    .scrollbar-inner
+                        .add_shelf_book-list
+                            include ./book_on_shelf.pug
+                            include ./book_on_shelf.pug
+                            include ./book_on_shelf.pug
+                            include ./book_on_shelf.pug
+                            include ./book_on_shelf.pug
 
                 .create_shelf_settings
                     .shelf_name-secret

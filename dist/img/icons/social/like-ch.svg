@@ -14,7 +14,7 @@
                         <use xlink:href="#path-1"></use>
                     </mask>
                     <use id="Mask" stroke="#354052" fill-rule="nonzero" xlink:href="#path-1"></use>
-                    <g mask="url(#mask-2)" fill="#A8AAB7" id="Base">
+                    <g mask="url(#mask-2)" fill="#354052" id="Base">
                         <g transform="translate(-1.086957, -1.083333)">
                             <rect x="0" y="0" width="28" height="28"></rect>
                         </g>

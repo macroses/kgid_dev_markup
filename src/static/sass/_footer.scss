@@ -57,6 +57,7 @@ footer{
         font-family: $p_semi;
         outline: 0;
         padding: 16px 8px;
+        color: $base-text-color;
         &:focus{
             outline: 0;
         }

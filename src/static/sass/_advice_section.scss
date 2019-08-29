@@ -60,11 +60,15 @@
     .user_rate-box{
         display: none;
     }
+    
+    .review-item_card-data{
+        margin-right: 32px;
+    }
 }
 
 .advice-descr_fragment {
     line-height: 1.5;
-    height: 83px;
+    height: 106px;
     position: relative;
     overflow: hidden;
     &:after{

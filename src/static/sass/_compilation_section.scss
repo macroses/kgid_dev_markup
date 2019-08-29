@@ -7,7 +7,7 @@
 }
 
 .compilation-section{
-    padding-top: 47px;
+    padding-top: 24px;
 }
 
 .compilation-title{
@@ -22,10 +22,11 @@
     font-size: 10px;
     color: #fff;
     line-height: 1.9;
-    font-family: $p_bold;
+    font-family: $p_semi;
     padding: 0 11px;
     border-radius: 4px;
     background: #516173;
+    padding-top: 1px;
     text-transform: uppercase;
     &:hover{
         color: #fff;

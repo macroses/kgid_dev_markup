@@ -13,8 +13,8 @@
                     <mask id="mask-2" fill="white">
                         <use xlink:href="#path-1"></use>
                     </mask>
-                    <use id="Mask" fill="#718FA7" fill-rule="nonzero" xlink:href="#path-1"></use>
-                    <g id="UI/Color/Flat/Grey-50%" mask="url(#mask-2)" fill="#A8AAB7">
+                    <use id="Mask" fill="#354052" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="UI/Color/Flat/Grey-50%" mask="url(#mask-2)" fill="#354052">
                         <g transform="translate(0.000000, -1.000000)" id="Base">
                             <rect x="0" y="0" width="26" height="26"></rect>
                         </g>
